@@ -1,0 +1,52 @@
+.top-bg {
+    background-image: url("../img/Vector.png");
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: 100% 16%;
+    background-color: var(--op-blue6-b);
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+.c-child { 
+    top: 22%;
+}
+.top-bg .wrap2 {
+position: relative;
+z-index: 3;
+}
+
+.pagewrap1 {
+    position: relative;
+    margin: -1rem auto 0;
+    background-color: var(--op-white-b);
+    border-radius: 1rem 1rem 0 0;
+}
+
+/* 統一樣式結束 */
+/* 內容樣式開始 */
+
+/* 內容樣式結束 */
+
+@media (max-width: 1140px) {
+
+}
+
+/* 平板樣式 */
+@media (max-width: 991px) {
+    .top-bg {
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+    }
+
+}
+
+/* 手機樣式開始 */
+@media (max-width: 768px) {
+
+    /* 內容樣式開始 */
+
+}

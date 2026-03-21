@@ -1,0 +1,191 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="about.aspx.cs" Inherits="prjAPM.about" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>千機科技股份有限公司</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/bootstrap3.3.7.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KTJBSVL2ND">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KTJBSVL2ND');
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+            <nav class="navbar-default" id="na01">
+                <div class="container-fluid col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.aspx">
+                            <img src="img/logo-08.png " alt="logo" />千機科技
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right navbar-select">
+                            <!-- <li class="dropdown">
+                            <a href="#" id="hoverkey" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">產品服務<span class="caret"></span></a>
+                            <ul class="dropdown-menu" id="showmenu">
+                                <li><a href="project_development.html">專案開發</a></li>
+                                <li><a href="#">資安監控</a></li>
+                                <li><a href="#">網頁防置換</a></li>
+                                <li><a href="#">SSL憑證服務</a></li>
+                            </ul>
+                        </li> -->
+                            <li><a href="dm2.aspx">Cosaty 資安_主機或網站安全</a></li>
+                       <li><a href="dm.aspx">Cosaty 端點資安防護系統</a></li>
+                            <li><a href="project.aspx">專案開發</a></li>
+                            <li><a href="about.aspx">公司簡介</a></li>
+                            <li><a href="success.aspx">成功案例</a></li>
+                            <li><a href="contact.aspx">聯絡我們</a></li>
+                            <li><a href="map.aspx">網站導覽</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <!-- nav -->
+            <div class="aboutcompany col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="grideline col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div class="page_title">
+                        <h2>公司簡介</h2>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <!-- page_title -->
+                    <div class="item">
+                        <p>千機科技股份有限公司的本專案團隊均有多年專案開發經驗， 並於</p>
+                        <ul>
+                            <li>政府單位網站規劃開發建置</li>
+                            <li>政府單位全球資訊網站開發建置</li>
+                            <li>癌症資訊系統開發建置</li>
+                            <li>檔案加密管理系統規劃開發建置</li>
+                            <li>入口網站規劃開發建置</li>
+                            <li>銀行單位客服關係管理系統規劃開發建置</li>
+                            <li>醫療單位網站規劃開發建置</li>
+                            <li>學校單位選課系統個資暨檔案加密管理系統開發建置</li>
+                            <li>入口網站管理系統規劃開發建置</li>
+                            <li>檔案加密管理系統規劃開發建置</li>
+                            <li>傳真客服關係管理系統規劃開發建置</li>
+                            <li>企業單位網站規劃開發建置</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <p>，等相關經驗的資深資訊科技專業人員，其工作背景及服務的專案客戶，均是大型的國防單位、 醫療單位、政府單位、學校單位、金融機構或外商企業，如</p>
+                        <ul>
+                            <li>國防部、國防部相關單位</li>
+                            <li>中國信託</li>
+                            <li>蘇黎士保險(股)</li>
+                            <li>中華大學</li>
+                            <li>台灣大學</li>
+                            <li>國家文官學院</li>
+                            <li>台灣微軟</li>
+                            <li>資策會</li>
+                            <li>三軍總醫院</li>
+                            <li>桃竹苗就業服務中心</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <p>
+                            等客戶。 千機科技以專業化的工作團隊不斷在系統開發相關領域累積技術與應用經驗， 並秉持著對客戶永續經營的重大承諾，並不是一般公司專案或人力外派的短線做法， 欲將客戶視為長期的事業夥伴，將會不斷提供客戶最新相關的技術經驗與發展趨勢， 與客戶共同成長。千機科技不僅在相關科技應用上有廣泛及深入的經驗， 就專業諮詢經驗上千機科技更能提供客戶保貴的經驗。 千機科技累積多年的系統開發相關技術經驗深深瞭解到， 建立一個系統架構絕非只考慮技術問題就可以成功，它更需要考慮與客戶單位策略結合、
+                        組織結構流程、以及人的因素等其它三個方面。為協助客戶成功建置及資訊安全， 千機科技導入ISO27001:2013及個資法規範之資訊及個資安全管理制度方法， 將可以有效地引導客戶由導入資訊安全的觀點，於網站系統順利建置後並能為客戶的後續維護機制建立風險管控。 千機科技的專業服務包括：
+                        </p>
+                        <ul>
+                            <li>資訊科技策略規劃顧問諮詢服務</li>
+                            <li>政府網站系統開發建置</li>
+                            <li>政府網站版型與內容管理規範服務</li>
+                            <li>政府網站營運績效檢核評分服務</li>
+                            <li>政府網站無障礙網站檢核申請服務</li>
+                            <li>政府及企業應用軟體專業規劃、實施與導入</li>
+                            <li>政府及企業應用軟體系統開發與整合服務</li>
+                            <li>政府及企業應用軟體的專案開發與客製化</li>
+                            <li>政府及企業客戶關係管理資訊系統專案系統開發</li>
+                            <li>政府及企業個資極機密檔案防護顧問諮詢服務</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="contactus col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <a href="contact.aspx">
+                    <span><i class="fa fa-angle-double-right fa-2x" aria-hidden="true"></i></span>聯絡我們
+                </a>
+                <div class="border_gradient"></div>
+            </div>
+            <!-- contactus -->
+            <div class="bottomfooter col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="fat-footer col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                    <ul>
+                        <li>
+                            <a href="#">產品服務</a>
+                            <ul>
+                                <li><a href="project.aspx">專案開發</a></li>
+                                <li><a href="#">資安監控</a></li>
+                                <li><a href="#">網頁防置換 </a></li>
+                                <li><a href="#">SSL憑證服務</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">公司簡介</a>
+                            <ul></ul>
+                        </li>
+                        <li>
+                            <a href="#">成功案例</a>
+                            <ul></ul>
+                        </li>
+                        <li>
+                            <a href="#">聯絡我們</a>
+                            <ul></ul>
+                        </li>
+                        <li>
+                            <a href="#">網站導覽</a>
+                            <ul></ul>
+                        </li>
+                        <li>
+                            <a href="policy.aspx">資安政策</a>
+                            <ul></ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- fat-footer -->
+                <footer class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div class="fontbox">
+                        <div class="companyname">千機科技股份有限公司</div>
+                        <ul class="company_info">
+                            <li>台北市中正區100忠孝東路一段85號12樓之4</li>
+                            <li>Tel:(886) 02-7726-7688</li>
+                            <li>Fax:(886) 02-7726-7689</li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap3.3.7.js"></script>
+        <script src="js/main.js"></script>
+    </form>
+</body>
+</html>

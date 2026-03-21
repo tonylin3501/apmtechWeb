@@ -1,0 +1,131 @@
+.top-bg {
+    background-image: url("../img/Vector.png");
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: 100% 16%;
+    background-color: var(--op-blue6-b);
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+.c-child { 
+    top: 32%;
+}
+.top-bg .wrap2 {
+position: relative;
+z-index: 3;
+padding-top: var(--padding-y-20);
+padding-bottom: var(--padding-y-20);
+}
+.pagewrap1 {
+    position: relative;
+    margin: -1rem auto 0;
+    background-color: var(--op-white-b);
+    border-radius: 1rem 1rem 0 0;
+}   
+.wrap1 {
+    max-width: none;
+    position: relative;
+}
+
+/* 內容樣式開始 */
+.glossary-header {
+    display: flex;
+    align-items: center;
+    background-color: var(--op-blue4);
+    border-radius: 4px;
+    padding: 12px 24px;
+    gap: 24px;
+    margin: 0 auto;
+    color: var(--op-white);
+}
+.file-box {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 16px;
+    border-bottom: 0.5px solid var(--op-blue2-b);
+}
+.glossary-header h6 {
+    flex: 1;
+    text-align: left;
+    margin: 0;
+}
+.file-detail-box {
+    color: var(--op-gray8-w);
+    border-radius: 0 0 4px 4px;
+}
+.file-detail-box .title {
+    flex: 1;
+    text-align: left;
+    color: var(--op-black1-w);
+    font-weight: 800;
+}
+.fileitems-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.fileitems {
+  background-color: var(--op-blue-g);
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.fileitems img.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-pic {
+  margin-right: 4px;
+  padding-bottom: 1px;
+}
+
+.file-text {
+  margin-right: 24px;
+  color: var(--op-blue5-w);
+}
+
+.fileitems .file-count.minimum {
+  color: var(--op-gray5);
+}
+.dark .icon-pic,
+.dark .icon-download {
+    filter: brightness(0) invert(1);
+}
+.fileitems .icon-download {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+}
+
+@media (max-width: 1140px) {
+
+}
+
+/* 平板樣式 */
+@media (max-width: 991px) {
+    .top-bg {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+.fileitems .file-count {
+display: none;
+}
+
+}
+
+/* 手機樣式開始 */
+@media (max-width: 768px) {
+    .file-box{
+    padding: 24px 12px;
+    }
+
+
+}

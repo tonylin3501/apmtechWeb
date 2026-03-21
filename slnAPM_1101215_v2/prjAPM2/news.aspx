@@ -1,0 +1,328 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="news.aspx.cs" Inherits="prjAPM.news" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>千機科技股份有限公司</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/bootstrap3.3.7.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KTJBSVL2ND">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KTJBSVL2ND');
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+            <nav class="navbar-default" id="na01">
+                <div class="container-fluid col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.aspx">
+                            <img src="img/logo-08.png " alt="logo" />千機科技
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right navbar-select">
+                            <!-- <li class="dropdown">
+                            <a href="#" id="hoverkey" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">產品服務<span class="caret"></span></a>
+                            <ul class="dropdown-menu" id="showmenu">
+                                <li><a href="project_development.html">專案開發</a></li>
+                                <li><a href="#">資安監控</a></li>
+                                <li><a href="#">網頁防置換</a></li>
+                                <li><a href="#">SSL憑證服務</a></li>
+                            </ul>
+                        </li> -->
+                            <li><a href="dm2.aspx">Cosaty 資安_主機或網站安全</a></li>
+                       <li><a href="dm.aspx">Cosaty 端點資安防護系統</a></li>
+                            <li><a href="project.aspx">專案開發</a></li>
+                            <li><a href="about.aspx">公司簡介</a></li>
+                            <li><a href="success.aspx">成功案例</a></li>
+                            <li><a href="contact.aspx">聯絡我們</a></li>
+                            <li><a href="map.aspx">網站導覽</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <!-- nav -->
+            <div class="newspage col-lg-12">
+                <div class="grideline col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div class="page_title">
+                        <h2>最新消息</h2>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <!-- page_title -->
+                    <div class="item">
+                        <div class="annual">
+                            <div class="number">2021</div>
+                        </div>
+                        <div class="rightbox">
+                            <ul>
+                                <li>
+                                    <div class="title">ISO/CNS 27001驗證</div>
+                                    <p>公司推動實施資訊安全管理制度及ISO/CNS 27001驗證。</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--2020 -->
+                     <div class="item">
+                        <div class="annual">
+                            <div class="number">2020</div>
+                        </div>
+                        <div class="rightbox">
+                            <ul>                             
+                                <li>
+                                   <div class="title">網站監控防置換系統開發</div>
+                                    <p>網站監控防置換系統開發上線。</p>
+                                </li>                           
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!--2019 -->
+                    <div class="item">
+                        <div class="annual">
+                            <div class="number">2019</div>
+                        </div>
+                        <div class="rightbox">
+                            <ul>                             
+                                <li>
+                                   <div class="title">108年度國防醫學院全球資訊網站再造案</div>
+                                    <p>系統功能架構、版面設計、網頁資訊公告、公開瀏覽、檔案上傳及下載、報名系統、使用者資料輸入與匯出管理、會議行事曆管理、資訊安全檢測。</p>
+                                </li>                           
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- 6/26更新 -->
+                    <div class="item">
+                        <div class="annual">
+                            <div class="number">2018</div>
+                        </div>
+                        <div class="rightbox">
+                            <ul>                             
+                                <li>
+                                    <div class="title">107年度國防部全球資訊網站維護等4項</div>
+                                    <p>依據行政院「政府網站改善計畫」政策推動，並參照政府網站版型相關規範，國防部全球資訊網網站改版為RWD響應式網頁設計。</p>
+                                </li>
+                                <li>
+                                    <div class="title">107年度國防部全球資訊網站維護等3項案</div>
+                                    <p>依據行政院「政府網站改善計畫」政策推動，並參照政府網站版型相關規範，國防部全球資訊網網站改版為RWD響應式網頁設計。</p>
+                                </li>
+                                <li>
+                                    <div class="title">全民防衛動員資訊服務網系統維護</div>
+                                    <p>軍民網系統測試環境建置模擬，軍民網系統程式及資料庫分析，軍民網網站漏洞檢測及調整修改，軍民網網站測試，軍民網網站配合國防部網站漏洞檢測掃描修改修正。</p>
+                                </li>
+                                <li>
+                                    <div class="title">中華大學「推廣教育學分班管理系統」系統開發維護</div>
+                                    <p>學員基本資料登錄作業、線上報名、線上選課作業、註冊作業、課程管理作業、成績管理報表作業、財務管理 繳費登錄作業。</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /01 -->
+                    <div class="item">
+                        <div class="annual">
+                            <div class="number">2017</div>
+                        </div>
+                        <div class="rightbox">
+                            <ul>
+                                <li>
+                                    <div class="title">三軍總醫院內網網站系統開發</div>
+                                    <p>系統功能架構、版面設計、網頁資訊公告、公開瀏覽、檔案上傳及下載、報名系統、使用者資料輸入與匯出管理、會議行事曆管理、資訊安全檢測。</p>
+                                </li>
+                                <li>
+                                    <div class="title">106年度國防醫學院三軍總醫院「三軍總醫院癌症管理資訊系統建置」</div>
+                                    <p>三軍總醫院癌症管理資訊系統建置：建立癌症管理資訊系統，透過時間軸整合查詢平台、提供癌症管理資訊系統及醫院內各系統資料庫整合查詢。</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /02 -->
+                    <div class="item">
+                        <div class="annual">
+                            <div class="number">2016</div>
+                        </div>
+                        <div class="rightbox">
+                            <ul>
+                                <li>
+                                    <div class="title">105年度國防部全球資訊網站維護等4項案</div>
+                                    <p>依據行政院「政府網站改善計畫」政策推動，並參照政府網站版型相關規範，國防部全球資訊網網站改版為RWD響應式網頁設計。</p>
+                                </li>
+                                <li>
+                                    <div class="title">105年度國防醫學院三軍總醫院「三軍總醫院癌症管理資訊系統建置」</div>
+                                    <p>三軍總醫院癌症管理資訊系統建置：建立癌症管理資訊系統，透過時間軸整合查詢平台、提供癌症管理資訊系統及醫院內各系統資料庫整合查詢。</p>
+                                </li>
+                                <li>
+                                    <div class="title">全民防衛動員資訊服務網系統維護</div>
+                                    <p>軍民網系統測試環境建置模擬，軍民網系統程式及資料庫分析，軍民網網站漏洞檢測及調整修改，軍民網網站測試，軍民網網站配合國防部網站漏洞檢測掃描修改修正。</p>
+                                </li>
+                                <li>
+                                    <div class="title">三軍總醫院「人體試驗審議會(IRB)網站」系統開發維護</div>
+                                    <p>系統功能架構、版面設計、網頁資訊公告、公開瀏覽、檔案上傳及下載、報名系統、使用者資料輸入與匯出管理、會議行事曆管理、資訊安全檢測。</p>
+                                </li>
+                                <li>
+                                    <div class="title">中華大學「推廣教育學分班管理系統」系統開發維護</div>
+                                    <p>學員基本資料登錄作業、線上報名、線上選課作業、註冊作業、課程管理作業、成績管理報表作業、財務管理、繳費登錄作業。</p>
+                                </li>
+                                <li>
+                                    <div class="title">中華大學「推廣教育學分班管理系統」系統開發維護</div>
+                                    <p>學員基本資料登錄作業、線上報名、線上選課作業、註冊作業、課程管理作業、成績管理報表作業、財務管理、繳費登錄作業。</p>
+                                </li>
+                                <li>
+                                    <div class="title">大同股份有限公司</div>
+                                    <p>參與國防部IBM系統主機及週邊維護等32項專案資訊設備、系統之軟體或硬體維護服務。</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /3 -->
+                    <div class="item">
+                        <div class="annual">
+                            <div class="number">2015</div>
+                        </div>
+                        <div class="rightbox">
+                            <ul>
+                                <li>
+                                    <div class="title">104年度國防醫學院三軍總醫院「三軍總醫院癌症管理資訊系統建置」</div>
+                                    <p>三軍總醫院癌症管理資訊系統建置：建立癌症管理資訊系統，透過時間軸整合查詢平台、提供癌症管理資訊系統及醫院內各系統資料庫整合查詢。</p>
+                                </li>
+                                <li>
+                                    <div class="title">大同股份有限公司</div>
+                                    <p>國軍影像檔案借調閱系統維護等3項，ISMS及PIMS整合導入輔導服務。</p>
+                                </li>
+                                <li>
+                                    <div class="title">104年度三軍總醫院「人體試驗審議會(IRB)網站」系統開發維護</div>
+                                    <p>系統功能架構、版面設計、網頁資訊公告、公開瀏覽、檔案上傳及下載、報名系統、使用者資料輸入與匯出管理、會議行事曆管理、資訊安全檢測。</p>
+                                </li>
+                                <li>
+                                    <div class="title">104年度中華大學「推廣教育學分班管理系統」系統開發維護</div>
+                                    <p>學員基本資料登錄作業、線上報名、線上選課作業、註冊作業、課程管理作業、成績管理報表作業、財務管理、繳費登錄作業。</p>
+                                </li>
+                                <li>
+                                    <div class="title">蘇黎世產物保險股份有限公司客服系統-語音傳真回覆管理系統維護及功能擴充</div>
+                                    <p>蘇黎世產物保險股份有限公司客服系統-語音傳真回覆管理系統包含Web查詢介面，語音導引，傳真接收，檔案搜尋，報表等系統維護及功能擴充。</p>
+                                </li>
+                                <li>
+                                    <div class="title">三軍總醫院能源事務室入口網站開發建置</div>
+                                    <p>全院區版面功能設計、開發，同仁專區版面功能設計、開發，單位人員編輯管理 ，系統管理人員群組權限管理，網站視覺設計規劃，網站架構規劃、需求分析、設計， 網站測試、佈署建置、配合資管室軟體開發規範。</p>
+                                </li>
+                                <li>
+                                    <div class="title">三軍總醫院達文西網站管理系統開發建置</div>
+                                    <p>網站前後台系統開發達文西手術系統簡介(1)手術系統簡介(2)手術團隊簡介(全科列表)、手術相關資訊、病友專區、新聞花絮、門診時刻表、權限功能設定、線上編輯器。</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /4 -->
+                    <div class="item">
+                        <div class="annual">
+                            <div class="number">2014</div>
+                        </div>
+                        <div class="rightbox">
+                            <ul>
+                                <li>
+                                    <div class="title">臺北市政府動物保育處</div>
+                                    <p>(102年度)動物保育雲端系統開發計畫系統規畫。</p>
+                                </li>
+                                <li>
+                                    <div class="title">103年度三軍總醫院「人體試驗審議會(IRB)網站」系統開發維護</div>
+                                    <p>系統功能架構、版面設計、網頁資訊公告、公開瀏覽、檔案上傳及下載、報名系統、使用者資料輸入與匯出管理、會議行事曆管理、資訊安全檢測。</p>
+                                </li>
+                                <li>
+                                    <div class="title">103年度中華大學「推廣教育學分班管理系統」系統開發維護</div>
+                                    <p>學員基本資料登錄作業、線上報名、線上選課作業、註冊作業、課程管理作業、成績管理報表作業、財務管理、繳費登錄作業。</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- newspage -->
+            <div class="contactus col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <a href="contact_us.html">
+                    <span><i class="fa fa-angle-double-right fa-2x" aria-hidden="true"></i></span>聯絡我們
+                </a>
+                <div class="border_gradient"></div>
+            </div>
+            <!-- contactus -->
+            <div class="bottomfooter col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="fat-footer col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                    <ul>
+                        <li>
+                            <a href="#">產品服務</a>
+                            <ul>
+                                <li><a href="project.aspx">專案開發</a></li>
+                                <li><a href="#">資安監控</a></li>
+                                <li><a href="#">網頁防置換 </a></li>
+                                <li><a href="#">SSL憑證服務</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">公司簡介</a>
+                            <ul></ul>
+                        </li>
+                        <li>
+                            <a href="#">成功案例</a>
+                            <ul></ul>
+                        </li>
+                        <li>
+                            <a href="#">聯絡我們</a>
+                            <ul></ul>
+                        </li>
+                        <li>
+                            <a href="#">網站導覽</a>
+                            <ul></ul>
+                        </li>
+                        <li>
+                            <a href="policy.aspx">資安政策</a>
+                            <ul></ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- fat-footer -->
+                <footer class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div class="fontbox">
+                        <div class="companyname">千機科技股份有限公司</div>
+                        <ul class="company_info">
+                            <li>台北市中正區100忠孝東路一段85號12樓之4</li>
+                            <li>Tel:(886) 02-7726-7688</li>
+                            <li>Fax:(886) 02-7726-7689</li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap3.3.7.js"></script>
+        <script src="js/main.js"></script>
+    </form>
+</body>
+</html>

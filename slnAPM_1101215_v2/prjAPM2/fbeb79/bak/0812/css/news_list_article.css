@@ -1,0 +1,145 @@
+.top-bg {
+    background-image: url("../img/Vector.png");
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: 100% 16%;
+    background-color: var(--op-blue6-b);
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.top-bg .wrap2 {
+    position: relative;
+    z-index: 3;
+}
+
+.c-child {
+    top: 22%;
+}
+
+.pagewrap1 {
+    position: relative;
+    margin: -1rem auto 0;
+    background-color: var(--op-white-b);
+    border-radius: 1rem 1rem 0 0;
+    min-height: 100px;
+}
+
+/* 內容樣式開始 */
+.news_list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 4rem 1.5rem;
+    border-bottom: 0.5px solid var(--op-blue2-b);
+    text-decoration: none;
+}
+
+.news_list .left-block {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.news_list .date-category-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.news_list .date {
+    color: var(--op-black1-g);
+    margin-right: 16px;
+    padding-top: 10px;
+}
+
+.news_list .category,
+.news_list .category2 {
+    border-radius: 20rem;
+    padding: 4px 0;
+    width: 90px;
+    text-align: center;
+    color: var(--op-white);
+    margin: 6px 40px 0 0;
+}
+
+.news_list .category {
+    background-color: var(--op-blue4);
+}
+
+.news_list .category2 {
+    background-color: var(--op-blue3-b);
+}
+
+.news_list .title-column {
+    display: flex;
+    flex-direction: column;
+    max-width: 740px;
+}
+
+.news_list .title {
+    color: var(--op-black1-g);
+    margin-right: 24px;
+    flex: 1;
+}
+
+.news_list .content {
+    color: var(--op-gray8-g2);
+    margin-top: 8px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news_list .arrow {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--op-blue2);
+    border-radius: 50%;
+    color: var(--op-blue2);
+    text-decoration: none;
+    margin-left: auto;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+
+/* 響應式設計 */
+@media (max-width: 1200px) {
+    .advanced-filters-2 {
+        width: calc(100% - 60px);
+    }
+}
+
+@media (max-width: 991px) {
+    .top-bg {
+        padding: 4rem 0 6rem;
+        min-height: 300px;
+    }
+    .news_list {
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 0;
+    }
+
+    .news_list .left-block {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .top-bg {
+        padding: 2rem 0 3rem;
+        min-height: 250px;
+    }
+}

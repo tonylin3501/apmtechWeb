@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>國防部_首頁</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+</head>
+
+
+<body>
+
+  
+  <!-- 導覽列 -->
+  <div class="nav-wrapper" id="navWrapper">
+    <div class="nav-bar">
+      <h1>
+        <img src="https://i.ibb.co/27Pfdt10/logo-w.png" alt="國防部標誌" />
+      </h1>
+      <div class="nav-right">
+        <div class="hamburger" id="hamburger">
+        </div>
+        <div class="nav-icons">
+            <div class="nav-icons-sitemap">
+              <a href="#" title="導覽地圖" class="body-1 nav-icon" id="sitemapBtn">
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-svg">
+                  <path d="M10.251 0.358154C10.987 0.358418 11.5848 0.955095 11.585 1.69116V3.35815C11.5849 4.09429 10.9871 4.6909 10.251 4.69116H9.50098V7.02515H14.418C15.1541 7.02541 15.751 7.62194 15.751 8.35815V11.1912H16.501C17.2371 11.1914 17.835 11.7889 17.835 12.5251V14.1912C17.8349 14.9273 17.2371 15.5249 16.501 15.5251H14.001C13.2648 15.525 12.6681 14.9273 12.668 14.1912V12.5251C12.668 11.7889 13.2647 11.1913 14.001 11.1912H14.751V8.35815C14.751 8.17422 14.6018 8.02541 14.418 8.02515H9.50098V11.1912H10.251C10.9871 11.1914 11.585 11.7889 11.585 12.5251V14.1912C11.5849 14.9273 10.9871 15.5249 10.251 15.5251H7.75098C7.01481 15.525 6.41807 14.9273 6.41797 14.1912V12.5251C6.41797 11.7889 7.01475 11.1913 7.75098 11.1912H8.50098V8.02515H3.58496C3.40087 8.02515 3.25098 8.17406 3.25098 8.35815V11.1912H4.00098C4.73713 11.1914 5.33496 11.7889 5.33496 12.5251V14.1912C5.33486 14.9273 4.73707 15.5249 4.00098 15.5251H1.50098C0.764807 15.525 0.168068 14.9273 0.167969 14.1912V12.5251C0.167969 11.7889 0.764746 11.1913 1.50098 11.1912H2.25098V8.35815C2.25098 7.62178 2.84858 7.02515 3.58496 7.02515H8.50098V4.69116H7.75098C7.01481 4.69099 6.41807 4.09434 6.41797 3.35815V1.69116C6.41814 0.955041 7.01486 0.35833 7.75098 0.358154H10.251ZM1.50098 12.1912C1.31703 12.1913 1.16797 12.3412 1.16797 12.5251V14.1912C1.16807 14.3751 1.31709 14.525 1.50098 14.5251H4.00098C4.18479 14.5249 4.33486 14.375 4.33496 14.1912V12.5251C4.33496 12.3412 4.18485 12.1914 4.00098 12.1912H1.50098ZM7.75098 12.1912C7.56703 12.1913 7.41797 12.3412 7.41797 12.5251V14.1912C7.41807 14.3751 7.56709 14.525 7.75098 14.5251H10.251C10.4348 14.5249 10.5849 14.375 10.585 14.1912V12.5251C10.585 12.3412 10.4348 12.1914 10.251 12.1912H7.75098ZM14.001 12.1912C13.817 12.1913 13.668 12.3412 13.668 12.5251V14.1912C13.6681 14.3751 13.8171 14.525 14.001 14.5251H16.501C16.6848 14.5249 16.8349 14.375 16.835 14.1912V12.5251C16.835 12.3412 16.6848 12.1914 16.501 12.1912H14.001ZM7.75098 1.35815C7.56714 1.35833 7.41814 1.50733 7.41797 1.69116V3.35815C7.41807 3.54206 7.56709 3.69099 7.75098 3.69116H10.251C10.4348 3.6909 10.5849 3.542 10.585 3.35815V1.69116C10.5848 1.50738 10.4347 1.35842 10.251 1.35815H7.75098Z" fill="currentColor" />
+                </svg>
+              </a>
+            </div>
+            <div class="nav-icons-search">
+              <a href="#" title="搜尋" class="body-1 nav-icon" id="search">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-svg">
+                <path d="M8.72363 3.60815C11.9754 3.60815 14.6112 6.24414 14.6113 9.49585C14.6113 10.9417 14.0893 12.265 13.2246 13.2898L16.1895 16.2546L16.2539 16.3328C16.382 16.5268 16.3603 16.7908 16.1895 16.9617C16.0186 17.1324 15.7546 17.1542 15.5605 17.0261L15.4824 16.9617L12.5176 13.9968C11.4928 14.8615 10.1695 15.3835 8.72363 15.3835C5.47199 15.3834 2.83604 12.7475 2.83594 9.49585C2.83606 6.24422 5.472 3.60828 8.72363 3.60815ZM8.72363 4.60815C6.02429 4.60828 3.83606 6.79651 3.83594 9.49585C3.83604 12.1952 6.02427 14.3834 8.72363 14.3835C11.4231 14.3835 13.6112 12.1953 13.6113 9.49585C13.6112 6.79643 11.4231 4.60815 8.72363 4.60815Z" fill="currentColor" />
+                </svg>
+              </a>
+            </div> 
+          <div class="nav-icons-fontsize">
+              <a href="#" title="字體大小" class="body-1 nav-icon" id="fontsize">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.18227 6.11682V16.3608H7.56598V6.11682H11.3303V4.94141H2.41797V6.11682H6.18227ZM13.5063 15.8104C13.9427 16.2666 14.6023 16.4948 15.4851 16.4948C15.7232 16.4948 15.9662 16.465 16.2142 16.4055C16.4721 16.3559 16.6705 16.2865 16.8093 16.1972L16.5862 15.1855C16.4473 15.2251 16.2985 15.2648 16.1398 15.3045C15.991 15.3343 15.8373 15.3491 15.6786 15.3491C15.1529 15.3491 14.7759 15.2103 14.5478 14.9325C14.3197 14.6548 14.2056 14.2432 14.2056 13.6976V10.1565H16.482V9.11498H14.2056V6.91294H12.8516V9.11498H11.4382V10.1565H12.8516V13.8166C12.8516 14.6796 13.0698 15.3442 13.5063 15.8104Z" fill="currentColor" />
+                </svg>
+              </a>
+            </div>
+            <div class="nav-icons-language">
+              <a href="#" title="語言切換" class="body-1 nav-icon" id="language">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-svg">
+                <path d="M10.3711 3.20093C14.1579 3.39273 17.1689 6.52371 17.1689 10.3582C17.1687 14.3159 13.9607 17.524 10.0029 17.5242C6.04502 17.5242 2.83615 14.316 2.83594 10.3582C2.83594 6.40011 6.04489 3.19116 10.0029 3.19116L10.3711 3.20093ZM7.84668 12.7625C7.98569 13.5674 8.18862 14.2848 8.44141 14.8748C8.68391 15.4406 8.96028 15.8669 9.24121 16.1443C9.48541 16.3853 9.71299 16.4956 9.91699 16.5193L10.0029 16.5242C10.2282 16.5241 10.4849 16.4194 10.7637 16.1443C11.0447 15.8669 11.3209 15.4407 11.5635 14.8748C11.8163 14.2848 12.0202 13.5675 12.1592 12.7625H7.84668ZM4.32227 12.7625C5.00319 14.3689 6.34641 15.6253 8.00879 16.1931C7.82924 15.9159 7.66645 15.6052 7.52246 15.2693C7.21719 14.557 6.98127 13.7039 6.83105 12.7625H4.32227ZM13.1748 12.7625C13.0246 13.7039 12.7877 14.557 12.4824 15.2693C12.3385 15.6049 12.1755 15.9151 11.9961 16.1921C13.6584 15.6243 15.0017 14.3689 15.6826 12.7625H13.1748ZM3.99902 8.95288C3.8938 9.40432 3.83594 9.87467 3.83594 10.3582C3.83597 10.8414 3.89386 11.3112 3.99902 11.7625H6.70703C6.66662 11.3076 6.64552 10.8378 6.64551 10.3582C6.64551 9.87823 6.66659 9.40793 6.70703 8.95288H3.99902ZM7.71387 8.95288C7.67095 9.40351 7.64551 9.87383 7.64551 10.3582C7.64552 10.8422 7.67001 11.312 7.71289 11.7625H12.292C12.3349 11.312 12.3594 10.8422 12.3594 10.3582C12.3594 9.87385 12.3349 9.40349 12.292 8.95288H7.71387ZM13.2979 8.95288C13.3383 9.40794 13.3594 9.87822 13.3594 10.3582C13.3594 10.8379 13.3383 11.3076 13.2979 11.7625H16.0068C16.112 11.3113 16.1689 10.8414 16.1689 10.3582C16.1689 9.87472 16.112 9.40427 16.0068 8.95288H13.2979ZM8.00977 4.52124C6.34689 5.08886 5.00339 6.3461 4.32227 7.95288H6.83105C6.98125 7.01169 7.21728 6.15919 7.52246 5.44702C7.66671 5.11044 7.82981 4.79888 8.00977 4.52124ZM10.0029 4.19116C9.77752 4.19116 9.52016 4.29574 9.24121 4.57104C8.96022 4.84847 8.68395 5.27464 8.44141 5.84058C8.1886 6.43047 7.98571 7.14795 7.84668 7.95288H12.1592C12.0202 7.14789 11.8163 6.43051 11.5635 5.84058C11.3209 5.27457 11.0447 4.84846 10.7637 4.57104C10.4849 4.29588 10.2283 4.19126 10.0029 4.19116ZM11.9951 4.52222C12.1749 4.79972 12.3383 5.11065 12.4824 5.44702C12.7876 6.15924 13.0246 7.01159 13.1748 7.95288H15.6826C15.0015 6.34616 13.658 5.08983 11.9951 4.52222Z" fill="currentColor" />
+                </svg>
+                <span class="body-2">EN</span>
+              </a>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-item">
+              <span class="nav-text body-1">本部簡介</span>
+              <!-- <div class="dropdown-menu-full">
+                <a href="#" class="body-1">願景</a>
+                <a href="#" class="body-1">組織圖</a>
+                <a href="#" class="body-1">歷任長官</a>
+                <a href="#" class="body-1">國防安全</a>
+                <a href="#" class="body-1">全民國防</a>
+                <a href="#" class="body-1">法規政策</a>
+                <a href="#" class="body-1">政策解讀</a>
+                <a href="#" class="body-1">最新公告</a>
+              </div> -->
+            </div>
+          <div class="nav-item">
+            <span class="nav-text body-1">重要政策</span>
+          </div>
+          <div class="nav-item">
+            <span class="nav-text body-1">新聞與公告</span>
+          </div>
+          <div class="nav-item">
+            <span class="nav-text body-1">便民服務</span>
+          </div>
+          <div class="nav-item">
+            <span class="nav-text body-1">資料服務</span>
+          </div>
+          <div class="nav-item">
+            <span class="nav-text body-1" style="margin-right: -20px;">相關連結</span>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+<!-- 導覽列結束 -->
+
+<!-- 主內容開始 -->
+  <main class="main" id="main">
+
+<!-- banner開始 -->
+<section class="herobanner">
+<div class="banner-slider">
+  <div class="banner" style="background-image: url(https://www.mnd.gov.tw/img/賴總統主持將官晉任授階典禮　期勉務實領導推動國軍改革.jpg);">
+    <div class="gradient-overlay"></div>
+    <div class="wrap">
+    <div class="title-area">
+      <h1 class="title">Ministry of National Defense, R.O.C.</h1>
+      <p class="display">時時刻刻，我們做最好的準備！</p>
+    </div>
+    </div>
+  </div>
+  <!-- 複製多個 banner slide -->
+  <div class="banner" style="background-image: url(https://www.mnd.gov.tw/img/軍人優先登機政策啟動　顧部長：展現社會敬軍支持.jpg);">
+        <div class="gradient-overlay"></div>
+    <div class="wrap">
+    <div class="title-area">
+      <h1 class="title">另一個標題2 另一個標題2 另一個標題2</h1>
+      <p class="display">其他文字內容</p>
+    </div>
+    </div>
+  </div>
+  <div class="banner" style="background-image: url(https://www.mnd.gov.tw/img/柏副部長慰問宜蘭駐軍　期深化保防工作與提升後備戰力.jpg);">
+        <div class="gradient-overlay"></div>
+    <div class="wrap">
+    <div class="title-area">
+      <h1 class="title">另一個標題3</h1>
+      <p class="display">其他文字內容</p>
+    </div>
+    </div>
+  </div>
+</div>
+  <div class="circle-button">
+    <a href="#" class="circle-button-left"></a>
+    <a href="#" class="circle-button-right"></a>
+  </div>
+</section>
+
+<section class="floating">
+<div class="wrap">
+<div class="floating-block">
+  <div class="text-container">
+    <div class="texts">
+      <h3 class="text">顧部長主持漢光兵推精神喊話慰勉參演官兵辛勞</h3>
+      <h3 class="text" style="display:none;">蔡總統視察聯合演訓 表示感謝官兵辛勞</h3>
+      <h3 class="text" style="display:none;">新竹基地開放，萬人參與盛況空前</h3>
+      <h3 class="text" style="display:none;">參謀總長說明國軍訓練成果</h3>
+      <h3 class="text" style="display:none;">國防部公開新一代軍備研發成果</h3>
+    </div>
+    <div class="date">
+      <h4 class="current-index">01</h4>
+      <span class="floating-center body-1">/</span>
+      <span class="total-coun body-1">05</span>
+    </div>
+  </div>
+
+  <div class="rectangle-container">
+    <div class="rectangle"><span class="progressBar"></span></div>
+    <div class="rectangle"><span class="progressBar"></span></div>
+    <div class="rectangle"><span class="progressBar"></span></div>
+    <div class="rectangle"><span class="progressBar"></span></div>
+    <div class="rectangle"><span class="progressBar"></span></div>
+  </div>
+  </div>
+</div>
+</section>
+<!-- banner結束 -->
+
+<!-- 國防消息開始 -->
+<section class="main-bg">
+  <div class="wrap">
+    <div class="divider">
+      <h3 class="title">即時提供國人最新國防政策、戰備演訓、全民國防活動及軍旅軼趣和募兵訊息等多元資訊！</h3>
+    </div>
+    <div class="news">
+      <div class="news-title">
+        <h1 class="title">最新國防消息</h1>
+        <div class="tabs">
+          <div class="tab military-news">
+            <p>軍事新聞</p>
+            <div class="line"></div>
+          </div>
+          <div class="tab announcement">
+            <p>公告專區</p>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-container active" id="military-banner">
+        <div class="banner-slide active">
+          <img src="https://i.ibb.co/0yHBCm0f/a.jpg" alt="Military News 1" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 線段位移開始 -->
+  <div class="line-vertical"></div>
+  <div class="moving-line2"></div>
+  <div class="c-child">
+      <div class="cross-deco">
+    <svg width="100%" height="100%" viewBox="0 0 100 100">
+      <path d="
+          M 0 50
+          Q 50 50 50 0
+          Q 50 50 100 50
+          Q 50 50 50 100
+          Q 50 50 0 50
+          Z
+        " fill="var(--op-blue5)"></path>
+    </svg>
+  </div>
+    <div class="moving-line"></div>
+  </div>
+</section>
+<!-- 線段位移結束 -->
+<!-- 國防消息結束 -->
+
+<!-- 軍事動態開始 -->
+  <section class="post">
+  <div class="wrap">
+      <h3 class="post-title">掌握更多即時軍事動態</h3>
+      <div class="post-links">
+        <div class="link-group">
+          <span class="date body-2">114.04.19</span>
+          <a href="#" class="category">軍事消息</a>
+          <a href="#" class="title h4">高雄市議會舉辦敬軍餐會，感謝國軍衛國辛勞</a>
+          <a href="#" class="arrow"><i class="bi bi-chevron-right"></i></a>
+        </div>
+        <div class="separator-line"></div>
+        <div class="link-group">
+          <span class="date body-2">114.04.19</span>
+          <a href="#" class="category">軍事消息</a>
+          <a href="#" class="title h4">總督察長室漫畫 - 反詐特攻隊第二回（網路購物詐騙）</a>
+          <a href="#" class="arrow"><i class="bi bi-chevron-right"></i></a>
+        </div>
+        <div class="separator-line"></div>
+        <div class="link-group">
+          <span class="date body-2">114.04.19</span>
+          <a href="#" class="category">軍事消息</a>
+          <a href="#" class="title h4">高雄市議會舉辦敬軍餐會，感謝國軍衛國辛勞</a>
+          <a href="#" class="arrow"><i class="bi bi-chevron-right"></i></a>
+        </div>
+        <div class="separator-line"></div>
+      </div>
+      <div class="btnbar1">
+        <a href="#" class="btn1"><span>查看更多</span><span class="visually-hidden">總統府新聞</span></a>
+      </div>
+    </div>
+  </div>
+  </section>
+<!-- 軍事動態結束 -->
+
+<!-- 便民服務開始 -->
+  <section class="service">
+    <div class="wrap">
+      <div class="service-box">
+      <div class="service-card-large">
+        <div>
+          <h1>便民服務</h1>
+          <h4>為提升國軍進步與服務品質，國防部以專業分工處理原則，將臺端所陳事項轉請業管單位處理並改進。</h4>
+        </div>
+        <div class="btnbar1">
+          <a href="#">查看更多</a>
+        </div>
+      </div>
+      <div class="service-card-grid">
+        <a href="#" class="service-card-small">
+          <h4>部長民意信箱</h4>
+          <div class="icon-container">
+            <span class="icon-left"></span>
+            <span class="icon-right"></span>
+          </div>
+        </a>
+        <a href="#" class="service-card-small">
+          <h4>國軍檔案應用服務區</h4>
+          <div class="icon-container">
+            <span class="icon-left"></span>
+            <span class="icon-right"></span>
+          </div>
+        </a>
+        <a href="#" class="service-card-small">
+          <h4>常見問答</h4>
+          <div class="icon-container">
+            <span class="icon-left"></span>
+            <span class="icon-right"></span>
+          </div>
+        </a>
+        <a href="#" class="service-card-small">
+          <h4>機關交通及聯絡資訊</h4>
+          <div class="icon-container">
+            <span class="icon-left"></span>
+            <span class="icon-right"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+    </div>
+  </section>
+<!-- 便民服務結束 -->
+
+<!-- 標語開始 -->
+  <section class="slogan">
+    <div class="wrap">
+    <div class="slogan-text">
+      <h3 class="title">國防部主管全國國防事務，職司建軍備戰，以維護國家領土主權，確保人民生命財產安全。</div>
+    </div>
+    </div>
+  </section>
+<!-- 標語結束 -->
+
+<!-- 長官介紹開始 -->
+ <section class="leader">
+    <div class="carousel-container">
+      <div class="leader-carousel">
+        <div><img src="https://i.ibb.co/LdR98M6h/8cbecb78-5104-4f1b-a299-1b17b1c86006-1.jpg" alt="Leader 1"></div>
+        <div><img src="https://i.ibb.co/LdR98M6h/8cbecb78-5104-4f1b-a299-1b17b1c86006-1.jpg" alt="Leader 2"></div>
+        <div><img src="https://i.ibb.co/LdR98M6h/8cbecb78-5104-4f1b-a299-1b17b1c86006-1.jpg" alt="Leader 3"></div>
+        <div><img src="https://i.ibb.co/LdR98M6h/8cbecb78-5104-4f1b-a299-1b17b1c86006-1.jpg" alt="Leader 4"></div>
+        <div><img src="https://i.ibb.co/LdR98M6h/8cbecb78-5104-4f1b-a299-1b17b1c86006-1.jpg" alt="Leader 5"></div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="member">
+        <div class="title-container">
+          <h4 class="title">長官介紹</h4>
+          <h3 class="title">致力於推動國防現代化與制度革新。</h3>
+        </div>
+        <div class="circle-button">
+          <a href="#" class="circle-button-left"></a>
+          <a href="#" class="circle-button-right"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- 長官介紹結束 -->
+
+<!-- 重要政策開始 -->
+    <section class="policy">
+        <div class="wrap">
+        <div class="policy-box">
+         <div class="policies">
+         <div class="title-container">
+      <h2 class="title">重要政策
+      <h4 class="article">為提升國軍進步與服務品質，國防部以專業分工處理原則，將臺端所陳事項轉請業管單位處理並改進。</div>
+      <div class="btnbar2">
+        <a href="#" class="btn2"><span>查看更多</span><span class="visually-hidden">總統府新聞</span></a>
+      </div>
+        </div>
+      <div class="list">
+        <div class="list-row">
+          <a href="#" class="circle-button-right"></a>
+          <h4>國防預算穩定成長1</h4>
+        </div>
+        <div class="list-row">
+          <a href="#" class="circle-button-right"></a>
+          <h4>國防預算穩定成長2</h4>
+        </div>
+        <div class="list-row">
+          <a href="#" class="circle-button-right"></a>
+          <h4>國防預算穩定成長3</h4>
+        </div>
+        <div class="list-row">
+          <a href="#" class="circle-button-right"></a>
+          <h4>國防預算穩定成長4</h4>
+        </div>
+        <div class="list-row">
+          <a href="#" class="circle-button-right"></a>
+          <h4>國防預算穩定成長5</h4>
+        </div>
+        <div class="list-row">
+          <a href="#" class="circle-button-right"></a>
+          <h4>國防預算穩定成長6</h4>
+        </div>
+        <div class="list-row">
+          <a href="#" class="circle-button-right"></a>
+          <h4>國防預算穩定成長7</h4>
+        </div>
+        <div class="list-row">
+          <a href="#" class="circle-button-right"></a>
+          <h4>國防預算穩定成長8</h4>
+        </div>
+      </div>
+      </div>
+    </div>
+    </section>
+<!-- 重要政策結束 -->
+
+<!-- 加入國軍開始 -->
+  <section class="join">
+    <div class="wrap">
+      <div class="join-container">
+        <div class="join-video">
+          <img src="https://i.ibb.co/DPK1zBfq/video.jpg" alt="影片" />
+        </div>
+        <div class="join-info">
+          <h5>Stand with us. Protect what we share.</h5>
+          <h1>邀請您一起<br>守護我們共同擁有的一切</h1>
+        <div class="join-btnbar1">
+          <a href="#">立即加入</a>
+        </div>
+        </div>
+      </div>
+    </section>
+<!-- 加入國軍結束 -->
+
+<!-- 相關連結開始 -->
+    <section class="friendlylink">
+      <div class="wrap">
+      <div class="friendlylink-box">
+        <div class="friendlylink-left">
+          <h2>相關單位</h2>
+          <h4>這裡是內文，介紹與我們合作的相關機關或夥伴。</h4>
+        </div>
+        <div class="friendlylink-right">
+          <div class="logo-grid">
+            <div class="logo-item">
+              <img src="https://i.ibb.co/DBFSBx0/logo.png" alt="Logo 1">
+              <h6>單位一</h6>
+            </div>
+            <div class="logo-item">
+              <img src="https://i.ibb.co/DBFSBx0/logo.png" alt="Logo 2">
+              <h6>單位二</h6>
+            </div>
+            <div class="logo-item">
+              <img src="https://i.ibb.co/DBFSBx0/logo.png" alt="Logo 3">
+              <h6>單位三</h6>
+            </div>
+            <div class="logo-item">
+              <img src="https://i.ibb.co/DBFSBx0/logo.png" alt="Logo 4">
+              <h6>單位四</h6>
+            </div>
+            <div class="logo-item">
+              <img src="https://i.ibb.co/DBFSBx0/logo.png" alt="Logo 5">
+              <h6>單位五</h6>
+            </div>
+            <div class="logo-item">
+              <img src="https://i.ibb.co/DBFSBx0/logo.png" alt="Logo 6">
+              <h6>單位六</h6>
+            </div>
+            <div class="logo-item">
+              <img src="https://i.ibb.co/DBFSBx0/logo.png" alt="Logo 7">
+              <h6>單位七</h6>
+            </div>
+            <div class="logo-item">
+              <img src="https://i.ibb.co/DBFSBx0/logo.png" alt="Logo 8">
+              <h6>單位八</h6>
+            </div>
+            <div class="logo-item">
+              <img src="https://i.ibb.co/DBFSBx0/logo.png" alt="Logo 9">
+              <h6>單位九</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+<!-- 相關連結結束 -->
+</main>
+<!-- 主內容結束 -->    
+
+<!-- 回到上方開始 -->
+  <button class="back-to-top" id="backToTop" title="回到上方"></button>
+<!-- 回到上方結束 -->
+
+<!-- footer開始 -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="logo">
+        <img src="https://i.ibb.co/27Pfdt10/logo-w.png" alt="國防部標誌" />
+      </div>
+      <div class="links">
+        <div class="links-row">
+          <a href="#" class="body-2">網站隱私權政策</a>
+          <a href="#" class="body-2">網站安全政策宣告</a>
+        </div>
+        <div class="links-row">
+          <a href="#" class="body-2">個資法保護聲明</a>
+          <a href="#" class="body-2">政府網站資料開放宣告</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 first">
+        <strong class="body-1">本部簡介</strong>
+        <a href="#" class="body-1">部長</a>
+        <a href="#" class="body-1">組織與職掌</a>
+        <a href="#" class="body-1">歷任部長</a>
+      </div>
+      <div class="col-md-2">
+        <strong class="body-1">重要政策</strong>
+        <a href="#" class="body-1">國際變局中的台海安全</a>
+        <a href="#" class="body-1">國防安全之戰略指導</a>
+        <a href="#" class="body-1">打造克敵制勝的軍隊</a>
+        <a href="#" class="body-1">推動國防改革優先要務</a>
+        <a href="#" class="body-1">全民防衛動員支援持續作戰</a>
+        <a href="#" class="body-1">鏈結區域強化集體嚇阻</a>
+      </div>
+      <div class="col-md-2">
+        <strong class="body-1">新聞與公告</strong>
+        <a href="#" class="body-1">新聞稿</a>
+        <a href="#" class="body-1">本部新聞</a>
+        <a href="#" class="body-1">即時新聞澄清</a>
+        <a href="#" class="body-1">台海周邊海空域動態</a>
+        <a href="#" class="body-1">行政公告</a>
+        <a href="#" class="body-1">影音專區</a>
+      </div>
+      <div class="col-md-2">
+        <strong class="body-1">便民服務</strong>
+        <a href="#" class="body-1">部長民意信箱</a>
+        <a href="#" class="body-1">國軍檔案應用專區</a>
+        <a href="#" class="body-1">常見問答</a>
+        <a href="#" class="body-1">機關交通及聯絡資訊</a>
+        <a href="#" class="body-1">次項目敘述</a>
+      </div>
+      <div class="col-md-2">
+        <strong class="body-1">資訊服務</strong>
+        <a href="#" class="body-1">人才招募</a>
+        <a href="#" class="body-1">法規專區</a>
+        <a href="#" class="body-1">資訊公開</a>
+        <a href="#" class="body-1">中英文辭彙對照</a>
+        <a href="#" class="body-1">出版品</a>
+      </div>
+      <div class="col-md-2">
+        <strong class="body-1">相關連結</strong>
+        <a href="#" class="body-1">國軍機關單位</a>
+        <a href="#" class="body-1">軍事院校</a>
+        <a href="#" class="body-1">國軍醫院</a>
+        <a href="#" class="body-1">國軍資訊服務</a>
+        <a href="#" class="body-1">國防相關組織</a>
+        <a href="#" class="body-1">政府資訊服務</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <img src="https://www.mnd.gov.tw/img/AA2.1.jpg" alt="無障礙認證" />
+      <div class="accessibility">
+        <div class="left-block">
+          <span class="body-1">機關地址: 104237 台北市中山區北安路409號</span>
+          <span class="body-1">總機電話: (02)2311-6117(代表號) 國軍人員申訴專線: 1985</span>
+        </div>
+      </div>
+      <div class="copyright">
+        <span class="body-1">國防部版權所有</span>
+        <span class="body-1">© 2025 Ministry of National Defense. All rights reserved.</span>
+      </div>
+    </div>
+    <div class="c-child">
+      <div class="cross-deco"></div>
+      <div class="moving-line"></div>
+    </div>
+  </footer>
+<!-- footer結束 -->
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>

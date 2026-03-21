@@ -1,0 +1,289 @@
+    .top-bg {
+      background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0 ,0.8), rgba(0, 0, 0, 0)),
+        url('../img/newsimg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: var(--op-blue6);
+      padding-top: 10vh;
+      padding-bottom: 9vh;
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      margin: -4rem auto 0;
+      background-color: white;
+      border-radius: 1.5rem 1.5rem 0 0;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .pagewrap1 {
+      position: relative;
+      margin: -4rem auto 0;
+      background-color: var(--op-white-b);
+      border-radius: 1rem;
+    }
+    .pagewrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: var(--gap-idx-l) var(--padding-x);
+    }
+    .pageinfo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .pageinfo .tag {
+      background-color: var(--op-blue4);
+      color: var(--op-white);
+      padding: 4px 16px;
+      border-radius: 20rem;
+    }
+    .pageinfo span:nth-child(2) {
+      color: var(--op-black1-w);
+    }
+    .pageinfo span:nth-child(3) {
+      color: var(--op-gray8);
+    }
+    .page-share-fixed {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      z-index: 100;
+      opacity: 1;
+      pointer-events: auto;
+      gap: 12px;
+      transition: none;
+      margin: 2rem 0;
+      display: none;
+    }
+    .page-share-fixed .share-label {
+    writing-mode: horizontal-tb;
+    color: var(--op-gray5);
+    }
+   .page-share-fixed .share-line {
+      width: 40px;
+      height: 1px;
+      background-color: var(--op-gray4);
+    }
+    .page-share-fixed .share-icons {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .maincontent {
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
+      padding-top: 40px;
+    }
+    .pic1 img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    .maintext {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .article1.body-1 {
+      text-align: left;
+    }
+    .link-more {
+      color: var(--op-blue5-w);
+      text-decoration: underline;
+    }
+    .pic2 {
+      display: flex;
+      gap: 2rem;
+      width: 100%;
+    }
+    .pic2 img {
+      flex: 1;
+      width: 0;
+      min-width: 0;
+      border-radius: 1rem;
+      object-fit: cover;
+    }
+    .pagetitle1,
+    .pagetitle2{
+      color: var(--op-black1-w);
+    }
+    .pointlist,
+    .article1,
+    .numberslist {
+      color: var(--op-gray8-g2);
+    }
+    .keyword {
+    padding-top: 80px;
+    }
+    .keyword.body-2 {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--op-gray8-g2);
+    }
+    .keyword-item {
+      background-color: transparent;
+      border-radius: 2rem;
+      border: 1px solid var(--op-gray8-g2);
+      color: var(--op-gray8-g2);
+      padding: 4px 16px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .keyword-2 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .downloadsection {
+      background-color: var(--op-blue);
+    }
+    .download-box1 {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .download-box1 .downloadtitle1 {
+      color: var(--op-black1-w);
+    }
+    .download-box2 {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .downloaditems {
+      background-color: var(--op-white-b);
+      border-radius: 10rem;
+      display: flex;
+      align-items: center;
+      padding:16px 24px;
+    }
+    .downloaditems img.icon {
+      width: 24px;
+      height: 24px;
+    }
+    .icon-pic {
+      margin-right: 4px;
+      padding-bottom: 1px;
+    }
+
+    .download-text {
+      margin-right: 24px;
+      color: var(--op-blue5-w);;
+    }
+    .downloaditems .download-count.minimum {
+      color: var(--op-gray5);
+    }
+    .dark .icon-pic,
+    .dark .icon-download {
+    filter: brightness(0) invert(1);
+    }
+    .downloaditems .icon-download {
+      width: 24px;
+      height: 24px;
+      margin-left: auto;
+    }
+    .loadmore {
+      text-align: center;
+    }
+    .loadmore-button {
+      padding: 10px 20px;
+      background-color: transparent;
+      color: var(--op-gray8-g2);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .loadmore-button:hover {
+      color: var(--op-blue5-w);
+    }
+    .loadmore-button .more {
+      margin-left: 12px;
+    }
+    .downloadbutton1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    }
+    .return-button {
+    background-color: transparent;
+    border: 1px solid var(--op-blue5-w);
+    color: var(--op-blue5-w);
+    width: 160px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 16px;
+    gap: 20px;
+    }
+    .return-button::before {
+      font-family: "Bootstrap-Icons";
+      content: "\F12F";
+    }
+
+/* 平板樣式 */
+@media (max-width: 991px) {
+  .top-bg {
+      padding-top: 2vh;
+      padding-bottom: 4vh;
+    }
+    .maincontent {
+      padding-top: 0;
+      gap: 32px;
+    }
+    .pic2 {
+      flex-direction: column;
+    }
+
+    .pic2 img {
+      width: 100%;
+      flex: none;
+    }
+    .page-share-fixed {
+      display: flex;
+    }
+  }
+
+/* 手機樣式開始 */
+@media (max-width: 768px) {
+    .pagewrap {
+     padding: 2rem;
+    }
+
+    .breadcrumb {
+      margin-left: 10px; 
+      gap: 8px;
+    }
+
+    .breadcrumb .separator {
+      margin: 0 8px;
+    }
+    .title-area .title {
+      margin-left: 10px;
+    }
+    
+    .keyword.body-2 {
+      gap: 8px; 
+    }
+    .keyword-item {
+      padding: 4px 16px;
+    }
+
+    .downloaditems .download-count.minimum {
+    display: none ;
+    }
+
+}
+/* 手機樣式結束 */
+

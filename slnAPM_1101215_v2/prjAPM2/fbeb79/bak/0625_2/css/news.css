@@ -1,0 +1,218 @@
+    .top-bg {
+      background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0)),  /* 黑到透明的漸層 */
+        url('https://i.ibb.co/BkXqSxv/hero.jpg');  /* 替換成你的背景圖路徑 */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      background-color: var(--op-blue6); /* 萬一圖片沒載入還是有背景色 */
+      padding-top: 10vh;
+      padding-bottom: 6vh;
+      position: relative;
+      z-index: 0;
+    }
+
+    .breadcrumb {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      margin-left: 40px;
+      display: flex;
+      align-items: center;
+    }
+    .breadcrumb a {
+      color: white;
+      text-decoration: none;
+      margin-right: 4px;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumb .separator {
+      color: var(--op-blue3);
+      margin: 0 16px;
+      pointer-events: none;
+      font-size: 0.9rem;
+    }
+    .title-area .title {
+      color: white;
+      margin-left: 40px;
+      display: block;
+    }
+ 
+    .content-wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      margin: -4rem auto 0;
+      background-color: white;
+      border-radius: 1.5rem 1.5rem 0 0;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .pageWrap1 {
+      position: relative;
+      margin: -4rem auto 0;
+      background-color: var(--op-white);
+      border-radius: 1rem;
+    }
+    .pagewrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: var(--gap-idx-l) var(--padding-x);
+    }
+    .pageinfo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+      margin-top: 2rem;
+    }
+    .pageinfo span:nth-child(1) {
+      background-color: var(--op-blue5);
+      color: white;
+      padding: 0.5rem 1.4rem;
+      border-radius: 20rem;
+    }
+    .pageinfo span:nth-child(2) {
+      color: var(--op-black1);
+    }
+    .pageinfo span:nth-child(3) {
+      color: var(--op-gray8);
+    }
+    .pic1 {
+    margin-top: 2rem;
+    }
+    .pic1 img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    .pageTitle1 {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+    .article1.body-1 {
+      text-align: left;
+    }
+
+    .pic2 {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      margin-top: 2rem;
+    }
+    .pic2 img {
+      flex: 1;
+      width: 0;
+      min-width: 0;
+      border-radius: 1rem;
+      object-fit: cover;
+    }
+    .article1 {
+      margin-top: 2rem;
+    }
+    .keyword.body-2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .keyword-item {
+      background-color: transparent;
+      border: 1px solid var(--op-gray8);
+      border-radius: 2rem;
+      padding: 5px 10px;
+      text-align: center;
+      color: var(--op-gray8);
+      white-space: nowrap;
+    }
+    .downloadsection {
+      background-color: var(--op-blue);
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .downloaditems {
+      background-color: var(--op-white);
+      border-radius: 10rem;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding:16px 24px;
+    }
+    .downloaditems img.icon {
+      width: 24px;
+      height: 24px;
+    }
+    .downloaditems .main-text {
+      font-weight: var(--fw-bold);
+    }
+    .downloaditems .download-count.minimum {
+      color: var(--op-gray5);
+    }
+    .downloaditems .icon-download {
+      width: 24px;
+      height: 24px;
+      margin-left: auto; /* 單獨將下載圖標推到最右邊 */
+    }
+    .downloaditems .main-text {
+    color: var(--op-blue5);
+    }
+    .button1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    }
+    .return-button {
+    background-color: transparent;
+    border: 1px solid var(--op-blue5);
+    color: var(--op-blue5);
+    width: 160px;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 16px;
+    }
+    .return-button::before {
+      font-family: "Bootstrap-Icons";
+      content: "\F12F";       /* Bootstrap Icons 中的返回箭頭 */
+      margin-right: 8px;      /* 在文字左邊留點空間 */
+    }
+
+/* 平板樣式開始 */
+@media (max-width: 768px) {
+    .pagewrap {
+     padding: 2rem;
+    }
+
+    .breadcrumb {
+      margin-left: 10px; 
+      gap: 8px;
+    }
+
+    .breadcrumb .separator {
+      margin: 0 8px;
+    }
+    .title-area .title {
+      margin-left: 10px;
+    }
+    
+    .keyword.body-2 {
+      gap: 8px; 
+    }
+    .keyword-item {
+      padding: 10px 16px;
+    }
+
+    .downloaditems .download-count.minimum {
+    display: none ;
+    }
+}
+/* 手機樣式結束 */
+

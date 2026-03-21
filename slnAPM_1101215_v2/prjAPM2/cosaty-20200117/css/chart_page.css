@@ -1,0 +1,781 @@
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+body .container .main_container {
+  background-color: #fff;
+}
+
+body .container .main_container .left_col {
+  background-color: #fff;
+  position: fixed;
+}
+
+body .container .main_container .left_col .scroll-view {
+  -webkit-box-shadow: 0 2px 15px #ddd;
+          box-shadow: 0 2px 15px #ddd;
+  height: 100%;
+}
+
+body .container .main_container .left_col .nav_title {
+  height: 57px;
+  background-color: #3085da;
+}
+
+body .container .main_container .left_col .nav_title a {
+  width: 100%;
+  padding: 15px 0 0 0;
+}
+
+body .container .main_container .left_col .nav_title a img {
+  margin: auto;
+  display: block;
+  width: 70px;
+}
+
+body .container .main_container .left_col .profile .profile_info span {
+  color: #666666;
+}
+
+body .container .main_container .left_col .profile .profile_info h2 {
+  color: #666666;
+}
+
+body .container .main_container .left_col .main_menu_side .menu_section h3 {
+  color: #555555;
+  text-shadow: none;
+}
+
+body .container .main_container .left_col .main_menu_side .menu_section .side-menu li a {
+  color: #666666;
+}
+
+body .container .main_container .left_col .main_menu_side .menu_section .side-menu li a i {
+  color: #2a3f54;
+}
+
+body .container .main_container .left_col .main_menu_side .menu_section .side-menu li:active a {
+  color: #fff;
+}
+
+body .container .main_container .left_col .main_menu_side .menu_section .side-menu li:active:hover .child_menu li a {
+  color: #fff;
+}
+
+body .container .main_container .left_col .main_menu_side .menu_section .side-menu li:focus a {
+  color: #fff;
+}
+
+body .container .main_container .left_col .main_menu_side .menu_section .side-menu li:hover {
+  background: rgba(0, 255, 255, 0.06);
+}
+
+body .container .main_container .left_col .sidebar-footer {
+  background-color: #3085da;
+}
+
+body .container .main_container .left_col .sidebar-footer a {
+  background-color: #3085da;
+}
+
+body .container .main_container .left_col .sidebar-footer a i {
+  color: #fff;
+}
+
+body .container .main_container .top_nav .nav_menu nav .nav .pagename {
+  position: absolute;
+  font-size: 1.3em;
+  top: 15px;
+}
+
+body .container .main_container .top_nav .nav_menu nav .navbar-right .dropdown a .badge {
+  background-color: #DF65E5;
+}
+
+body .container .main_container .right_col .right_box .row .sm-pagi-title {
+  display: none;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel {
+  -webkit-box-shadow: 0 2px 18px #ddd;
+          box-shadow: 0 2px 18px #ddd;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel .x_title {
+  margin-top: 10px;
+  padding-bottom: 15px;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel .x_title form input:active {
+  -webkit-box-shadow: 0 0 5px #3085DA;
+          box-shadow: 0 0 5px #3085DA;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel .x_title form input:focus {
+  -webkit-box-shadow: 0 0 5px #3085DA;
+          box-shadow: 0 0 5px #3085DA;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel .x_title .searching input {
+  width: 100%;
+  height: 34px;
+  border: 1px solid #ccc;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel .x_title .allow_check {
+  text-align: right;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel .x_title .allow_check input:focus {
+  background-color: #f00;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel .daytime {
+  margin-bottom: 20px;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table {
+  border-top: 0;
+  table-layout: fixed;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr:first-child td {
+  border: 0;
+  padding: 0;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr:first-child td:first-child {
+  width: 60px;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr:first-child td:last-child {
+  width: 70px;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr th:nth-child(5) {
+  border-right: none;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr th:last-child {
+  border-left: none;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr td {
+  vertical-align: middle;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr td:nth-child(3) img {
+  width: 30px;
+  border-radius: 25px;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr td:nth-child(5) {
+  padding-right: 0;
+  border-right: none;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr td:nth-child(5) table {
+  width: 100%;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr td:nth-child(5) table tr {
+  border-bottom: 1px solid #aaa;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr td:nth-child(5) table tr td {
+  padding: 5px 0;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr td:nth-child(5) table tr:last-child {
+  border: none;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr td:last-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr td:last-child table {
+  width: 100%;
+  display: block;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr td:last-child table tr {
+  border-bottom: 1px solid #aaa;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr td:last-child table tr td {
+  padding: 5px 0 5px 10px;
+}
+
+body .container .main_container .right_col .right_box .row .risk_statistic .x_panel table tr td:last-child table tr:last-child {
+  border: none;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos {
+  border-left: 4px solid #c3d9ef;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .info_title {
+  margin-bottom: 20px;
+  background-color: #c3d9ef;
+  color: #000;
+  padding: 10px 20px;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .info_title li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .info_title li span {
+  display: inline-block;
+  border-radius: 25px;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #dd2525;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .info_title li img {
+  width: 30px;
+  border-radius: 25px;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .row .list_chart .x_panel .x_title ul li:last-child a {
+  padding-right: 0;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .row .list_chart .x_panel .x_title .panel_toolbox {
+  min-width: auto;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .row .list_chart .x_panel .x_content {
+  height: 300px;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .row .list_chart .x_panel .x_content #chart-area {
+  width: 200px;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .row .list_chart .x_panel .x_content #chartjs-tooltip {
+  opacity: 1;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 3px;
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .row .list_chart .x_panel .x_content .chartjs-tooltip-key {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .row .list_bar .x_panel .x_title ul li:last-child a {
+  padding-right: 0;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .row .list_bar .x_panel .x_title .panel_toolbox {
+  min-width: auto;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .row .list_bar .x_panel .x_content {
+  height: 300px;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .row .list_bar .x_panel .x_content .progress_title .list_name span {
+  float: left;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .row .list_bar .x_panel .x_content .progress_title .list_name span:nth-child(2) {
+  float: right;
+}
+
+body .container .main_container .right_col .right_box .row .todays_chart .x_panel .whos .row .list_bar .x_panel .x_content .progress_title .progress {
+  height: 10px;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos {
+  border-left: 4px solid #333;
+  padding: 0;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .info_title {
+  margin-bottom: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .info_title li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.125em;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .info_title li span {
+  display: inline-block;
+  border-radius: 25px;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #dd2525;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .info_title li img {
+  width: 40px;
+  border-radius: 25px;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .list_chart {
+  margin-top: 30px;
+  display: block;
+  position: relative;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .list_chart .chartt {
+  margin: auto;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .list_chart .show_data {
+  position: absolute;
+  top: 0;
+  right: 150px;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .list_chart .show_data li {
+  margin: 6px 0;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .list_chart .show_data li span {
+  width: 10px;
+  height: 10px;
+  background-color: #d08;
+  display: inline-block;
+  margin: 0 15px;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 50px;
+  background-color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .time {
+  width: 40%;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .time .leftarea {
+  width: 100%;
+  text-align: center;
+  color: #eee;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .time .leftarea .today {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .time .leftarea .time_count {
+  font-size: 4em;
+  font-weight: 700;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .time .leftarea .timefor_month {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .time .leftarea .timefor_month span {
+  margin: 0 6px;
+  color: #2aad8f;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .application_name {
+  font-size: 1.125em;
+  font-weight: 700;
+  padding: 0;
+  width: 60%;
+  border-left: 1px solid #ddd;
+  background-color: #eee;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .application_name .title {
+  text-align: right;
+  color: #888;
+  padding: 6px 15px 6px 0;
+  background-color: #ddd;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .application_name .application_data {
+  padding-top: 10px;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .application_name .application_data li {
+  display: block;
+  padding: 6px 0;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .application_name .application_data li .name {
+  display: block;
+  word-break: break-all;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .application_name .application_data li .data_programs {
+  text-align: right;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .application_name .application_data li .data_programs:before {
+  content: '';
+  vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .application_name .application_data li .data_programs span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .application_name .application_data li .data_programs .progress {
+  width: 228px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  margin: 0;
+}
+
+body .container .main_container .right_col .right_box .row .time_glance_chart .x_panel .whos .app_urls .application_name .application_data li .data_programs .progress .progress-bar {
+  margin: 0;
+  padding: 0;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos {
+  border-left: 4px solid #333;
+  padding: 0;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .info_title {
+  margin-bottom: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .info_title li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.125em;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .info_title li span {
+  display: inline-block;
+  border-radius: 25px;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #dd2525;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .info_title li img {
+  width: 40px;
+  border-radius: 25px;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .list_chart {
+  margin-top: 30px;
+  display: block;
+  position: relative;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .list_chart .chartt {
+  margin: auto;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 50px;
+  background-color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .time {
+  width: 40%;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .time .leftarea {
+  width: 100%;
+  text-align: center;
+  color: #eee;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .time .leftarea .today {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .time .leftarea .time_count {
+  font-size: 4em;
+  font-weight: 700;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .time .leftarea .timefor_month {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .time .leftarea .timefor_month span {
+  margin: 0 6px;
+  color: #2aad8f;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .application_name {
+  font-size: 1.125em;
+  font-weight: 700;
+  padding: 0;
+  width: 60%;
+  border-left: 1px solid #ddd;
+  background-color: #eee;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .application_name .title {
+  text-align: right;
+  color: #888;
+  padding: 6px 15px 6px 0;
+  background-color: #ddd;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .application_name .application_data {
+  padding-top: 10px;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .application_name .application_data li {
+  display: block;
+  padding: 6px 0;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .application_name .application_data li .name {
+  display: block;
+  word-break: break-all;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .application_name .application_data li .data_programs {
+  text-align: right;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .application_name .application_data li .data_programs:before {
+  content: '';
+  vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .application_name .application_data li .data_programs span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .application_name .application_data li .data_programs .progress {
+  width: 228px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  margin: 0;
+}
+
+body .container .main_container .right_col .right_box .row .time_application_chart .x_panel .whos .app_urls .application_name .application_data li .data_programs .progress .progress-bar {
+  margin: 0;
+  padding: 0;
+}
+
+body .container .main_container .right_col .right_box .row .frequency_application_chart .x_panel .whos {
+  border-left: 4px solid #333;
+  padding: 0;
+}
+
+body .container .main_container .right_col .right_box .row .frequency_application_chart .x_panel .whos .info_title {
+  margin-bottom: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+body .container .main_container .right_col .right_box .row .frequency_application_chart .x_panel .whos .info_title li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.125em;
+}
+
+body .container .main_container .right_col .right_box .row .frequency_application_chart .x_panel .whos .info_title li span {
+  display: inline-block;
+  border-radius: 25px;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #dd2525;
+}
+
+body .container .main_container .right_col .right_box .row .frequency_application_chart .x_panel .whos .info_title li img {
+  width: 40px;
+  border-radius: 25px;
+}
+
+body .container .main_container .right_col .right_box .row .frequency_application_chart .x_panel .whos .table_info {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+body .container .main_container .right_col .right_box .row .frequency_application_chart .x_panel .whos .table_info table {
+  width: 100%;
+}
+
+body .container .main_container .right_col .right_box .row .frequency_application_chart .x_panel .whos .table_info table tr th {
+  border-top: 0;
+}
+
+body .container .main_container .right_col .right_box .row .frequency_application_chart .x_panel .whos .table_info table tr td {
+  vertical-align: middle;
+}
+
+body .container .main_container .right_col .right_box .row .frequency_application_chart .x_panel .whos .table_info table tr td .progress {
+  margin-bottom: 0;
+  height: 10px;
+}
+
+body .container .main_container .right_col .right_box .row .frequency_application_chart .x_panel .whos .table_info table tr td .progress .progress-bar {
+  height: 10px;
+}
+
+body .container .main_container .right_col .right_box .row .connection_chart .x_panel .whos {
+  border-left: 4px solid #333;
+  padding: 0;
+}
+
+body .container .main_container .right_col .right_box .row .connection_chart .x_panel .whos .info_title {
+  margin-bottom: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+body .container .main_container .right_col .right_box .row .connection_chart .x_panel .whos .info_title li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.125em;
+}
+
+body .container .main_container .right_col .right_box .row .connection_chart .x_panel .whos .info_title li span {
+  display: inline-block;
+  border-radius: 25px;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #dd2525;
+}
+
+body .container .main_container .right_col .right_box .row .connection_chart .x_panel .whos .info_title li img {
+  width: 40px;
+  border-radius: 25px;
+}
+
+body .container .main_container .right_col .right_box .row .connection_chart .x_panel .whos .table_info {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+body .container .main_container .right_col .right_box .row .immediately_record .x_panel .whos {
+  border-left: 4px solid #333;
+  padding: 0;
+}
+
+body .container .main_container .right_col .right_box .row .immediately_record .x_panel .whos .info_title {
+  margin-bottom: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+body .container .main_container .right_col .right_box .row .immediately_record .x_panel .whos .info_title li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.125em;
+}
+
+body .container .main_container .right_col .right_box .row .immediately_record .x_panel .whos .info_title li span {
+  display: inline-block;
+  border-radius: 25px;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #dd2525;
+}
+
+body .container .main_container .right_col .right_box .row .immediately_record .x_panel .whos .info_title li img {
+  width: 40px;
+  border-radius: 25px;
+}
+
+body .container .main_container .right_col .right_box .row .immediately_record .x_panel .whos .table_info {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+body .container .main_container .right_col .right_box .row .immediately_record .x_panel .whos table tr td a img {
+  width: 15px;
+  height: 15px;
+}
+/*# sourceMappingURL=chart_page.css.map */

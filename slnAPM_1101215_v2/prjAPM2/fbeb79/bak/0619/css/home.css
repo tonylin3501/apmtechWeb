@@ -1,0 +1,1189 @@
+﻿  .main-bg {
+    background-color: var(--op-blue6);
+    padding-bottom: 6rem;
+    padding-top: 10vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .title-area {
+    color: var(--op-white);
+    position: relative;
+    z-index: 1;
+    padding-top: 10%;
+  }
+  .divider {
+    color: var(--op-white);
+    position: relative;
+    width: 80%;
+    margin-bottom: 6rem;
+    z-index: 10;
+  }
+
+  .news {
+
+    overflow: hidden; /* 防止內容溢出 */
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  .news-title {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 4rem 0;
+    color: var(--op-white);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 2;
+  }
+  .news-title h1 {
+    margin: 0;
+  }
+      .tabs {
+          display: flex;
+          justify-content: center;
+      }
+      .tab {
+          text-align: center;
+          cursor: pointer;
+          transition: opacity 0.2s;
+      }
+      .tab:hover {
+          opacity: 0.8;
+      }
+      .military-news .line {
+          width: 10rem;
+          height: 2px;
+          background-color: var(--op-blue3);
+          margin-top: 1rem;
+      }
+      .announcement .line {
+          width: 10rem;
+          height: 2px;
+          background-color: var(--op-gray7);
+          margin-top: 1rem;
+      }
+      .military-news {
+          color: var(--op-blue3);
+      }
+      .announcement {
+          color: var(--op-gray7);
+      }
+
+/* banner 微動態 */
+@keyframes banner-pan {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 20% center;
+  }
+}
+  .banner {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 2 ;
+    }
+    
+    .gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    z-index: 1;
+    pointer-events: none;
+    }
+
+  /* 動畫 class，會被動態加上 */
+  .banner.animate-pan {
+    animation: banner-pan 4s linear forwards;
+    animation-fill-mode: forwards; 
+  }
+
+  /* banner 微動態 END */
+
+
+  /* 平板樣式結束 */
+
+  /* 手機樣式開始 */
+  @media (max-width: 440px) {
+  .floating{
+    margin-top: -40%;
+  }
+  }
+  /* 手機樣式結束 */
+  .banner .title-area .title {
+    max-width: 600px;
+  }
+
+  .banner-container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 900px;
+    height: 480px;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    display: none;
+  }
+  .banner-container.active {
+    display: block;
+  }
+  .banner-slide {
+    width: 900px;
+    height: 480px;
+    display: none;
+  }
+  .banner-slide.active {
+    display: block;
+  }
+  .banner-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .banner-slide .text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--op-white);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .banner-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .banner-slide {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .banner-slide img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2;
+    object-fit: cover;
+    display: block;
+  }
+  .herobanner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .herobanner .circle-button {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: absolute;
+    bottom: 24%;
+    right: 2rem;
+    z-index: 100;
+  }
+  
+    .herobanner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* 懸浮視窗 */
+  .floating {
+    position: relative;
+    margin-top: -15%; /* 上移，部分覆蓋 Banner 底部 */
+    z-index: 10;
+  }
+
+  .floating-block {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 34vw;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    padding-bottom: 6rem;
+    background: rgba(46, 68, 119, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    color: var(--op-white);
+    z-index: 10;
+  }
+
+  /* 文字容器 */
+  .floating-block .text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(0.5rem, 5%, 0.625rem);
+  }
+
+  /* 漂浮框文字 */
+  .floating-block .text {
+    color: var(--op-white);
+    max-width: clamp(15rem, 40vw, 28.75rem); 
+    text-align: left;
+  }
+
+  /* 日期區域 */
+  .floating-block .date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+
+  .floating-block .floating-center,
+  .floating-block .total-coun{
+    color: var(--op-gray3);
+  }
+
+  /* banner進度條 */
+  .rectangle-container {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .rectangle {
+    position: relative;
+    width: 90px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.3);;
+    overflow: hidden;
+  }
+
+  .rectangle .progressBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--op-orange1);
+  }
+  /* 當 rectangle 為 active 時執行動畫 */
+  .rectangle-container .rectangle.active .progressBar{
+    animation: progressBar 4s linear forwards;
+  }
+
+  @keyframes progressBar {
+    from { width: 0%; }
+    to   { width: 100%; }
+  }
+  /* banner進度條 END */
+
+
+  .rectangle:nth-child(1),
+  .rectangle:nth-child(2),
+  .rectangle:nth-child(3),
+  .rectangle:nth-child(4),
+  .rectangle:nth-child(5) {
+    background-color: rgb(255, 255, 255, 0.3);
+  }
+
+  .post {
+  position: relative;
+  margin: -4rem auto 0;
+  background-color: var(--op-white);
+  border-radius: 1rem;
+  }
+
+  .post-title {
+  margin: 5rem 0 3rem 0;
+  text-align: center;
+  color: var(--op-blue5);
+  }
+
+  .post-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  }
+
+  .link-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  }
+
+  .date {
+  min-width: 80px; 
+  text-align: left;
+  }
+
+  .post-links .category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--op-blue4);
+  color: var(--op-white);
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 0 0.5rem; /* 左右間距 */
+  }
+
+  .post-links .title {
+  flex: 1; /* 讓標題佔據剩餘空間，確保置左對齊 */
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 1px;
+  color: var(--op-black1);
+  text-decoration: none;
+  text-align: left;
+  }
+
+  .post-links .arrow {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--op-blue2);
+  border-radius: 50%;
+  color: var(--op-blue2);
+  text-decoration: none;
+  margin-left: auto; /* 將箭頭推到最右 */
+  }
+
+  .post-links .arrow i {
+  font-size: 1rem;
+  }
+
+  .post-links .arrow i.bi-chevron-right::before {
+  vertical-align: baseline !important;
+  }
+
+  .separator-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--op-blue3);
+  }
+
+  .btnbar1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .btn1 {
+    display: inline-flex; /* 保持 flex 佈局 */
+    align-items: center; /* 垂直置中 */
+    justify-content: center; /* 水平置中整個按鈕內容 */
+    background-color: var(--op-blue5);
+    color: var(--op-white);
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+    position: relative; /* 為 ::after 定位提供參考 */
+    width: 150px; /* 設定固定寬度以確保置中效果，可根據需要調整 */
+  }
+
+  .btn1 span {
+    margin-right: auto; /* 文字靠左 */
+  }
+
+  .btn1::after {
+  font-family: "Bootstrap-Icons";
+    content: "\F138"; /* Arrow right */
+  }
+
+  .btn1:hover {
+    background-color: var(--op-blue5);
+  }
+
+  .service-box {
+    display: flex;
+    gap: 12px;
+  }
+  .service-card-large {
+    width: 50%;
+    height: 560px;
+    background-color: var(--op-blue5);
+    border-radius: 1rem;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--op-white);
+    cursor: default;
+    box-sizing: border-box;
+  }
+  .service-card-large h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 2%;
+  }
+  .service-card-large p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    margin: 0;
+    max-width: 80%;
+  }
+  .service-card-large .btnbar1 a {
+    background-color: transparent;
+    border: 2px solid var(--op-white);
+    color: var(--op-white);
+    width: 160px;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 16px;
+  }
+  .service-card-large .btnbar1 a::after {
+    font-family: "Bootstrap-Icons";
+    content: "\F138";
+    margin-left: 8px;
+  }
+  .service-card-large .btnbar1 a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .service-card-grid {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, calc((560px - 12px) / 2)); /* 每行 274px，包含 gap */
+    gap: 12px;
+    height: 560px;
+    box-sizing: border-box;
+  }
+  .service-card-small {
+    background-color: var(--op-gray2);
+    border-radius: 1rem;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--op-black1);
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .service-card-small:nth-child(1) {
+    background-color: var(--op-gray2);
+    color: var(--op-blue5);
+  }
+  .service-card-small:nth-child(2) {
+    background-color: var(--op-blue3);
+    color: var(--op-white);
+  }
+  .service-card-small:nth-child(3) {
+    background-color: var(--op-blue4);
+    color: var(--op-white);
+  }
+  .service-card-small:nth-child(4) {
+    background-color: var(--op-blue6);
+    color: var(--op-white);
+  }
+  .service-card-small:hover,
+  .service-card-small:focus {
+    background-color: var(--op-white);
+    color: var(--op-blue5);
+    outline: none; 
+    border: 2px solid var(--op-blue6);
+  }
+  .service-card-small .icon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 24px; /* 確保 icon 有足夠空間顯示 */
+  }
+  .service-card-small .icon-left::after,
+  .service-card-small .icon-right::after {
+    font-family: "Bootstrap-Icons";
+    font-size: 24px;
+  }
+  .service-card-small:nth-child(1) .icon-left::after {
+    content: "\F32F";
+  }
+  .service-card-small:nth-child(2) .icon-left::after {
+    content: "\F53F";
+  }
+  .service-card-small:nth-child(3) .icon-left::after {
+    content: "\F431";
+  }
+  .service-card-small:nth-child(4) .icon-left::after {
+    content: "\F47F";
+  }
+  .icon-right::after {
+    content: "\F138"; /* Arrow right */
+  }
+  .service-card-large .btnbar1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+
+  .slogan-text {
+    color: var(--op-blue5);
+    position: relative;
+    padding-left: 40%;
+  }
+
+    .leader {
+      background-color: var(--op-blue5);
+      position: relative;
+      padding: 2rem 0;
+      height: 800px;
+      overflow: visible;
+    }
+
+    .carousel-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .leader-carousel {
+      overflow: visible;
+    }
+
+    .leader-carousel .slick-slide {
+      width: 340px;
+      height: 400px;
+      position: relative;
+      top: 0;
+      transition: all 0.4s ease;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      margin: 0 10px;
+      border-radius: 1rem;
+    }
+    .leader-carousel .slick-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      transform-origin: center center;
+    }
+
+    .leader-carousel .slick-center {
+      width: calc(340px * 1.35); /* 寬度放大 */
+      height: calc(400px * 1.35); /* 高度放大 */
+      top: -120px;
+      z-index: 2;
+      margin: 0 10px;
+    }
+
+    .slick-prev, .slick-next {
+      display: none !important;
+    }
+
+    .slick-list {
+      overflow: visible !important;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .member {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .member .title {
+      color: var(--op-white);
+    }
+
+    .title-container {
+      flex: 1;
+    }
+
+    .circle-button {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .circle-button-left,
+    .circle-button-right {
+      width: 80px;
+      height: 80px;
+      background-color: transparent;
+      border: 2px solid var(--op-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .circle-button-left::after,
+    .circle-button-right::after {
+      font-family: "bootstrap-icons";
+      color: var(--op-white);
+      font-size: 24px;
+    }
+
+    .circle-button-left::after {
+      content: "\f284";
+    }
+
+    .circle-button-right::after {
+      content: "\f285";
+    }
+
+    .circle-button-left:hover,
+    .circle-button-right:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+  .policy {
+    background-color: var(--op-blue);
+    width: 100%;
+    height: 100%;
+  }
+  .policy-box {
+    margin-top: 14rem;
+  }
+  .policy .article {
+    position: relative;
+    width: 70%;
+  }
+  .policy .policies {
+    display: flex;
+    flex-direction: row;
+  }
+  .policy .btnbar2 {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .policy .circle-button-right {
+    background-color: var(--op-blue3);
+    width: 2rem;
+    height: 2rem;
+}
+
+.circle-button-right::after {
+    color: var(--op-white);
+    font-size: 16px;
+}
+  .btn2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--op-blue5);
+    color: var(--op-white);
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    width: 150px;
+  }
+
+  .btn2 span {
+    margin-right: auto;
+  }
+
+  .btn2::after {
+  font-family: "Bootstrap-Icons";
+    content: "\F138";
+  }
+
+  .btn2:hover {
+    background-color: var(--op-blue6);
+  }
+
+  .policy .list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .policy .list-row {
+    flex: 0 0 calc(50% - 0.5rem);
+    padding: 0.5rem;
+    text-align: left;
+    border-radius: 8px;
+    color: var(--op-blue5);
+    display: flex;               
+    align-items: center;        
+    gap: 0.75rem;                
+  }
+
+
+
+  .wrap5 {
+    position: relative;
+    width: 100%;
+    background-color: var(--op-blue);
+    padding: 4rem 10rem;
+  }
+
+  .join-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .join-video,
+  .join-info {
+    flex: 1 1 calc(50% - 0.375rem); 
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+    overflow: hidden;
+    min-width: 300px;
+    max-width: 100%;
+  }
+
+  .join-video {
+    background: var(--op-gray2);
+  }
+
+  .join-video img,
+  .join-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .join-info {
+    background-color: var(--op-blue5);
+    color: var(--op-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .join-info .join-btnbar1 a {
+    background-color: transparent;
+    border: 2px solid var(--op-white);
+    color: var(--op-white);
+    width: 160px;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 16px;
+  }
+
+
+  .friendlylink {
+    background-color: var(--op-white);
+  }
+
+  .friendlylink-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .friendlylink-left {
+    flex: 1 1 300px;
+  }
+
+  .friendlylink-left h2 {
+    margin: 0 0 1rem;
+    font-size: 1.75rem;
+  }
+
+  .friendlylink-left p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .friendlylink-right {
+    flex: 1 1 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+
+  .logo-item {
+    text-align: center;
+  }
+
+  .logo-item img {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+
+/* 筆電樣式開始 */
+@media (max-width: 1440px) {
+  .floating{
+    margin-top: -22%;
+  }
+  .floating-block {
+    width: 42vw;
+}
+  .herobanner .circle-button {
+    bottom: 30%;
+  }
+  }
+
+/* 平板樣式開始 */
+@media (max-width: 980px) {
+    .main-bg {
+      background-color: var(--op-blue6);
+      padding-bottom: 6rem;
+      padding-top: 10vh;
+      position: relative;
+      z-index: 0;
+  }
+  .title-area {
+    display: none;
+  }
+   .banner {
+    padding-top: 40%;
+  }
+
+
+  .divider {
+    width: 100%;
+  }
+  
+  .floating-block {
+    left: 50%;                      
+    top: 80%;                      
+    bottom: 20px;                   
+    transform: translateX(-50%);
+    width: 80vw;
+    height: 16vh;
+    padding: 1em;
+  }
+
+  .floating-block .text-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .floating-block .text {
+    font-size: 1rem;
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .floating-block .date {
+    display: flex;
+    margin-top: 0.5em;
+    justify-content: flex-start;
+  }
+
+  .news-title {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  box-sizing: border-box; /* 確保內邊距不影響寬度 */
+  }
+
+  .news-title h1 {
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 1rem;
+  }
+
+  .tabs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  }
+
+  .tab {
+  margin: 0 1rem;
+  }
+
+  .military-news .line,
+  .announcement .line {
+  width: 5rem;
+  }
+
+
+
+  .link-group {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .date {
+    order: 2;
+    min-width: auto;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+  }
+
+  .post-links .category {
+    order: 1;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+  }
+
+  .post-links .title {
+    order: 3;
+    flex: 1;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+  }
+
+  .post-links .arrow {
+    order: 4;
+    margin: 0.25rem 0 0.25rem auto;
+  }
+
+  .link-group::after {
+    content: "";
+    flex-basis: 100%;
+    height: 0;
+    order: 2; 
+  }
+  .floating{
+    margin-top: -30%;
+  }
+
+  .service-box {
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  }
+
+  .service-card-large {
+  width: 100%;
+  max-width: 500px;
+  height: 40vh;
+  padding: 16px;
+  }
+
+  .service-card-large h1 {
+  font-size: 36px;
+  margin-bottom: 10%;
+  }
+
+  .service-card-large p {
+  font-size: 14px;
+  max-width: 100%;
+  }
+
+  .service-card-large .btnbar1 a {
+  width: 140px;
+  padding: 8px 20px;
+  font-size: 14px;
+  }
+
+  .service-card-grid {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: auto;
+  }
+
+  .service-card-small {
+  width: 100%;
+  height: 10vh;
+  padding: 16px;
+  }
+
+  .service-card-small h4 {
+  font-size: 18px;
+  }
+
+  .service-card-small .icon-container {
+  min-height: 20px;
+  }
+
+  .service-card-small .icon-left::after,
+  .service-card-small .icon-right::after {
+  font-size: 20px;
+  }
+  .slogan-text {
+    padding-left: 0%;
+  }
+  .leader {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center; 
+  align-items: flex-end; 
+  }
+
+  .herobanner .circle-button {
+   display: none;
+  }
+
+  .member {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  }
+
+  .title-container {
+  display: none;
+
+  }
+  .policy-box {
+  margin: 2rem auto;
+  max-width: 500px;
+  width: 100%;
+  }
+
+  .policy .policies {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  }
+
+  .policy .article {
+  width: 100%;
+  }
+
+  .policy .title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  }
+
+  .policy .title {
+  text-align: left;
+  }
+
+  .policy .btnbar2 {
+  align-items: flex-start;
+  }
+
+  .policy .list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+  gap: 0.5rem;
+  }
+
+  .policy .list-row {
+  flex: 0 0 auto;
+  width: 100%;
+  text-align: left;
+  }
+
+
+  .btn2 {
+  width: 150px;
+  }
+  .circle-button-left,
+  .circle-button-right {
+  width: 2rem;
+  height: 2rem;
+  }
+  .banner .circle-button-left,
+  .banner .circle-button-right {
+    display: none;
+  }
+
+  .friendlylink-box {
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  }
+
+  .friendlylink-left,
+  .friendlylink-right {
+  flex: 1 1 100%;
+  }
+
+  .logo-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  }
+
+  .logo-item img {
+  width: 100px;
+  height: 100px;
+  }
+
+  .logo-item h6 {
+  font-size: 0.75rem;
+  }
+
+  .friendlylink-left h2 {
+  font-size: 1.5rem;
+  }
+
+  .friendlylink-left h4 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  }
+  .join-info h1{
+  font-size: 22px;
+  }
+  .join-info h5{
+  font-size: 14px;
+  }
+}
+
+  /* 手機樣式開始 */
+  @media (max-width: 440px) {
+  .floating{
+    margin-top: -50%;
+  }
+}
+  /* 手機樣式結束 */
+
+

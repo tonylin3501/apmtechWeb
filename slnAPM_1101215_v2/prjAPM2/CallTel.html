@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一鍵撥打電話</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .phone-btn {
+            display: inline-block;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .phone-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .phone-btn:active {
+            transform: translateY(0);
+        }
+
+        .phone-icon {
+            font-size: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .phone-number {
+            display: block;
+            margin-top: 20px;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .info {
+            margin-top: 30px;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>聯絡我們</h1>
+        
+        <a href="tel:02-2922-6666" class="phone-btn">
+            <span class="phone-icon">📞</span>
+            立即撥打
+        </a>
+        
+        <span class="phone-number">(02) 2922-6666</span>
+        
+        <div class="info">
+            <p>點擊按鈕即可直接撥打電話</p>
+            <p>（手機裝置限定）</p>
+        </div>
+    </div>
+</body>
+</html>

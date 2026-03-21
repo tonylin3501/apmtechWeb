@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html id="htmlTag" lang="zh-Hant-TW" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>中華民國國防部-全球資訊網-首頁</title>
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="css/pageloading.css" />
+</head>
+<body>
+    <a href="#main-content" id="AU" accesskey="U" class="skip-link" title="頁面頂端功能區塊[快捷鍵Alt+U]"><span class="label">跳到主要畫面</span>:::</a>
+    <!-- 讀取畫面 -->
+  <div class="loading-screen">
+   <div class="loading-line-vertical"></div>
+        <div class="loading-moving-line2"></div>
+        <div class="loading-c-child">
+            <div class="loading-cross-deco">
+          <svg width="100%" height="100%" viewBox="0 0 100 100">
+            <path d="
+                M 0 50
+                Q 50 50 50 0
+                Q 50 50 100 50
+                Q 50 50 50 100
+                Q 50 50 0 50
+                Z
+              " fill="var(--op-blue5)"></path>
+          </svg>
+          </div>
+        </div>
+        <div class="loading-moving-line"></div> 
+    <div class="percentage">
+      <span class="percentageNum">0</span><span class="percentagePer">%</span>
+    </div>
+  </div>
+  
+  <div class="main-content">
+
+    <!-- 導覽列 -->
+    <header class="nav-wrapper" id="navWrapper">
+        <div class="nav-bar">
+            <div class="mainlogo">
+                <img src="img/logo_w.svg" alt="國防部標誌" />
+            </div>
+            <div class="nav-right">
+                <div class="hamburger" id="hamburger">
+                <img class="hamburger-icon" src="img/menu.svg" alt="選單">
+                </div>
+                <div class="nav-icons">
+                <div class="nav-icons-sitemap">
+                    <a href="#" title="導覽地圖" class="body-1 nav-icon" id="sitemapBtn">
+                        <img src="img/sitemap.svg" alt="導覽地圖圖示" class="nav-svg" width="18" height="16">
+                    </a>
+                </div>
+
+                <div class="search-input-container" id="searchInputContainer">
+                    <input type="text" placeholder="請輸入搜尋內容" class="search-input" />
+                    <button type="submit" class="search-submit-btn">
+                        <img src="img/search_b.svg" alt="搜尋" width="20" height="20" />
+                    </button>
+                </div>
+                <div class="nav-icons-search">
+                    <a href="#" title="搜尋" class="body-1 nav-icon" id="search">
+                        <img src="img/search.svg" alt="搜尋" width="20" height="20" />
+                    </a>
+                </div>
+                <div class="nav-icons-fontsize">
+                    <a href="#" title="字體大小" class="body-1 nav-icon" id="fontsize">
+                        <img src="img/fontsize.svg" alt="字體大小" width="20" height="20" />
+                    </a>
+                </div>
+                <div class="nav-icons-language">
+                    <a href="#" title="語言切換" class="body-1 nav-icon" id="language">
+                        <img src="img/language.svg" alt="語言切換" width="20" height="20" />
+                        <span class="body-2">EN</span>
+                    </a>
+                </div>
+            <div class="theme-toggle" id="toggleDarkMode" role="button" tabindex="0" aria-label="切換暗黑模式">
+            <div class="icon sun">
+                <img src="img/sun.svg" alt="Sun icon" />
+            </div>
+            <div class="icon moon">
+                <img src="img/moon.svg" alt="Moon icon" />
+            </div>
+            <div class="toggle-indicator"></div>
+            </div>
+            </div>
+                <nav id="navMenuContainer">
+                    <div class="nav-item" tabindex="0" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                        <span tabindex="0" class="nav-text middlebutton">本部簡介</span>
+                        <!--第二層測試-->
+                        <div class="dropdown-menu-full" role="menu" aria-hidden="true">
+                            <div class="wrap-menu">
+                            <div class="sevNavContent">
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>願景</span></a>                                  
+                                </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>組織圖</span></a>
+                                    
+                                    </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>歷任長官</span></a>
+                                    
+                                </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>國防安全</span></a>
+                                    
+                                </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>全民國防</span></a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <span tabindex="0" class="nav-text middlebutton">重要政策</span>
+                        <div class="dropdown-menu-full" role="menu" aria-hidden="true">
+                            <div class="wrap-menu">
+                            <div class="sevNavContent">
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>國際變局中的臺海安全</span></a>
+                                </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>國防安全之戰略指導</span></a>
+                                </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>打造克敵制勝的軍隊</span></a>
+                                </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>推動國防改革優先要務</span></a>
+                                </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>全民防衛動員支援持續作戰</span></a>
+                                </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>鏈接區域強化集體嚇阻</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="新聞內頁.html"><span class="nav-text nav-text-noSub middlebutton">新聞與公告</span></a>
+                    </div>
+                    <div class="nav-item">
+                        <span tabindex="0" class="nav-text middlebutton">便民服務</span>
+                        <!--第三層排列順序為先左至右之後由上至下測試-->
+                        <div class="dropdown-menu-full" role="menu" aria-hidden="true">
+                            <div class="wrap-menu">
+                            <div class="sevNavContent">
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>便民服務1</span></a>
+                                    <div class="dropdown-menu-Third">
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>便民服務1-112313131351</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>便民服務1-2</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>便民服務1-3</span></a>
+                                    </div>
+                                </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>便民服務政策212335513135</span></a>
+                                    </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>便民服務3</span></a>
+                                    <div class="dropdown-menu-Third">
+                                    <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>便民服務3-1</span></a>
+                                    <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>便民服務3-2</span></a>
+                                    <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>便民服務3-3</span></a>
+                                    </div>
+                                </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>便民服務4</span></a>
+                                    <div class="dropdown-menu-Third">
+                                    <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>便民服務4-1</span></a>
+                                    <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>便民服務4-2</span></a>
+                                    <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>便民服務4-3</span></a>
+                                    </div>
+                                </div>
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>便民服務5</span></a>
+                                    <div class="dropdown-menu-Third">
+                                    <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>便民服務5-1</span></a>
+                                    <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>便民服務5-2</span></a>
+                                    <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>便民服務5-3</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <span tabindex="0" class="nav-text middlebutton">資訊服務</span>
+                         <!--第三層排列順序為先上至下之後由左至右測試-->
+                        <div class="dropdown-menu-full" role="menu" aria-hidden="true">
+                            <div class="wrap-menu">
+                            <div class="sevNavContentCol">
+                                <div class="secNavWithThi secNavCol2">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>人才招募</span></a>
+                                    <div class="dropdown-menu-Third">
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>國軍人才招募</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>聘僱招募</span></a>
+                                    </div>
+                                </div>
+                                <div class="secNavWithThi secNavCol2">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>法規專區</span></a>
+                                    <div class="dropdown-menu-Third">
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>國防法歸資料庫</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>全國法規資料庫</span></a>
+                                    </div>
+                                    </div>
+                                <div class="secNavWithThi secNavCol6">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>資訊公開</span></a>
+                                    <div class="dropdown-menu-ThirdCol">
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>施政計畫</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>施政績效報告</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>立法院業務報告</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>業務統計及研究報告</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>預算及決算書</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>行政救濟</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>軍法案件資訊</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>公共工程採購契約</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>支付或接受之補助</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>財團法人專區</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>性別平等專區</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>人權業務專區</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>設密離退人員出現資訊</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>國軍屆退官兵「就業」及「職業訓練」相關資訊</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>個案計畫評核報告</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>生態檢核專區</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>軍人儲蓄專區</span></a>
+                                    </div>
+                                </div>
+                                <div class="secNavWithThi secNavCol2">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>中英文詞彙對照</span></a>
+                                    <div class="dropdown-menu-Third">
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>詞彙對照</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>美華軍語辭典</span></a>
+                                    </div>
+                                </div>
+                                <div class="secNavWithThi secNavCol2">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>出版品</span></a>
+                                    <div class="dropdown-menu-Third">
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>國防報告書</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>國防總檢討QDR</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>軍事期刊</span></a>
+                                        <a href="#" class="middlebutton"><i class="bi bi-arrow-right-circle-fill thiIcon"></i><span>軍事書籍</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <span tabindex="0" class="nav-text nav-text-noSub middlebutton" style="margin-right: -20px;">相關連結</span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- 導覽列結束 -->
+     
+    <!-- 主內容開始 -->
+    <main class="main" id="main">
+
+        <!-- banner開始 -->
+        <section class="herobanner">
+            <div class="banner-slider">
+                <div class="banner" style="background-image: url('img/herobanner01.jpg');">
+                    <div class="gradient-overlay"></div>
+                    <div class="wrap3">
+                        <div class="title-area">
+                            <h1 class="title">Ministry of National Defense, R.O.C.</h1>
+                            <p class="display">時時刻刻，我們做最好的準備！</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 複製多個 banner slide -->
+                <div class="banner" style="background-image: url('img/herobanner02.jpg');">
+                    <div class="gradient-overlay"></div>
+                    <div class="wrap3">
+                        <div class="title-area">
+                            <h1 class="title">Ministry of National Defense, R.O.C.</h1>
+                            <p class="display">時時刻刻，我們做最好的準備！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner" style="background-image: url('img/herobanner03.jpg');">
+                    <div class="gradient-overlay"></div>
+                    <div class="wrap3">
+                        <div class="title-area">
+                            <h1 class="title">Ministry of National Defense, R.O.C.</h1>
+                            <p class="display">時時刻刻，我們做最好的準備！</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="banner" style="background-image: url('img/herobanner04.jpg');">
+                    <div class="gradient-overlay"></div>
+                    <div class="wrap3">
+                        <div class="title-area">
+                            <h1 class="title">Ministry of National Defense, R.O.C.</h1>
+                            <p class="display">時時刻刻，我們做最好的準備！</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="banner" style="background-image: url('img/herobanner05.jpg');">
+                    <div class="gradient-overlay"></div>
+                    <div class="wrap3">
+                        <div class="title-area">
+                            <h1 class="title">Ministry of National Defense, R.O.C.</h1>
+                            <p class="display">時時刻刻，我們做最好的準備！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <div class="circle-button">
+                <a href="#" class="circle-button-left"></a>
+                <a href="#" class="circle-button-right"></a>
+                </div>
+            </div>
+</section>
+
+        <section class="floating">
+            <div class="wrap4">
+                <div class="floating-block">
+                    <div class="text-container">
+                        <div class="texts">
+                            <h3 class="text">國防部攜手金融研訓院，強化官兵金融素養</h3>
+                            <h3 class="text" style="display:none;">總統勗勉陸軍砲兵，期勉達到真和平</h3>
+                            <h3 class="text" style="display:none;">顧部長視導北部駐軍，慰勉官兵戮力戰訓辛勞</h3>
+                            <h3 class="text" style="display:none;">梅總長主持畢業典禮，勉堅持前行成就光榮</h3>
+                            <h3 class="text" style="display:none;">顧部長赴立院專案報告，推行國防施政</h3>
+                        </div>
+                        <div class="date">
+                            <h4 class="current-index">01</h4>
+                            <span class="floating-center body-1">/</span>
+                            <span class="total-coun body-1">05</span>
+                        </div>
+                    </div>
+
+                    <div class="rectangle-container">
+                        <div class="rectangle"><span class="progressBar"></span></div>
+                        <div class="rectangle"><span class="progressBar"></span></div>
+                        <div class="rectangle"><span class="progressBar"></span></div>
+                        <div class="rectangle"><span class="progressBar"></span></div>
+                        <div class="rectangle"><span class="progressBar"></span></div>
+                    </div>
+                    <div class="floating-circle-button">
+                    <a href="#" class="circle-button-left"></a>
+                    <a href="#" class="circle-button-right"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner結束 -->
+        <!-- 國防消息開始 -->
+        <section class="main-bg">
+            <div class="wrap2">
+                <div class="divider">
+                    <h3 class="title">即時提供國人最新國防政策、戰備演訓、全民國防活動及軍旅軼趣和募兵訊息等多元資訊！</h3>
+                </div>
+                <div class="news">
+                    <div class="news-title">
+                        <h1 class="title">最新國防消息</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="newsbanner">
+            <div class="carousel-track">
+                <div class="slide"><div class="overlay"></div><div class="gradient"></div><img src="img/newsbanner01.jpg" alt="">
+                <div class="meta"><span class="tag body-2">軍事新聞</span><span class="date body-2">114.09.19</span></div><div class="caption"><h3>東指部混砲營夜間射擊，發揚全天候作戰效能</h3><i class="chevron-right"></i></div>
+                </div>
+                <div class="slide"><div class="overlay"></div><div class="gradient"></div><img src="img/newsbanner02.jpg" alt="">
+                <div class="meta"><span class="tag body-2">軍事新聞</span><span class="date body-2">114.09.19</span></div><div class="caption"><h3>航特部空武基礎射擊，展訓練成果</h3><i class="chevron-right"></i></div>
+                </div>
+                <div class="slide"><div class="overlay"></div><div class="gradient"></div><img src="img/newsbanner03.jpg" alt="">
+                <div class="meta"><span class="tag body-2">軍事新聞</span><span class="date body-2">114.09.19</span></div><div class="caption"><h3>114年精準飛彈射擊，砲兵部隊展堅實戰力</h3><i class="chevron-right"></i></div>
+                </div>
+                <div class="slide"><div class="overlay"></div><div class="gradient"></div><img src="img/newsbanner04.jpg" alt="">
+                <div class="meta"><span class="tag body-2">軍事新聞</span><span class="date body-2">114.09.19</span></div><div class="caption"><h3>第四作戰區重砲保養射擊，厚植防衛作戰能力</h3><i class="chevron-right"></i></div>
+                </div>
+                <div class="slide"><div class="overlay"></div><div class="gradient"></div><img src="img/newsbanner05.jpg" alt="">
+                <div class="meta"><span class="tag body-2">軍事新聞</span><span class="date body-2">114.09.19</span></div><div class="caption"><h3>賴總統視導海安12號演習，籲持續提升國家安全</h3><i class="chevron-right"></i></div>
+                </div>
+                
+            </div>
+            <div class="circle-button2">
+                <a href="#" class="circle-button-left"></a>
+                <a href="#" class="circle-button-right"></a>
+            </div>
+            <div class="slick-dots-wrapper"></div>
+            </div>
+
+            <!-- 線段位移開始 -->
+            <div class="line-vertical"></div>
+            <div class="moving-line2"></div>
+            <div class="c-child">
+                <div class="cross-deco">
+                <svg width="100%" height="100%" viewBox="0 0 100 100">
+                <path d="
+                M 0 50
+                Q 50 50 50 0
+                Q 50 50 100 50
+                Q 50 50 50 100
+                Q 50 50 0 50
+                Z
+                " fill="var(--op-blue5-b)"></path>
+                    </svg>
+                </div>
+                <div class="moving-line"></div>
+            </div>
+            <!-- 線段位移結束 -->
+        </section>
+
+        <!-- 國防消息結束 -->
+        <!-- 軍事動態開始 -->
+        <section class="post">
+            <div class="wrap2">
+            <div class="post-box">
+                <h3 class="post-title">掌握更多即時軍事動態</h3>
+                <div class="post-links">
+                    <div class="link-group">
+                        <span class="date body-2">114.04.19</span>
+                        <a href="#" class="category1 body-2">軍事消息</a>
+                        <a href="#" class="title h4">高雄市議會舉辦敬軍餐會，感謝國軍衛國辛勞</a>
+                        <a href="#" class="arrow"><i class="bi bi-chevron-right"></i></a>
+                    </div>
+                    <div class="separator-line"></div>
+                    <div class="link-group">
+                        <span class="date body-2">114.04.19</span>
+                        <a href="#" class="category2 body-2">軍事消息</a>
+                        <a href="#" class="title h4">總督察長室漫畫 - 反詐特攻隊第二回（網路購物詐騙）</a>
+                        <a href="#" class="arrow"><i class="bi bi-chevron-right"></i></a>
+                    </div>
+                    <div class="separator-line"></div>
+                    <div class="link-group">
+                        <span class="date body-2">114.04.19</span>
+                        <a href="#" class="category1 body-2">軍事消息</a>
+                        <a href="#" class="title h4">高雄市議會舉辦敬軍餐會，感謝國軍衛國辛勞</a>
+                        <a href="#" class="arrow"><i class="bi bi-chevron-right"></i></a>
+                    </div>
+                    <div class="separator-line"></div>
+                </div>
+                <div class="btnbar1">
+                    <a href="#" class="btn1 middlebutton"><span>查看更多</span><span class="visually-hidden">查看更多按鈕</span></a>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- 軍事動態結束 -->
+        <!-- 便民服務開始 -->
+        <section class="service">
+            <div class="wrap4">
+                <div class="service-box">
+                    <div class="service-card-large">
+                        <div>
+                            <h1>便民服務</h1>
+                            <h4>為提升國軍進步與服務品質，國防部以專業分工處理原則，將臺端所陳事項轉請業管單位處理並改進。</h4>
+                        </div>
+                        <div class="btnbar1">
+                        <a href="#" class="btn1"><span>查看更多</span><span class="visually-hidden">查看更多按鈕</span></a>
+                        </div>
+                    </div>
+                    <div class="service-card-grid">
+                        <a href="#" class="service-card-small inbox" data-icon-base="inbox">
+                            <h4>部長民意信箱</h4>
+                            <div class="icon-container">
+                                <span class="icon-left"><img src="img/inbox.svg" alt="信箱 Icon" class="icon-svg inbox-icon"></span>
+                                <span class="icon-right"></span>
+                            </div>
+                        </a>
+                        <a href="#" class="service-card-small files" data-icon-base="files">
+                        <h4>國軍檔案應用服務區</h4>
+                        <div class="icon-container">
+                            <span class="icon-left"><img src="img/files.svg" alt="檔案 Icon" class="icon-svg"></span>
+                            <span class="icon-right"></span>
+                        </div>
+                        </a>
+                        <a href="#" class="service-card-small fqa" data-icon-base="fqa">
+                        <h4>常見問答</h4>
+                        <div class="icon-container">
+                            <span class="icon-left"><img src="img/fqa.svg" alt="問答 Icon" class="icon-svg"></span>
+                            <span class="icon-right"></span>
+                        </div>
+                        </a>
+                        <a href="#" class="service-card-small transportation" data-icon-base="transportation">
+                        <h4>機關交通及聯絡資訊</h4>
+                        <div class="icon-container">
+                            <span class="icon-left"><img src="img/transportation.svg" alt="交通 Icon" class="icon-svg"></span>
+                            <span class="icon-right"></span>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 便民服務結束 -->
+        <!-- 標語開始 -->
+        <section class="slogan">
+            <div class="wrap2">
+                <div class="slogan-text">
+                    <h3 class="title">國防部主管全國國防事務，職司建軍備戰，以維護國家領土主權，確保人民生命財產安全。</h3>
+                </div>
+            </div>
+            <div class="c-child slogan-c-child">
+            <div class="moving-line"></div>
+        </div>
+        </section>
+        <!-- 標語結束 -->
+        <!-- 長官介紹開始 -->
+        <section class="leader">
+            <div class="carousel-container">
+                <div class="leader-carousel">
+                    <div class="leader-item">
+                    <img src="img/leader01.jpg" alt="Leader1">
+                    <div class="leader-overlay-white"></div>
+                    <div class="leader-overlay-blue"></div>
+                    <div class="overlay-dim"></div>
+                    <div class="leader-text">
+                    <h4>國防部長</h4>
+                    <h1>顧立雄</h1>
+                    </div>
+                    </div>
+                    <div class="leader-item">
+                    <img src="img/leader02.png" alt="Leader2">
+                    <div class="leader-overlay-white"></div>
+                    <div class="leader-overlay-blue"></div>
+                    <div class="overlay-dim"></div>
+                    <div class="leader-text">
+                    <h4>國防部長</h4>
+                    <h1>顧立雄</h1>
+                    </div>
+                    </div>
+                    <div class="leader-item">
+                    <img src="img/leader03.png" alt="Leader3">
+                    <div class="leader-overlay-white"></div>
+                    <div class="leader-overlay-blue"></div>
+                    <div class="overlay-dim"></div>
+                    <div class="leader-text">
+                    <h4>國防部長</h4>
+                    <h1>顧立雄</h1>
+                    </div>
+                    </div>
+                    <div class="leader-item">
+                    <img src="img/leader02.png" alt="Leader4">
+                    <div class="leader-overlay-white"></div>
+                    <div class="leader-overlay-blue"></div>
+                    <div class="overlay-dim"></div>
+                    <div class="leader-text">
+                    <h4>國防部長</h4>
+                    <h1>顧立雄</h1>
+                    </div>
+                    </div>
+                    <div class="leader-item">
+                    <img src="img/leader03.png" alt="Leader5">
+                    <div class="leader-overlay-white"></div>
+                    <div class="leader-overlay-blue"></div>
+                    <div class="overlay-dim"></div>
+                    <div class="leader-text">
+                    <h4>國防部長</h4>
+                    <h1>顧立雄</h1>
+                    </div>
+                    </div>
+                </div>
+                <div class="leader-circle-button">
+                    <a href="#" class="circle-button-left"></a>
+                    <a href="#" class="circle-button-right"></a>
+                </div>
+            </div>
+            <div class="member-text">
+            <div class="wrap2">
+                <div class="member">
+                    <div class="title-container">
+                        <h4 class="title">長官介紹</h4>
+                        <h3 class="title">致力於推動國防現代化與制度革新。</h3>
+                    </div>
+                    <div class="circle-button3">
+                        <a href="#" class="circle-button-left"></a>
+                        <a href="#" class="circle-button-right"></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- 長官介紹結束 -->
+        <!-- 重要政策開始 -->
+        <section class="policy">
+            <div class="wrap2">
+                <div class="policy-box">
+                    <div class="policies">
+                        <div class="title-container2">
+                            <h2 class="title">重要政策</h2>
+                            <h4 class="article">為提升國軍進步與服務品質，國防部以專業分工處理原則，將臺端所陳事項轉請業管單位處理並改進。</h4>
+                        </div>
+                        <div class="btnbar2">
+                            <a href="#" class="btn2"><span>查看更多</span><span class="visually-hidden">總統府新聞</span></a>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="list-row">
+                            <a href="#" class="circle-button-right"></a>
+                            <h4>台海的安全局勢</h4>
+                        </div>
+                        <div class="list-row">
+                            <a href="#" class="circle-button-right"></a>
+                            <h4>國防戰略指導</h4>
+                        </div>
+                        <div class="list-row">
+                            <a href="#" class="circle-button-right"></a>
+                            <h4>國防預算穩定成長</h4>
+                        </div>
+                        <div class="list-row">
+                            <a href="#" class="circle-button-right"></a>
+                            <h4>建構不對稱戰力</h4>
+                        </div>
+                        <div class="list-row">
+                            <a href="#" class="circle-button-right"></a>
+                            <h4>實戰化訓練及後備戰力提升</h4>
+                        </div>
+                        <div class="list-row">
+                            <a href="#" class="circle-button-right"></a>
+                            <h4>引進創新技術及國防自主</h4>
+                        </div>
+                        <div class="list-row">
+                            <a href="#" class="circle-button-right"></a>
+                            <h4>鏈結夥伴以強化嚇阻</h4>
+                        </div>
+                        <div class="list-row">
+                            <a href="#" class="circle-button-right"></a>
+                            <h4>全民防衛動員支援持續作戰</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <!-- 線段位移開始 -->
+            <div class="line-vertical"></div>
+            <div class="moving-line2"></div>
+            <div class="c-child">
+            <div class="moving-line"></div>
+            </div>
+        </section>
+        <!-- 線段位移結束 -->
+        </section>
+        <!-- 重要政策結束 -->
+        <!-- 加入國軍開始 -->
+        <section class="join">
+            <div class="wrap4">
+                <div class="join-container">
+                    <div class="join-video">
+                        <!-- <img src="https://i.ibb.co/DPK1zBfq/video.jpg" alt="影片" /> -->
+                        <img src="img/video.jpg" alt="影片" />
+                    </div>
+                    <div class="join-info">
+                        <h5>Stand with us. Protect what we share.</h5>
+                        <h1>邀請您一起<br>守護我們共同擁有的一切</h1>
+                        <div class="join-btnbar1">
+                            <a href="#">立即加入</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 加入國軍結束 -->
+        <!-- 相關連結開始 -->
+        <section class="friendlylink">
+            <div class="wrap2">
+                <div class="friendlylink-box">
+                    <div class="friendlylink-left">
+                        <h2>相關單位</h2>
+                        <h4>由專責單位處理各項業務，<br>提升國軍執行力與服務品質。</h4>
+                    </div>
+                    <div class="friendlylink-right">
+                        <div class="logo-grid">
+                            <div class="logo-item">
+                                <i class="icon logo-icon" style="background-image: url(img/logo01.svg);"></i>
+                                <h6>憲兵指揮部</h6>
+                            </div>
+                            <div class="logo-item">
+                                <i class="icon logo-icon" style="background-image: url(img/logo02.svg);"></i>
+                                <h6>國防大學</h6>
+                            </div>
+                            <div class="logo-item">
+                                <i class="icon logo-icon" style="background-image: url(img/logo03.svg);"></i>
+                                <h6>政治作戰局</h6>
+                            </div>
+                            <div class="logo-item">
+                                <i class="icon logo-icon" style="background-image: url(img/logo04.svg);"></i>
+                                <h6>軍醫局</h6>
+                            </div>
+                            <div class="logo-item">
+                                <i class="icon logo-icon" style="background-image: url(img/logo05.svg);"></i>
+                                <h6>全民防衛動員署</h6>
+                            </div>
+                            <div class="logo-item">
+                                <i class="icon logo-icon" style="background-image: url(img/logo06.svg);"></i>
+                                <h6>陸軍司令部</h6>
+                            </div>
+                            <div class="logo-item">
+                                <i class="icon logo-icon" style="background-image: url(img/logo07.svg);"></i>
+                                <h6>海軍司令部</h6>
+                            </div>
+                            <div class="logo-item">
+                                <i class="icon logo-icon" style="background-image: url(img/logo08.svg);"></i>
+                                <h6>空軍司令部</h6>
+                            </div>
+                            <div class="logo-item">
+                                <i class="icon logo-icon" style="background-image: url(img/logo09.svg);"></i>
+                                <h6>後備指揮部</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <!-- 線段位移開始 -->
+            <div class="line-vertical"></div>
+            <div class="moving-line2"></div>
+            <div class="c-child">
+            <div class="moving-line"></div>
+        </section>
+        <!-- 線段位移結束 -->
+        </section>
+        <!-- 相關連結結束 -->
+    <button class="back-to-top" id="backToTop" title="回到上方"></button>
+    </main>
+    <!-- 主內容結束 -->
+
+    <!-- footer開始 -->
+    <footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div class="logo">
+                <img src="img/logo_w.svg" alt="國防部標誌" />
+            </div>
+            <div class="links">
+                <div class="links-row">
+                    <a href="#" class="middlebutton">網站隱私權政策</a>
+                    <a href="#" class="middlebutton">網站安全政策宣告</a>
+                </div>
+                <div class="links-row">
+                    <a href="#" class="middlebutton">個資法保護聲明</a>
+                    <a href="#" class="middlebutton">政府網站資料開放宣告</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <strong class="body-1">本部簡介</strong>
+                <a href="#" class="body-1">部長</a>
+                <a href="#" class="body-1">組織與職掌</a>
+                <a href="#" class="body-1">歷任部長</a>
+            </div>
+            <div class="col-md-2">
+                <strong class="body-1">重要政策</strong>
+                <a href="#" class="body-1">國際變局中的台海安全</a>
+                <a href="#" class="body-1">國防安全之戰略指導</a>
+                <a href="#" class="body-1">打造克敵制勝的軍隊</a>
+                <a href="#" class="body-1">推動國防改革優先要務</a>
+                <a href="#" class="body-1">全民防衛動員支援持續作戰</a>
+                <a href="#" class="body-1">鏈結區域強化集體嚇阻</a>
+            </div>
+            <div class="col-md-2">
+                <strong class="body-1">新聞與公告</strong>
+                <a href="#" class="body-1">新聞稿</a>
+                <a href="#" class="body-1">本部新聞</a>
+                <a href="#" class="body-1">即時新聞澄清</a>
+                <a href="#" class="body-1">台海周邊海空域動態</a>
+                <a href="#" class="body-1">行政公告</a>
+                <a href="#" class="body-1">影音專區</a>
+            </div>
+            <div class="col-md-2">
+                <strong class="body-1">便民服務</strong>
+                <a href="#" class="body-1">部長民意信箱</a>
+                <a href="#" class="body-1">國軍檔案應用專區</a>
+                <a href="#" class="body-1">常見問答</a>
+                <a href="#" class="body-1">機關交通及聯絡資訊</a>
+                <a href="#" class="body-1">次項目敘述</a>
+            </div>
+            <div class="col-md-2">
+                <strong class="body-1">資訊服務</strong>
+                <a href="#" class="body-1">人才招募</a>
+                <a href="#" class="body-1">法規專區</a>
+                <a href="#" class="body-1">資訊公開</a>
+                <a href="#" class="body-1">中英文辭彙對照</a>
+                <a href="#" class="body-1">出版品</a>
+            </div>
+            <div class="col-md-2">
+                <strong class="body-1">相關連結</strong>
+                <a href="#" class="body-1">國軍機關單位</a>
+                <a href="#" class="body-1">軍事院校</a>
+                <a href="#" class="body-1">國軍醫院</a>
+                <a href="#" class="body-1">國軍資訊服務</a>
+                <a href="#" class="body-1">國防相關組織</a>
+                <a href="#" class="body-1">政府資訊服務</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <img src="https://www.mnd.gov.tw/img/AA2.1.jpg" alt="無障礙認證" />
+            <div class="accessibility">
+                <div class="left-block">
+                    <span class="body-1">機關地址: 104237 台北市中山區北安路409號</span>
+                    <span class="body-1">總機電話: (02)2311-6117(代表號) 國軍人員申訴專線: 1985</span>
+                </div>
+            </div>
+            <div class="copyright">
+                <span class="body-1">國防部版權所有</span>
+                <span class="body-1">© 2025 Ministry of National Defense. All rights reserved.</span>
+            </div>
+        </div>
+        </div>
+            <div class="c-child footer-c-child">
+            <div class="moving-line"></div>
+        </div>
+    </footer>
+    <!-- footer結束 -->
+    <div class="menu-overlay"></div>
+</div>
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/pageloading.js"></script>
+  
+  <script>
+    homePageLoading();
+  </script>
+
+</body>
+</html>

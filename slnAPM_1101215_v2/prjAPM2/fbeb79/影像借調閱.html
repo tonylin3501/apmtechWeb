@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html id="htmlTag" lang="zh-Hant-TW" class="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>影像借調閱</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/newarchive.css" />
+    <link rel="stylesheet" href="css/news.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/pageloading.css" />
+</head>
+<body class="no-scroll">
+    <a href="#main-content" id="AU" accesskey="U" class="skip-link" title="頁面頂端功能區塊[快捷鍵Alt+U]"><span class="label">跳到主要畫面</span>:::</a>
+    <!-- 讀取畫面 -->
+  <div class="loading-screen">
+   <div class="loading-line-vertical"></div>
+        <div class="loading-moving-line2"></div>
+        <div class="loading-c-child">
+            <div class="loading-cross-deco">
+          <svg width="100%" height="100%" viewBox="0 0 100 100">
+            <path d="
+                M 0 50
+                Q 50 50 50 0
+                Q 50 50 100 50
+                Q 50 50 50 100
+                Q 50 50 0 50
+                Z
+              " fill="var(--op-blue5)"></path>
+          </svg>
+          </div>
+        </div>
+        <div class="loading-moving-line"></div> 
+    <div class="percentage">
+      <span class="percentageNum">0</span><span class="percentagePer">%</span>
+    </div>
+  </div>
+  
+  <div class="main-content">
+
+    <!-- 導覽列 -->
+    <header class="nav-wrapper" id="navWrapper">
+        <div class="nav-bar">
+            <div class="mainlogo">
+                <img src="img/logo_w.svg" alt="國防部標誌" />
+            </div>
+            <div class="nav-right">
+                <div class="hamburger" id="hamburger">
+                <img class="hamburger-icon" src="img/menu.svg" alt="選單">
+                </div>
+                <div class="nav-icons">
+                <div class="nav-icons-sitemap">
+                    <a href="#" title="導覽地圖" class="body-1 nav-icon" id="sitemapBtn">
+                        <img src="img/sitemap.svg" alt="導覽地圖圖示" class="nav-svg" width="18" height="16">
+                    </a>
+                </div>
+
+                <div class="search-input-container" id="searchInputContainer">
+                    <input type="text" placeholder="請輸入搜尋內容" class="search-input" />
+                    <button type="submit" class="search-submit-btn">
+                        <img src="img/search_b.svg" alt="搜尋" width="20" height="20" />
+                    </button>
+                </div>
+                <div class="nav-icons-search">
+                    <a href="#" title="搜尋" class="body-1 nav-icon" id="search">
+                        <img src="img/search.svg" alt="搜尋" width="20" height="20" />
+                    </a>
+                </div>
+                <div class="nav-icons-fontsize">
+                    <a href="#" title="字體大小" class="body-1 nav-icon" id="fontsize">
+                        <img src="img/fontsize.svg" alt="字體大小" width="20" height="20" />
+                    </a>
+                    <div class="font-size-selector-container">
+                        <div id="size-small" class="size-button unselected">小</div>
+                        <div id="size-medium" class="size-button selected">中</div>
+                        <div id="size-large" class="size-button unselected">大</div>
+                    </div>
+                </div>
+
+
+                <div class="nav-icons-language">
+                    <a href="#" title="語言切換" class="body-1 nav-icon" id="language">
+                        <img src="img/language.svg" alt="語言切換" width="20" height="20" />
+                        <span class="body-2">EN</span>
+                    </a>
+                </div>
+            <div class="theme-toggle" id="toggleDarkMode" role="button" tabindex="0" aria-label="切換暗黑模式">
+            <div class="icon sun">
+                <img src="img/sun.svg" alt="Sun icon" />
+            </div>
+            <div class="icon moon">
+                <img src="img/moon.svg" alt="Moon icon" />
+            </div>
+            <div class="toggle-indicator"></div>
+            </div>
+            </div>
+                <nav id="navMenuContainer">
+                    <div class="nav-item" tabindex="0" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                        <span tabindex="0" class="nav-text middlebutton">國軍史政檔案影像調閱系統</span>
+                        <!--第二層測試-->
+                        <div class="dropdown-menu-full" role="menu" aria-hidden="true">
+                            <div class="wrap-menu">
+                            <div class="sevNavContent">
+                                <div class="secNavWithThi secNavCol3">
+                                    <a href="javascript:void(0)" class="middlebutton aTagDec"><i class="bi bi-arrow-right-circle-fill secIcon"></i><span>登入</span></a>                                  
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <span tabindex="0" class="nav-text nav-text-noSub middlebutton" style="margin-right: -20px;">返回國防部首頁</span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- 導覽列結束 -->
+     
+    <!-- 主內容開始 -->
+    <main class="main" id="main">
+
+        <!-- 標題 -->
+        <div class="top-bg">
+            <div class="top-wrap">
+                <div class="insidepage-title">
+                    <div class="breadcrumb">
+                        <div class="first body-2">國防部</div><span class="separator body-2"><i class="bi bi-chevron-right"></i></span>
+                        <a href="#" class="body-2">國軍史政檔案影像調閱系統</a>
+                    </div>
+                    <h1 class="title">國軍史政檔案影像調閱系統</h1>
+                </div>
+            </div>
+            <!-- 線段位移開始 -->
+            <div class="line-vertical"></div>
+            <div class="moving-line2"></div>
+            <div class="c-child">
+                <div class="cross-deco">
+                <svg width="100%" height="100%" viewBox="0 0 100 100">
+                <path d="
+                M 0 50
+                Q 50 50 50 0
+                Q 50 50 100 50
+                Q 50 50 50 100
+                Q 50 50 0 50
+                Z
+                " fill="var(--op-blue5-b)"></path>
+                    </svg>
+                </div>
+                <div class="moving-line"></div>
+            </div>
+            <!-- 線段位移結束 -->
+        </div>
+
+        <!-- 內文 -->
+<div class="pagewrap1">
+    <div class="wrap-page3">
+        <div class="maincontent">
+            <div class="maintext">
+                <div class="idcard-box">
+                    <div class="form-group">
+                        <label for="loginMode" class="body-1">登入模式：</label>
+                        <div class="select-wrapper"> 
+                            <select id="loginMode" name="loginMode" class="form-control">
+                                <option value="account" selected>帳號登入</option>
+                                <option value="card">自然人憑證</option>
+                            </select>
+                            <i class="bi bi-chevron-down select-icon"></i> 
+                        </div>
+                    </div>
+                    <h4 class="pagetitle2">身分證字號:</h4>
+                    <div class="form-group">
+                        <label for="idcard" class="body-1">身分證<span class="required">*</span></label>
+                        <input type="email" id="idcard" name="idcard" class="form-control" placeholder="請輸入身分證字號" required>
+                    </div>
+
+                    <div class="captcha-container">
+                        <label for="captchaCode" class="body-1" style="margin-bottom: 0;">驗證碼<span class="required">*</span></label>
+                    <div class="captcha-box">
+                        <input type="text" id="captchaCode" name="captchaCode" class="form-control captcha-input" placeholder="請輸入驗證碼 ※請注意英文字母大小寫 " required>
+                        <div class="captcha-image-box">
+                        <img id="ContentPlaceHolder2_image1" src="ValidateCode.aspx?no=2" alt="驗證碼圖片" class="captcha-image">
+                        <button type="button" class="newarchive-middlebutton btn-reset">重新產生驗證碼</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" class="newarchive-middlebutton btn-submit-confirm">登入</button>
+                        <button type="reset" class="newarchive-middlebutton btn-reset">清除重填</button>
+                        <button type="button" class="newarchive-middlebutton btn-reset">註冊</button>
+                        <button type="button" class="newarchive-middlebutton btn-reset">密碼查詢</button>
+                        
+                        </div>
+                    </div>
+                <div class="maintext-box">
+                    <div class="article1 body-1">
+                        <p><a href="#" class="link-more">114年1至9月份檔案申請應用統計表</a> 更新日期 ：10/17/2025 2:40:57 PM</p>
+                        <p><a href="#" class="link-more">114年1至9月份檔案申請應用統計表</a> 更新日期 ：10/17/2025 2:40:57 PM</p>
+                        <p><a href="#" class="link-more">114年1至9月份檔案申請應用統計表</a> 更新日期 ：10/17/2025 2:40:57 PM</p>
+                        <p>瀏覽人次: 12255549</p>
+                    </div>
+                    <div class="pic1">
+                        <img src="img/newarchive/processImg.png" alt="影像借調閱圖片">
+                        <button type="button" class="newarchive-middlebutton btn-submit-confirm">細項流程圖</button>
+                    </div>
+                </div>
+    </div>
+    </div>
+    </div>
+    <div class="wrap1">
+        <div class="return-button-box">
+            <a href="#" class="return-button middlebutton">返回首頁</a>
+        </div>
+        <div class="c-child-top">
+            <div class="moving-line-thin"></div>
+        </div>
+    </div>
+</div>
+    
+    <!-- <div class="share-mobile-container">
+    <button id="mobileShareBtn" class="mobile-share-button">
+        <img id="shareIcon" src="img/share.svg" alt="分享">
+    </button>
+    <div id="mobileSharePopup" class="mobile-share-popup">
+        <div class="share-icons">
+            <a href="#" class="share-icon"><img src="img/facebook.svg" alt="Facebook"></a>
+            <a href="#" class="share-icon"><img src="img/line.svg" alt="Line"></a>
+            <a href="#" class="share-icon"><img src="img/x.svg" alt="X(Twitter)"></a>
+            <a href="#" class="share-icon"><img src="img/link.svg" alt="Link"></a>
+            <a href="#" class="share-icon"><img src="img/rss.svg" alt="RSS"></a>
+            <a href="#" class="share-icon"><img src="img/print.svg" alt="Print"></a>
+        </div>
+    </div>
+    </div> -->
+    <button class="back-to-top" id="backToTop" title="回到頁首"></button>
+    </main>
+    <!-- 主內容結束 -->
+   <!-- footer開始 -->
+    <footer class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div class="logo">
+                <img src="img/logo_w.svg" alt="國防部標誌" />
+            </div>
+            <div class="links">
+                <div class="links-row">
+                    <a href="#" class="body-2">網站隱私權政策</a>
+                    <a href="#" class="body-2">網站安全政策宣告</a>
+                </div>
+                <div class="links-row">
+                    <a href="#" class="body-2">個資法保護聲明</a>
+                    <a href="#" class="body-2">政府網站資料開放宣告</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <strong class="body-1">國軍史政檔案影像調閱系統</strong>
+                <a href="#" class="body-1">登入</a>
+            </div>
+            <div class="col-md-2">
+                <strong class="body-1">回國防部首頁</strong>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <img src="https://www.mnd.gov.tw/img/AA2.1.jpg" alt="無障礙認證" />
+            <div class="accessibility">
+                <div class="left-block">
+                    <span class="body-1">機關地址: 104237 台北市中山區北安路409號</span>
+                    <span class="body-1">總機電話: (02)2311-6117(代表號) 國軍人員申訴專線: 1985</span>
+                </div>
+            </div>
+            <div class="copyright">
+                <span class="body-1">國防部版權所有</span>
+                <span class="body-1">© 2025 Ministry of National Defense. All rights reserved.</span>
+            </div>
+        </div>
+        </div>
+        <div class="c-child footer-c-child">
+        <div class="moving-line"></div>
+        </div>
+    </footer>
+    <!-- footer結束 -->
+
+
+    <!-- <div class="share-fixed">
+    <div class="share-label minimum">Share</div>
+    <div class="share-line"></div>
+    <div class="share-icons">
+        <a href="#" class="share-icon"><img src="img/facebook.svg" alt="Facebook"></a>
+        <a href="#" class="share-icon"><img src="img/line.svg" alt="Line"></a>
+        <a href="#" class="share-icon"><img src="img/x.svg" alt="X(Twitter)"></a>
+        <a href="#" class="share-icon"><img src="img/link.svg" alt="Link"></a>
+        <a href="#" class="share-icon"><img src="img/rss.svg" alt="RSS"></a>
+        <a href="#" class="share-icon"><img src="img/print.svg" alt="Print"></a>
+    </div>
+    </div> -->
+    <div class="menu-overlay"></div>
+    </div>
+    
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/pageloading.js"></script>
+  
+  <script>
+    homePageLoading();
+  </script>
+
+</body>
+</html>

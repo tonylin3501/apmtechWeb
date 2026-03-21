@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD Search Bar</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, "Microsoft JhengHei", sans-serif;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* 搜尋容器 */
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            padding: 0 16px;
+        }
+
+        /* 搜尋框 */
+        .search-box {
+            display: flex;
+            background: #fff;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 14px 20px;
+            font-size: 16px;
+        }
+
+        .search-box button {
+            border: none;
+            background: #007bff;
+            color: #fff;
+            padding: 0 24px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #0056b3;
+        }
+
+        /* 📱 手機優化 */
+        @media (max-width: 480px) {
+            .search-box input {
+                font-size: 14px;
+                padding: 12px 16px;
+            }
+
+            .search-box button {
+                padding: 0 18px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <form action="#" method="get" class="search-box">
+            <input type="text" name="q" placeholder="請輸入關鍵字搜尋…" />
+            <button type="submit">搜尋</button>
+        </form>
+    </div>
+
+</body>
+</html>

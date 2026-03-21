@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+<h1>HTML Buttons</h1>
+
+<p>catch website</p>
+
+<!-- 新增可以輸入網址的輸入框 -->
+<input type="text" id="urlInput" placeholder="Enter website URL">
+
+<!-- 增加網頁截圖功能,可以列印產生pdf檔案 -->
+<!-- 即使網頁包含js動畫,也能等全部載入後,再進行完整的截圖,而不會有跑版,或跟看到的頁面版型不會有不一致的問題-->
+<!-- 引入 html2canvas 和 jsPDF 套件 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<button id="captureBtn">網頁截圖並產生PDF</button>
+<div id="status" style="color: blue; margin: 10px 0;"></div>
+<script>
+document.getElementById('captureBtn').addEventListener('click', async function() {
+    const statusEl = document.getElementById('status');
+    const btn = document.getElementById('captureBtn');
+    const urlInput = document.getElementById('urlInput');
+    const targetUrl = urlInput.value.trim();
+    
+    let iframe = null;
+
+    try {
+        // 禁用按鈕
+        btn.disabled = true;
+        
+        let elementToCapture = document.body;
+        let targetWindow = window; // 用來控制捲動的視窗對象
+
+        // 基本截圖設定
+        let captureOptions = {
+            useCORS: true,
+            logging: false, // 關閉日誌減少干擾
+            scale: 2,
+            allowTaint: true,
+            backgroundColor: '#ffffff'
+        };
+        
+        if (targetUrl) {
+            if (!targetUrl.startsWith('http')) {
+                throw new Error('請輸入完整的網址 (包含 http:// 或 https://)');
+            }
+            
+            statusEl.textContent = '正在載入外部網頁...';
+            
+            // 建立全螢幕 iframe 以模擬真實瀏覽環境
+            iframe = document.createElement('iframe');
+            iframe.style.position = 'fixed';
+            iframe.style.left = '0';
+            iframe.style.top = '0';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.zIndex = '-9999'; // 置於底層
+            iframe.style.border = 'none';
+            iframe.src = targetUrl;
+            document.body.appendChild(iframe);
+            
+            // 等待 iframe 載入
+            await new Promise((resolve, reject) => {
+                iframe.onload = resolve;
+                iframe.onerror = () => reject(new Error('無法載入目標網址'));
+                setTimeout(() => reject(new Error('載入超時 (20秒)')), 20000);
+            });
+
+            try {
+                const iframeDoc = iframe.contentWindow.document;
+                elementToCapture = iframeDoc.body;
+                targetWindow = iframe.contentWindow;
+                
+                // 注入樣式以隱藏捲軸，避免截圖出現雙重捲軸
+                const style = iframeDoc.createElement('style');
+                style.innerHTML = 'body::-webkit-scrollbar { display: none; } body { -ms-overflow-style: none; scrollbar-width: none; }';
+                iframeDoc.head.appendChild(style);
+
+            } catch (e) {
+                throw new Error('無法截取該網址：瀏覽器安全性限制 (CORS) 禁止存取。僅能截取同網域網站。');
+            }
+        } else {
+            statusEl.textContent = '正在準備截圖當前頁面...';
+            captureOptions.scrollY = -window.scrollY;
+        }
+        
+        // --- 模擬 FireShot 核心行為：自動捲動以觸發 Lazy Loading ---
+        statusEl.textContent = '正在模擬瀏覽捲動 (觸發懶加載內容)...';
+        await autoScrollToLoadContent(targetWindow);
+        
+        // 再次等待圖片載入 (確保捲動後出現的圖片也載入)
+        statusEl.textContent = '等待所有圖片渲染...';
+        await waitForImages(elementToCapture);
+        
+        // 計算最終高度
+        const fullHeight = Math.max(
+            elementToCapture.scrollHeight,
+            elementToCapture.offsetHeight,
+            targetWindow.document.documentElement.scrollHeight
+        );
+        
+        // 如果是 iframe，調整高度以容納所有內容
+        if (iframe) {
+            iframe.style.height = fullHeight + 'px';
+            captureOptions.windowHeight = fullHeight;
+            captureOptions.windowWidth = iframe.offsetWidth;
+        } else {
+            captureOptions.windowHeight = fullHeight;
+            captureOptions.windowWidth = document.documentElement.scrollWidth;
+        }
+
+        statusEl.textContent = '正在擷取高解析度畫面 (請稍候)...';
+        
+        // 使用 html2canvas 截取
+        const canvas = await html2canvas(elementToCapture, captureOptions);
+        
+        statusEl.textContent = '正在產生 PDF...';
+        
+        // 建立 PDF
+        const { jsPDF } = window.jspdf;
+        // 根據截圖比例決定 PDF 方向 (直向或橫向)
+        const orientation = canvas.width > canvas.height ? 'l' : 'p';
+        const pdf = new jsPDF(orientation, 'mm', 'a4');
+        
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = pdf.internal.pageSize.getHeight();
+        
+        const imgWidth = pdfWidth;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        
+        let heightLeft = imgHeight;
+        let position = 0;
+        
+        // 產生分頁 PDF
+        const imgData = canvas.toDataURL('image/jpeg', 0.95); // 使用 JPEG 稍微壓縮以減少檔案大小
+        
+        pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pdfHeight;
+        
+        while (heightLeft > 0) {
+            position = heightLeft - imgHeight;
+            pdf.addPage();
+            pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
+            heightLeft -= pdfHeight;
+        }
+        
+        // 儲存
+        const timestamp = new Date().toISOString().slice(0, 19).replace(/[:-]/g, '');
+        const fileName = targetUrl ? 'external_webpage' : 'webpage';
+        pdf.save(`${fileName}_${timestamp}.pdf`);
+        
+        statusEl.textContent = 'PDF 已成功產生！';
+        statusEl.style.color = 'green';
+        
+        setTimeout(() => {
+            statusEl.textContent = '';
+            statusEl.style.color = 'blue';
+        }, 3000);
+        
+    } catch (error) {
+        console.error('截圖失敗:', error);
+        statusEl.textContent = '截圖失敗: ' + error.message;
+        statusEl.style.color = 'red';
+    } finally {
+        btn.disabled = false;
+        if (iframe) {
+            document.body.removeChild(iframe);
+        }
+        // 恢復當前視窗位置
+        window.scrollTo(0, 0);
+    }
+});
+
+// 模擬使用者捲動頁面，觸發 Lazy Load
+async function autoScrollToLoadContent(win) {
+    const scrollHeight = win.document.documentElement.scrollHeight;
+    const viewportHeight = win.innerHeight;
+    let currentScroll = 0;
+    
+    // 分段捲動
+    while (currentScroll < scrollHeight) {
+        currentScroll += viewportHeight;
+        win.scrollTo(0, currentScroll);
+        // 每次捲動暫停一下，讓瀏覽器有時間載入圖片
+        await new Promise(resolve => setTimeout(resolve, 200));
+    }
+    
+    // 捲到底部後，再捲回頂部，確保頂部內容也沒跑版
+    win.scrollTo(0, 0);
+    await new Promise(resolve => setTimeout(resolve, 500));
+}
+
+// 等待所有圖片載入完成的函數
+function waitForImages(element) {
+    const images = element.querySelectorAll('img');
+    if (images.length === 0) return Promise.resolve();
+
+    const promises = Array.from(images).map(img => {
+        if (img.complete) return Promise.resolve();
+        return new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = resolve;
+        });
+    });
+    return Promise.all(promises);
+}
+</script>
+
+<!-- 按下captureBtn按鈕進行網頁截圖並產生PDF -->
+<button>Click Me</button>
+
+</body>
+</html>

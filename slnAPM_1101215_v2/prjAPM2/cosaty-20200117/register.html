@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>註冊</title>
+    <!-- css -->
+    <link rel="stylesheet" href="js_css/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js_css/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/all_styles.css">
+    <link rel="stylesheet" href="css/all_rwd.css">
+</head>
+
+<body>
+    <form class="container-fluid registerpage" method="post">
+        <div class="registerpad sp">
+            <div class="registertitle">
+                <h2>cosaty 註冊</h2>
+                <h5>或<a href="login.html">登入您的帳戶</a></h5>
+            </div>
+            <!-- ================= -->
+            <div class="signup-form sp" method="post">
+                <input type="text" name="surname" placeholder="姓氏" required="required">
+                <input type="text" name="firstname" placeholder="名字" required="required">
+                <input type="email" name="user" placeholder="電子郵件" required="required">
+                <input type="password" name="password" placeholder="密碼" required="required">
+            </div>
+            <!-- ================= -->
+            <div class="agree-rule">
+                <input type="checkbox" id="checkboxId" onclick="myFunction()">我同意<a href="#">cosaty條款</a>
+            </div>
+            <!-- ================= -->
+
+            <div class="buttons">
+                <input type="submit" value="註冊" id="loginBt" class="login" disabled/>
+                <span>或</span>
+                <button type="submit" class="google">使用Google登入</button>
+                <button type="submit" class="fb">使用Facebook登入</button>
+            </div>
+        </div>
+    </form>
+</body>
+<!-- js -->
+<script src="js_css/jquery/dist/jquery.min.js "></script>
+<script src="js_css/bootstrap/dist/js/bootstrap.min.js "></script>
+<script>
+    function myFunction() {
+        var checkboxId = document.getElementById('checkboxId');
+        var loginBt = document.getElementById('loginBt');
+
+        if (checkboxId.checked = 'checked') {
+            loginBt.disabled = false;
+            prompt.style.display = 'block';
+        } else {
+            checkboxId.checked = false;
+            loginBt.disabled = true;
+        }
+    }
+</script>
+
+</html>

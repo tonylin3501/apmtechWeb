@@ -1,0 +1,162 @@
+.top-bg {
+    background-image: url("../img/Vector.png");
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: 100% 16%;
+    background-color: var(--op-blue6-b);
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.top-bg .wrap2 {
+    position: relative;
+    z-index: 3;
+}
+
+.c-child {
+    top: 22%;
+}
+
+.pagewrap1 {
+    position: relative;
+    margin: -1rem auto 0;
+    background-color: var(--op-white-b);
+    border-radius: 1rem 1rem 0 0;
+    min-height: 100px;
+}
+
+/* 內容樣式開始 */
+.glossary-wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.glossary-header {
+    display: flex;
+    align-items: center;
+    background-color: var(--op-blue4);
+    border-radius: 4px;
+    padding: 12px 24px;
+    gap: 24px;
+    margin: 0 auto;
+    color: var(--op-white);
+}
+
+.glossary-header h6 {
+    flex: 1;
+    text-align: left;
+    margin: 0;
+}
+
+.glossary-item {
+    display: flex;
+    padding: 32px 24px;
+    border-bottom: 0.5px solid var(--op-blue2-b);
+    margin: 0 auto;
+    gap: 24px;
+}
+
+.glossary-item .body-1 {
+    flex: 1;
+    text-align: left;
+}
+
+.glossary-title {
+    flex: 1;
+    text-align: left;
+    color: var(--op-black1-w);
+    margin: 0;
+    font-weight: 800;
+}
+
+.glossary-extra {
+    display: none;
+    color: var(--op-gray5-g);
+}
+
+.glossary-main {
+    display: flex;
+    gap: 24px;
+    flex: 2;
+}
+
+.glossary-main > div {
+    flex: 1;
+    text-align: left;
+    color: var(--op-gray8-g2);
+    margin: 0;
+}
+
+.glossary-date,
+.glossary-name {
+    flex: 1;
+    text-align: left;
+    color: var(--op-gray8-g2);
+}
+
+.glossary-date .date-1,
+.glossary-name .name-1 {
+    display: none;
+}
+
+
+/* 響應式設計 */
+@media (max-width: 1200px) {
+    .advanced-filters-2 {
+        width: calc(100% - 60px);
+    }
+}
+
+@media (max-width: 991px) {
+    .top-bg {
+        padding: 4rem 0 6rem;
+        min-height: 300px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .top-bg {
+        padding: 2rem 0 3rem;
+        min-height: 250px;
+    }
+    .glossary-header {
+        display: none;
+    }
+.glossary-item {
+        flex-direction: column;
+        padding: 12px 0;
+        gap: 0;
+    }
+    .glossary-title {
+        margin-bottom: 16px;
+         font-weight: 600;
+    }
+
+    .glossary-extra {
+        display: flex;
+        gap: 24px;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .glossary-extra > div {
+        flex: 1;
+        text-align: left;
+        color: var(--op-gray8-g2); /* 假設與 main 相同顏色 */
+        margin: 0;
+    }
+
+    .glossary-main {
+        flex: none;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+}
+
+

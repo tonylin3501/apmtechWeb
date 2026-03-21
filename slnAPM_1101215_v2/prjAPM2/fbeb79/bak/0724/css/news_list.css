@@ -1,0 +1,189 @@
+.top-bg {
+    background-image: url("../img/Vector.png");
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: 100% 16%;
+    background-color: var(--op-blue6-b);
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.top-bg .wrap2 {
+    position: relative;
+    z-index: 3;
+}
+
+.c-child {
+    top: 22%;
+}
+
+.pagewrap1 {
+    position: relative;
+    margin: -1rem auto 0;
+    background-color: var(--op-white-b);
+    border-radius: 1rem 1rem 0 0;
+    min-height: 100px;
+}
+
+/* 內容樣式開始 */
+.news_list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--op-blue2-b);
+}
+.news_list .date {
+    color: var(--op-blue3);
+    margin-right: 60px;
+}
+.news_list .title {
+    color: var(--op-black1-g);
+    margin-right: 24px;
+}
+.news_list .views {
+    color: var(--op-gray5);
+}
+.news_list .arrow {
+    margin-left: auto;
+}
+ .news_list .arrow {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--op-blue2);
+    border-radius: 50%;
+    color: var(--op-blue2);
+    text-decoration: none;
+    margin-left: auto;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 80px;
+}
+
+.pagination .page-arrow {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.pagination .page-arrow img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.pagination .page-number {
+    color: var(--op-black1-w);
+    text-decoration: none;
+    padding: 8px 10px;
+    position: relative;
+    width: 40px;
+    text-align: center;
+}
+
+.pagination .page-number.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: var(--op-orange1);
+}
+
+.pagination .page-number:hover {
+    text-decoration: none;
+}
+
+.pagination .page-ellipsis {
+    color: #3C3C3C;
+    padding: 8px; /* 與數字一致 */
+}
+
+/* 數字與箭頭之間的間距 */
+.pagination .page-number + .page-arrow,
+.pagination .page-arrow + .page-number {
+    margin-left: 28px; /* 40px 總間距 - 12px gap = 28px margin */
+}
+/* 內容樣式結束 */
+
+
+
+/* 平板樣式 */
+@media (max-width: 991px) {
+}
+
+/* 手機樣式開始 */
+@media (max-width: 768px) {
+    .pagewrap {
+        padding: 2rem;
+    }
+
+    .title-area .title {
+        margin-left: 10px;
+    }
+    
+    /* 內容樣式開始 */
+    .news_list {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 0;
+        gap: 0;
+    }
+
+    .news_list .date,
+    .news_list .title,
+    .news_list .views {
+        margin-right: 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .news_list .arrow {
+        margin-left: auto;
+        margin-top: 8px;
+    }
+
+    .pagination {
+        gap: 8px;
+        flex-wrap: wrap; /* 允許換行，避免擠壓 */
+    }
+
+    .pagination .page-arrow img {
+        width: 80%;
+        height: auto;
+    }
+
+    .pagination .page-number {
+        width: 30px;
+        padding: 6px 4px;
+    }
+
+    .pagination .page-ellipsis {
+        padding: 6px;
+    }
+    .pagination .page-number + .page-arrow, .pagination .page-arrow + .page-number {
+        margin-left: 0;
+    }
+    .pagination .page-number:nth-of-type(5) {
+        display: none;
+    }
+}

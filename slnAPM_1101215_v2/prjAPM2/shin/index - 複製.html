@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2025_欣欣天然氣設計導覽</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .image-side {
+      flex: 1 1 300px;
+      max-width: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .image-side img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .content-side {
+      flex: 2 1 400px;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .button-group {
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      border: 2px solid #026481;
+      padding: 10px 30px;
+      border-radius: 5px;
+      color: #333;
+      background: #fff;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background: #026481;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .content-side {
+        text-align: center;
+      }
+
+      .button-group {
+        justify-content: center;
+      }
+
+      a {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-side">
+      <img src="img/all_vertical.jpg" alt="欣欣天然氣圖示" />
+    </div>
+
+    <div class="content-side">
+      <h1>2025_欣欣天然氣設計導覽</h1>
+
+      <div class="button-group">
+        <a href="style/styleA.html" target="_blank">style A</a>
+        <a href="style/styleB.html" target="_blank">style B</a>
+        <a href="style/styleC.html" target="_blank">style C</a>
+      </div>
+
+      <div class="button-group">
+        <a href="style/RWD_Line.html" target="_blank">RWD線框圖</a>
+        <a href="style/RWD.html" target="_blank">RWD</a>
+		  <a href="style/demo/index.html" target="_blank">Demo</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

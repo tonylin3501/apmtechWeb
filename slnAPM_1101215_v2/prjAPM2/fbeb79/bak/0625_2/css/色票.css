@@ -1,0 +1,91 @@
+  :root {
+    --gap-idx-l: 60px;
+    --padding-x: 60px;
+    --padding-x-l: 100px;
+    --padding-x-m: 160px;
+    --padding-x-s: 100px;
+    --padding-x-xs: 40px;
+    --fw-bold: 500;
+    --op-white: #fff;
+    --op-white-b: #fff;
+    --op-black: #000;
+    --op-black1: #3C3C3C;
+    --op-black1-w: #3C3C3C;
+    --op-gray1: #F9F9F9;
+    --op-gray2: #EEEEEE;
+    --op-gray2-w: #EEEEEE;
+    --op-gray3: #E3E2E2;
+    --op-gray4: #C7C6C6;
+    --op-gray5: #ABABAB;
+    --op-gray6: #919191;
+    --op-gray7: #777777;
+    --op-gray8: #5E5E5E;
+    --op-gray9: #464747;
+    --op-blue: #EFF5FD;
+    --op-blue1: #E1ECFF;
+    --op-blue2: #94C2FF;
+    --op-blue3: #448EF6;
+    --op-blue4: #1440A3;
+    --op-blue5: #001F66;
+    --op-blue5-w: #001F66;
+    --op-blue6: #031643;
+    --op-orange1: #FF8D4F;
+    --op-orange2: #FF6E00;
+    --op-orange3: #C75400;
+  }
+
+  html.dark {
+    --op-white: #fff;
+    --op-white-b: #151515;
+    --op-black: #000;
+    --op-black1: #3C3C3C;
+    --op-black1-w: #fff; /* 改 */
+    --op-gray1: #F9F9F9;
+    --op-gray2: #EEEEEE;
+    --op-gray2-w: #5E5E5E; /* 改 */
+    --op-gray3: #E3E2E2;
+    --op-gray4: #C7C6C6;
+    --op-gray5: #ABABAB;
+    --op-gray6: #919191;
+    --op-gray7: #777777;
+    --op-gray8: #5E5E5E;
+    --op-gray9: #464747;
+    --op-blue: #2A2A2A; /* 改 */
+    --op-blue1: #E1ECFF;
+    --op-blue2: #94C2FF;
+    --op-blue3: #1440A3; /* 改 */
+    --op-blue4: #448EF6; /* 改 */
+    --op-blue5: #001F66; /* 改 */
+    --op-blue5-w: #fff; /* 改 */
+    --op-blue6: #112B71; /* 改 */
+    --op-orange1: #FF8D4F;
+    --op-orange2: #FF6E00;
+    --op-orange3: #C75400;
+  }
+
+  .wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--gap-idx-l) var(--padding-x);
+  }
+  .wrap2 {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--gap-idx-l) var(--padding-x-m);
+  }
+  .wrap3 {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--gap-idx-l) var(--padding-x-s);
+  }
+  .wrap4 {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--gap-idx-l) var(--padding-x-xs);
+  }
+/* 
+      --padding-x: 60px;
+    --padding-x-l: 100px;
+    --padding-x-m: 160px;
+    --padding-x-s: 100px;
+    --padding-x-xs: 40px; */

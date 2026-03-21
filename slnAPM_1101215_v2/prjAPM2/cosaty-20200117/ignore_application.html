@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>忽略程式設定</title>
+    <!-- css -->
+    <link rel="stylesheet" href="js_css/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js_css/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- 日期選擇器 -->
+    <link rel="stylesheet" href="js_css/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- 刪除紐 -->
+    <link rel="stylesheet" href="js_css/iCheck/skins/flat/green.css">
+    <!-- 共用css -->
+    <link rel="stylesheet" href="js_css/all_have/custom.min.css">
+    <link rel="stylesheet" href="css/buttonstyle.css">
+    <!-- 此頁css -->
+    <link rel="stylesheet" href="css/all_styles.css">
+    <link rel="stylesheet" href="css/all_rwd.css">
+
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title">
+                            <!-- <img src="img/logo04-w.png" alt=""> -->
+                            cosaty
+                        </a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="img/woman.png" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>您好,</span>
+                            <h2>黃凱莉</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section active">
+                            <ul class="nav side-menu">
+                                <li><a><i class="fa fa-home"></i>紀錄<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="unusual_record.html">異常事件紀錄</a></li>
+                                        <li><a href="glance.html">瀏覽及內文紀錄</a></li>
+                                        <li><a href="installation.html">安裝連線紀錄</a></li>
+                                        <li><a href="behaviour_record.html">檔案行為紀錄</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-edit"></i>權限<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="personal_info.html">個人資料</a></li>
+                                        <li><a href="group_permissions.html">群組權限設定</a></li>
+                                        <li><a href="personnel_permissions.html">人員權限設定</a></li>
+                                        <li><a href="info_import.html">人員資料匯入</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-desktop"></i>設定<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="application_setup.html">合法應用程式設定</a></li>
+                                        <li><a href="ignore_application.html">忽略程式設定</a></li>
+                                        <!-- <li><a href="encrypt.html">檔案類型加密設定</a></li> -->
+                                        <!-- <li><a href="share_personnel.html">人員共享設定</a></li> -->
+                                        <!-- <li><a href="path_encrypt.html">加解密路徑設定</a></li> -->
+                                        <li><a href="path_blockade.html">封鎖網址設定</a></li>
+                                        <li><a href="unusual_notify.html">異常事件通知設定</a></li>
+                                        <li><a href="risk_manage.html">風險等級人員安全設定</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-table"></i>處置<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="behaviour_disposal.html">端點行為處置</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-bar-chart-o"></i>報表<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="risk_statistic.html">使用者風險等級統計分析</a></li>
+                                        <li><a href="todays_chart.html">當日瀏覽統計圖表</a></li>
+                                        <li><a href="connect_record_chart.html">連線狀態紀錄統計圖表</a></li>
+                                        <li><a href="frequency_application_chart.html">開啟應用程式次數比例統計圖表</a></li>
+                                        <li><a href="time_application_chart.html">開啟應用程式時間比例統計圖表</a></li>
+                                        <li><a href="frequency_glance_chart.html">瀏覽頁面次數統計圖表</a></li>
+                                        <li><a href="time_glance_chart.html">瀏覽頁面時間統計圖表</a></li>
+                                        <li><a href="immediately_record.html">時間軸即時行為紀錄</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-bar-chart-o"></i>系統管理員<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="personnel_info.html">人員資料編輯</a></li>
+                                        <li><a href="LTD_info_edit.html">公司資料編輯</a></li>
+                                        <li><a href="LTD_info_manage.html">公司資料管理</a></li>
+                                        <li><a href="LTD_info_search.html">公司資料查詢</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- /sidebar menu -->
+
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <!-- <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> -->
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                            <!-- <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span> -->
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <!-- <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span> -->
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            <!-- <span class="glyphicon glyphicon-off" aria-hidden="true"></span> -->
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle">
+                                <i class="fa fa-bars"></i>
+                                <span class="pagename">忽略程式設定</span>
+                            </a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="userBox">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="img/woman.png" alt="">凱莉
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="javascript:;"> 個人資料</a></li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <!-- <span class="badge bg-red pull-right">50%</span> -->
+                                            <span>設定</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="javascript:;">幫助</a></li>
+                                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> 登出</a></li>
+                                </ul>
+                            </li>
+
+                            <li role="presentation" class="dropdown">
+                                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="badge">6</span>
+                                </a>
+                                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="img/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                            <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                          </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="img/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                            <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                          </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="img/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                            <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                          </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="img/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                            <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                          </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="text-center">
+                                            <a>
+                                                <strong>See All Alerts</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <!-- ********************************************** -->
+                <div class="right_box">
+
+                    <div class="clearfix"></div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 sm-pagi-title">
+                            <div class="pagination-name">忽略程式設定</div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 differentpage ig_application_setup">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <div class="mb form-horizontal col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                        <select class="form-control">
+                                            <option>請選擇單位</option>
+                                            <option>Option one</option>
+                                            <option>Option two</option>
+                                            <option>Option three</option>
+                                            <option>Option four</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb form-horizontal col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                        <select class="form-control">
+                                            <option>請選擇帳號</option>
+                                            <option>Option one</option>
+                                            <option>Option two</option>
+                                            <option>Option three</option>
+                                            <option>Option four</option>
+                                        </select>
+                                    </div>
+                                    <!-- ************** -->
+                                    <div class="mb form-horizontal input-txt col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" placeholder="&nbsp;請輸入應用程式名稱">
+                                    </div>
+                                    <div class="mb form-horizontal input-txt col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" placeholder="&nbsp;請輸入說明">
+                                    </div>
+                                    <div class="clearfix"></div>
+
+                                    <div class="separation-line"></div>
+
+                                    <div action="" class="mb btns col-lg-6 col-md-12 col-xs-12">
+                                        <button type="button" class="btn btn-search">查詢</button>
+                                        <button type="button" class="btn btn-cancel">取消</button>
+                                        <button type="button" class="btn btn-add">新增</button>
+                                        <button type="button" class="btn btn-edit">編輯</button>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                    <!-- input/form -->
+
+                                </div>
+                                <!-- x_title -->
+                                <div class="path-area">
+                                    <nav aria-label="breadcrumb col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        目前點選的單位:
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#">台北分公司</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">忽略應用程式設定</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                                <div class="delete-area col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <button><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="base_sitting col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <button class="btn btn-base">套用基本設定</button>
+                                </div>
+
+                                <div class="pagination-area">
+                                    <nav aria-label="Page navigation example" class="pagi">
+                                        <ul class="pagination">
+                                            <li class="page-item"><a class="page-link" href="#">上一頁</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">下一頁</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="clearfix"></div>
+
+                                <!--  -->
+                                <table class="table tablebase unusual-event">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" name="all" onclick="select_all(this,'pickit')">
+                                        </th>
+                                        <th>#</th>
+                                        <th>單位</th>
+                                        <th>帳號</th>
+                                        <th>應用程式</th>
+                                        <th>說明</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" name="pickit">
+                                        </td>
+                                        <td data-th='#'>1111</td>
+                                        <td data-th='單位'>資訊部</td>
+                                        <td data-th='帳號'>
+                                            <img src="img/male.png" alt="">
+                                            <span>Catherine Eiiis</span>
+                                        </td>
+                                        <td data-th='應用程式'>excel.exe</td>
+                                        <td data-th='說明'>OFFICE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" name="pickit">
+                                        </td>
+                                        <td data-th='#'>1111</td>
+                                        <td data-th='單位'>資訊部</td>
+                                        <td data-th='帳號'>
+                                            <img src="img/male.png" alt="">
+                                            <span>Catherine Eiiis</span>
+                                        </td>
+                                        <td data-th='應用程式'>excel.exe</td>
+                                        <td data-th='說明'>OFFICE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" name="pickit">
+                                        </td>
+                                        <td data-th='#'>1111</td>
+                                        <td data-th='單位'>資訊部</td>
+                                        <td data-th='帳號'>
+                                            <img src="img/male.png" alt="">
+                                            <span>Catherine Eiiis</span>
+                                        </td>
+                                        <td data-th='應用程式'>excel.exe</td>
+                                        <td data-th='說明'>OFFICE</td>
+                                    </tr>
+                                </table>
+                                <script type="text/javascript">
+                                    function select_all(obj, pickit) {
+                                        var checkboxs = document.getElementsByName(pickit);
+                                        for (var i = 0; i < checkboxs.length; i++) {
+                                            checkboxs[i].checked = obj.checked;
+                                        }
+                                    }
+                                </script>
+                                <div class="pagination-area">
+                                    <nav aria-label="Page navigation example" class="pagi">
+                                        <ul class="pagination">
+                                            <li class="page-item"><a class="page-link" href="#">上一頁</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">下一頁</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- unusual-table -->
+                    </div>
+                </div>
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content -->
+            <footer>
+                <div class="pull-left">
+                    Copyright © 2019 <a href="https://cosaty.com">Cosaty</a>本網站著作權為千機科技所有
+                </div>
+                <div class="pull-right">
+                    Version2.4.0
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<!-- js -->
+<script src="js_css/jquery/dist/jquery.min.js"></script>
+<script src="js_css/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- 日期選擇器 -->
+<script src="js_css/moment/min/moment.min.js"></script>
+<script src="js_css/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- 刪除紐 -->
+<script src="js_css/iCheck/icheck.min.js"></script>
+<!-- 共用 -->
+<script src="js_css/all_have/custom.min.js"></script>

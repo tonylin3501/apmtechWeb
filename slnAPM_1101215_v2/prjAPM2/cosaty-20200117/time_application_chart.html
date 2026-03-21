@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>開啟應用程式時間比例統計圖表</title>
+    <!-- css -->
+    <link rel="stylesheet" href="js_css/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js_css/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- 進度條 -->
+    <link rel="stylesheet" href="js_css/nprogress/nprogress.css">
+    <!-- 日期選擇器 -->
+    <link rel="stylesheet" href="js_css/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- 共用 -->
+    <link rel="stylesheet" href="js_css/all_have/custom.min.css">
+    <link rel="stylesheet" href="css/buttonstyle.css">
+    <!-- 此頁css -->
+    <link rel="stylesheet" href="css/all_styles.css">
+    <link rel="stylesheet" href="css/all_rwd.css">
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title">
+                            <!-- <img src="img/logo04-w.png" alt=""> -->
+                            cosaty
+                        </a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="img/woman.png" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>您好,</span>
+                            <h2>黃凱莉</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section active">
+                            <ul class="nav side-menu">
+                                <li><a><i class="fa fa-home"></i>紀錄<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="unusual_record.html">異常事件紀錄</a></li>
+                                        <li><a href="glance.html">瀏覽及內文紀錄</a></li>
+                                        <li><a href="installation.html">安裝連線紀錄</a></li>
+                                        <li><a href="behaviour_record.html">檔案行為紀錄</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-edit"></i>權限<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="personal_info.html">個人資料</a></li>
+                                        <li><a href="group_permissions.html">群組權限設定</a></li>
+                                        <li><a href="personnel_permissions.html">人員權限設定</a></li>
+                                        <li><a href="info_import.html">人員資料匯入</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-desktop"></i>設定<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="application_setup.html">合法應用程式設定</a></li>
+                                        <li><a href="ignore_application.html">忽略程式設定</a></li>
+                                        <!-- <li><a href="encrypt.html">檔案類型加密設定</a></li> -->
+                                        <!-- <li><a href="share_personnel.html">人員共享設定</a></li> -->
+                                        <!-- <li><a href="path_encrypt.html">加解密路徑設定</a></li> -->
+                                        <li><a href="path_blockade.html">封鎖網址設定</a></li>
+                                        <li><a href="unusual_notify.html">異常事件通知設定</a></li>
+                                        <li><a href="risk_manage.html">風險等級人員安全設定</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-table"></i>處置<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="behaviour_disposal.html">端點行為處置</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-bar-chart-o"></i>報表<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="risk_statistic.html">使用者風險等級統計分析</a></li>
+                                        <li><a href="todays_chart.html">當日瀏覽統計圖表</a></li>
+                                        <li><a href="connect_record_chart.html">連線狀態紀錄統計圖表</a></li>
+                                        <li><a href="frequency_application_chart.html">開啟應用程式次數比例統計圖表</a></li>
+                                        <li><a href="time_application_chart.html">開啟應用程式時間比例統計圖表</a></li>
+                                        <li><a href="frequency_glance_chart.html">瀏覽頁面次數統計圖表</a></li>
+                                        <li><a href="time_glance_chart.html">瀏覽頁面時間統計圖表</a></li>
+                                        <li><a href="immediately_record.html">時間軸即時行為紀錄</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-bar-chart-o"></i>系統管理員<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="personnel_info.html">人員資料編輯</a></li>
+                                        <li><a href="LTD_info_edit.html">公司資料編輯</a></li>
+                                        <li><a href="LTD_info_manage.html">公司資料管理</a></li>
+                                        <li><a href="LTD_info_search.html">公司資料查詢</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- /sidebar menu -->
+
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <!-- <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> -->
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                            <!-- <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span> -->
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <!-- <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span> -->
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            <!-- <span class="glyphicon glyphicon-off" aria-hidden="true"></span> -->
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle">
+                                <i class="fa fa-bars"></i>
+                                <span class="pagename">開啟應用程式時間比例統計圖表</span>
+                            </a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="userBox">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="img/woman.png" alt="">凱莉
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="javascript:;"> 個人資料</a></li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <!-- <span class="badge bg-red pull-right">50%</span> -->
+                                            <span>設定</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="javascript:;">幫助</a></li>
+                                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> 登出</a></li>
+                                </ul>
+                            </li>
+
+                            <li role="presentation" class="dropdown">
+                                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="badge">6</span>
+                                </a>
+                                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="img/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                                        <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                      </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="img/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                                        <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                      </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="img/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                                        <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                      </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="img/img.jpg" alt="Profile Image" /></span>
+                                            <span>
+                                        <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                      </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="text-center">
+                                            <a>
+                                                <strong>See All Alerts</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="right_box">
+
+                    <div class="clearfix"></div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 sm-pagi-title">
+                            <div class="pagination-name">開啟應用程式時間比例統計圖表</div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 time_application_chart">
+                            <div class="x_panel">
+                                <div class="x_title">
+
+                                    <div class="mb form-horizontal col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                        <select class="form-control">
+                                            <option>請選擇單位</option>
+                                            <option>Option one</option>
+                                            <option>Option two</option>
+                                            <option>Option three</option>
+                                            <option>Option four</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb form-horizontal col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                        <select class="form-control">
+                                            <option>請選擇帳號</option>
+                                            <option>Option one</option>
+                                            <option>Option two</option>
+                                            <option>Option three</option>
+                                            <option>Option four</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb col-lg-4 col-md-12 col-sm-12 col-xs-12 form-horizontal">
+                                        <div class="form-horizontal">
+                                            <div class="control-group">
+                                                <div class="controls">
+                                                    <div class="input-prepend input-group">
+                                                        <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                                        <input type="text" style="width: 100%" name="reservation" id="reservation" class="form-control" value="01/01/2018 - 01/25/2019" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- image cropping -->
+                                        <div class="container cropper">
+                                            <div class="modal fade docs-cropped" id="getCroppedCanvasModal" aria-hidden="true" aria-labelledby="getCroppedCanvasTitle" role="dialog" tabindex="-1">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-body"></div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                            <a class="btn btn-primary" id="download" href="javascript:void(0);" download="cropped.png">Download</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="separation-line"></div>
+
+                                    <div action="" class="mb btns col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <button type="button" class="btn btn-search">查詢</button>
+                                        <button type="button" class="btn btn-cancel">取消</button>
+                                        <button type="button" class="btn btn-delete">刪除</button>
+                                        <button type="button" class="btn btn-export">匯出圖表</button>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <!-- input/form -->
+
+                                </div>
+                                <!-- x_title -->
+                                <div class="path-area">
+                                    <nav aria-label="breadcrumb col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        目前點選的單位:
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#">台北分公司</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">開啟應用程式時間比例統計圖表</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <div class="pagination-area">
+                                    <nav aria-label="Page navigation example" class="pagi">
+                                        <ul class="pagination">
+                                            <li class="page-item"><a class="page-link" href="#">上一頁</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">下一頁</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                                <div class="whos col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <ul class="info_title">
+                                        <li>1</li>
+                                        <li><img src="img/img.jpg" alt=""></li>
+                                        <li><span></span>ERIC CHEN</li>
+                                        <li>起&nbsp;:&nbsp;2017/10/11</li>
+                                        <li>訖&nbsp;:&nbsp;AM:9:00</li>
+                                        <li>開啟應用程式時間比例統計圖表</li>
+                                    </ul>
+                                    <!-- list_chart -->
+                                    <div class="app_urls col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="time">
+                                                <ul class="leftarea">
+                                                    <li class="today">Tuesday，January 30</li>
+                                                    <li class="time_count">6h&nbsp;17m</li>
+                                                    <li class="timefor_month">Week<span>22h&nbsp;01m</span><span></span>Month<span>5h&nbsp;56m</span></li>
+                                                    <li class="clear"></li>
+                                                </ul>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <div class="application_name col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="title">Apps&URLs</div>
+                                                <ul class="application_data">
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="name">screenshotmonitor</div>
+                                                            <div class="data_programs">
+                                                                <span>30%</span>
+                                                                <div class="progress">
+                                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="clear"></div>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="name">XCode</div>
+                                                            <div class="data_programs">
+                                                                <span>70%</span>
+                                                                <div class="progress">
+                                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="clear"></div>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="name">Windows explore</div>
+                                                            <div class="data_programs">
+                                                                <span>30%</span>
+                                                                <div class="progress">
+                                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="clear"></div>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="name">Word</div>
+                                                            <div class="data_programs">
+                                                                <span>30%</span>
+                                                                <div class="progress">
+                                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="clear"></div>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="name">PhpStorm</div>
+                                                            <div class="data_programs">
+                                                                <span>90%</span>
+                                                                <div class="progress">
+                                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="clear"></div>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="name">Other</div>
+                                                            <div class="data_programs">
+                                                                <span>55%</span>
+                                                                <div class="progress">
+                                                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="clear"></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                    <!-- app_urls -->
+                                    <div class="pagination-area">
+                                        <nav aria-label="Page navigation example" class="pagi">
+                                            <ul class="pagination">
+                                                <li class="page-item"><a class="page-link" href="#">上一頁</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">下一頁</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <!-- whos -->
+
+                            </div>
+                        </div>
+                        <!-- unusual-table -->
+                    </div>
+
+                </div>
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content -->
+            <footer>
+                <div class="pull-left">
+                    Copyright © 2019 <a href="https://cosaty.com">Cosaty</a>本網站著作權為千機科技所有
+                </div>
+                <div class="pull-right">
+                    Version2.4.0
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<!-- js -->
+<script src="js_css/jquery/dist/jquery.min.js"></script>
+<script src="js_css/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- 輪播 -->
+<!-- <script src="js_css/slick-1.8.1/slick/slick.min.js"></script> -->
+<!-- 日期選擇器 -->
+<script src="js_css/moment/min/moment.min.js"></script>
+<script src="js_css/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- 圓餅圖 -->
+<script src="js_css/Chart.js/dist/Chart.bundle.js"></script>
+<script src="js_css/Chart.js/dist/utils.js"></script>
+<script src="js_css/Chart.js/dist/Chart.min.js"></script>
+<script src="js_css/echarts/dist/echarts.min.js"></script>
+<!-- 進度條 -->
+<script src="js_css/nprogress/nprogress.js"></script>
+<script src="js_css/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- 共用 -->
+<script src="js_css/all_have/custom.min.js"></script>
+
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-23581568-13', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<!--  圓餅圖 -->
+<script>
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+
+    var config = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                ],
+                backgroundColor: [
+                    window.chartColors.red,
+                    window.chartColors.orange,
+                    window.chartColors.yellow,
+                    window.chartColors.green,
+                    window.chartColors.blue,
+                ],
+                label: 'Dataset 1'
+            }],
+            labels: [
+                'Red',
+                'Orange',
+                'Yellow',
+                'Green',
+                'Blue'
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    };
+
+    window.onload = function() {
+        var ctx = document.getElementById('chart-area').getContext('2d');
+        window.myPie = new Chart(ctx, config);
+    };
+</script>

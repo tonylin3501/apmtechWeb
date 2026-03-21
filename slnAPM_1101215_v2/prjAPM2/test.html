@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>SVG 簽名範例</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    td, th {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    #signatureSVG {
+      border: 1px solid #000;
+      width: 500px;
+      height: 200px;
+      touch-action: none;
+      background-color: #fff;
+    }
+    #buttons {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>表格簽名範例（SVG）</h2>
+<table>
+  <tr>
+    <th>姓名</th>
+    <td>王小明</td>
+  </tr>
+  <tr>
+    <th>簽名</th>
+    <td>
+      <svg id="signatureSVG" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div id="buttons">
+        <button onclick="clearSVG()">清除</button>
+        <button onclick="saveSignature()">儲存簽名</button>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<script>
+  const svg = document.getElementById('signatureSVG');
+  let drawing = false;
+  let currentPath = null;
+
+  function getPoint(evt) {
+    const rect = svg.getBoundingClientRect();
+    const x = (evt.touches ? evt.touches[0].clientX : evt.clientX) - rect.left;
+    const y = (evt.touches ? evt.touches[0].clientY : evt.clientY) - rect.top;
+    return { x, y };
+  }
+
+  function startDraw(evt) {
+    evt.preventDefault();
+    drawing = true;
+    const { x, y } = getPoint(evt);
+    currentPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    currentPath.setAttribute("fill", "none");
+    currentPath.setAttribute("stroke", "black");
+    currentPath.setAttribute("stroke-width", "2");
+    currentPath.setAttribute("d", `M ${x} ${y}`);
+    svg.appendChild(currentPath);
+  }
+
+  function draw(evt) {
+    if (!drawing) return;
+    evt.preventDefault();
+    const { x, y } = getPoint(evt);
+    const d = currentPath.getAttribute("d");
+    currentPath.setAttribute("d", `${d} L ${x} ${y}`);
+  }
+
+  function stopDraw(evt) {
+    evt.preventDefault();
+    drawing = false;
+    currentPath = null;
+  }
+
+  // 滑鼠事件
+  svg.addEventListener("mousedown", startDraw);
+  svg.addEventListener("mousemove", draw);
+  svg.addEventListener("mouseup", stopDraw);
+  svg.addEventListener("mouseleave", stopDraw);
+
+  // 觸控事件
+  svg.addEventListener("touchstart", startDraw);
+  svg.addEventListener("touchmove", draw);
+  svg.addEventListener("touchend", stopDraw);
+  svg.addEventListener("touchcancel", stopDraw);
+
+  function clearSVG() {
+    while (svg.firstChild) {
+      svg.removeChild(svg.firstChild);
+    }
+  }
+
+  function saveSignature() {
+    const svgData = new XMLSerializer().serializeToString(svg);
+    const blob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "signature.svg";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    console.log("SVG 簽名已下載");
+  }
+</script>
+
+</body>
+</html>

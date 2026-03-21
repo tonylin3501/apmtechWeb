@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登入</title>
+    <!-- css -->
+    <link rel="stylesheet" href="js_css/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js_css/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/all_styles.css">
+    <link rel="stylesheet" href="css/all_rwd.css">
+</head>
+
+<body>
+    <div class="container-fluid loginpage">
+        <form class="logpad" method="post">
+            <div class="logtitle">
+                <h2>cosaty 登入</h2>
+                <h5>或<a href="register.html">建立帳戶</a></h5>
+            </div>
+            <!-- ================= -->
+            <div class="wordsarea">
+                <input type="email" name="user" id="email" placeholder="電子郵件" required="required">
+                <input type="password" name="password" placeholder="密碼" required="required">
+            </div>
+            <!-- ================= -->
+            <div class="rule">
+                <p>本頁面受機制保護，並遵守 cosaty 的 <a href="#">隱私權政策</a>及<a href="#">服務條款</a>。</p>
+            </div>
+            <!-- ================= -->
+            <div class="remeber">
+                <div>
+                    <input type="checkbox">記住我
+                </div>
+                <a href="#" class="forgot">忘記密碼</a>
+            </div>
+            <div class="buttons">
+                <input type="submit" class="login" value="登入">
+                <span>或</span>
+                <button type="submit" class="google">Google</button>
+                <button type="submit" class="fb">Facebook</button>
+            </div>
+        </form>
+    </div>
+</body>
+<!-- js -->
+<script src="js_css/jquery/dist/jquery.min.js"></script>
+<script src="js_css/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</html>

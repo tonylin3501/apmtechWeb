@@ -1,0 +1,128 @@
+.pagewrap1 {
+    position: relative;
+    margin: -1rem auto 0;
+    background-color: var(--op-white-b);
+    border-radius: 1rem 1rem 0 0;
+}   
+.wrap1 {
+    max-width: none;
+    position: relative;
+}
+
+/* 統一樣式結束 */
+/* 內容樣式開始 */
+/* openinfo 網格容器 */
+.openinfo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, auto);
+    column-gap: 1.5rem;
+    row-gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 奇數格子：藍底 */
+.openinfo-box-1 {
+    background-color: var(--op-blue-b);
+    border-radius: 1rem;
+    padding: 2.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.3s;
+}
+
+/* 偶數格子：灰底 */
+.openinfo-box-2 {
+    background-color: var(--op-gray1-g);
+    border-radius: 1rem;
+    padding: 2.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.3s;
+}
+
+
+.openinfo-text {
+    color: var(--op-blue5-w);
+    text-overflow: ellipsis;
+    max-width: 80%;
+    margin: 0;
+}
+
+/* 格子內圖標樣式 */
+.openinfo-icon {
+    color: var(--op-blue5-w);
+    font-size: 1.5rem;
+}
+
+.bi-arrow-right-circle::before {
+    content: "\f138";
+    font-size: 1.5rem;
+    color: var(--op-blue5-w);
+}
+
+/* c-child-top 基礎定位 */
+.c-child-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 0.5px solid var(--op-blue2-g);
+    z-index: 2;
+}
+
+/* moving-line-thin 保持原有樣式 */
+.moving-line-thin {
+    position: absolute;
+    height: 0.5px;
+    width: 80px;
+    background-color: var(--op-orange1);
+    transform: translateY(-50%);
+    animation: slide 8.5s ease-in-out infinite alternate;
+    z-index: 2;
+}
+
+/* 確保 wrap-page 作為定位上下文 */
+.wrap-page {
+    position: relative; /* 已由 pagewrap1 保證 */
+}
+/* 內容樣式結束 */
+
+@media (max-width: 1140px) {
+
+}
+
+/* 平板樣式 */
+@media (max-width: 991px) {
+        .openinfo {
+        grid-template-columns: repeat(2, 1fr); /* 2 列 */
+        grid-template-rows: repeat(9, auto); /* 9 行以容納 17 個格子 */
+        column-gap: 1rem;
+        row-gap: 2rem;
+    }
+
+}
+
+/* 手機樣式 */
+@media (max-width: 768px) {
+    .openinfo {
+        grid-template-columns: 1fr; /* 1 列 */
+        grid-template-rows: repeat(17, auto); /* 17 行 */
+        column-gap: 0;
+        row-gap: 1rem;
+    }
+    .openinfo-box-1 {
+        padding: 1.3rem 1.5rem;
+    }
+    .openinfo-box-2 {
+        padding: 1.3rem 1.5rem;
+}
+}
