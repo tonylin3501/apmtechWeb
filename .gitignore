@@ -1,0 +1,24 @@
+# Visual Studio workspace state
+.vs/
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ASP.NET local server config
+applicationhost.config
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NuGet packages restored locally
+packages/
+!packages/build/
+!packages/repositories.config
