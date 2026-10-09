@@ -1,0 +1,123 @@
+@{
+    ViewData["Title"] = "公司簡介";
+    ViewData["Eyebrow"] = "ABOUT APM TECH";
+    ViewData["Subtitle"] = "專業化的工作團隊，與客戶共同成長的長期事業夥伴。";
+    ViewData["Description"] = "千機科技專案團隊具多年開發經驗，服務國防、醫療、政府、學校、金融與外商企業，並導入 ISO27001 與個資法規範的資安管理。";
+
+    var projects = new[]
+    {
+        "政府單位網站規劃開發建置", "政府單位全球資訊網站開發建置", "癌症資訊系統開發建置",
+        "檔案加密管理系統規劃開發建置", "入口網站規劃開發建置", "銀行單位客服關係管理系統規劃開發建置",
+        "醫療單位網站規劃開發建置", "學校單位選課系統個資暨檔案加密管理系統開發建置",
+        "入口網站管理系統規劃開發建置", "傳真客服關係管理系統規劃開發建置", "企業單位網站規劃開發建置",
+    };
+    var customers = new[]
+    {
+        "國防部、國防部相關單位", "中國信託", "蘇黎世保險(股)", "中華大學", "台灣大學",
+        "國家文官學院", "台灣微軟", "資策會", "三軍總醫院", "桃竹苗就業服務中心",
+    };
+    var services = new[]
+    {
+        "資訊科技策略規劃顧問諮詢服務", "政府網站系統開發建置", "政府網站版型與內容管理規範服務",
+        "政府網站營運績效檢核評分服務", "政府網站無障礙網站檢核申請服務", "政府及企業應用軟體專業規劃、實施與導入",
+        "政府及企業應用軟體系統開發與整合服務", "政府及企業應用軟體的專案開發與客製化",
+        "政府及企業客戶關係管理資訊系統專案系統開發", "政府及企業個資極機密檔案防護顧問諮詢服務",
+    };
+}
+<partial name="_PageHeader" />
+
+<section class="section">
+    <div class="container">
+        <div class="section-head">
+            <div class="t">
+                <span class="eyebrow">OUR PRINCIPLES</span>
+                <h2>我們做事的三個原則</h2>
+            </div>
+        </div>
+        <div class="principles">
+            <div><b>可信賴</b><span>專業誠信敬業。合規、資安與個資保護是每個專案的起點，而不是加分項。</span></div>
+            <div><b>可維運</b><span>上線只是開始。以長期事業夥伴的角度設計架構、文件與維護機制，而非短線的人力外派。</span></div>
+            <div><b>可控的資安</b><span>導入 ISO27001:2013 及個資法規範，讓風險管控在系統建置後仍持續運作。</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="section soft">
+    <div class="container">
+        <div class="split">
+            <div class="l">
+                <span class="eyebrow">EXPERIENCE</span>
+                <h2>豐富的專案開發經驗</h2>
+            </div>
+            <div class="r stack-gap">
+                <p class="lead" style="margin:0">千機科技股份有限公司的專案團隊均有多年專案開發經驗，並於下列開發項目具備相當豐富的經驗，且皆為資深資訊科技專業人員。</p>
+                <div class="tags">@foreach (var p in projects) { <span class="chip">@p</span> }</div>
+                <h3 style="margin-top:16px">服務過的客戶</h3>
+                <p style="margin:0;color:var(--text)">專案團隊的工作背景及服務客戶，均是大型的國防單位、醫療單位、政府單位、學校單位、金融機構或外商企業。</p>
+                <div class="tags">@foreach (var c in customers) { <span class="chip">@c</span> }</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <partial name="_SectionTitle" model='new SectionHeading("CLIENTS", "信賴千機的單位")' />
+        <partial name="_ClientLogos" />
+    </div>
+</section>
+
+<section class="section soft">
+    <div class="container">
+        <div class="split">
+            <div class="l">
+                <span class="eyebrow">PARTNERSHIP</span>
+                <h2>與客戶共同成長</h2>
+            </div>
+            <div class="r prose">
+                <p>千機科技以專業化的工作團隊不斷在系統開發相關領域累積技術與應用經驗，並秉持對客戶永續經營的承諾，不是一般公司專案或人力外派的短線做法，而是將客戶視為長期的事業夥伴，持續提供最新相關的技術經驗與發展趨勢，與客戶共同成長。</p>
+                <p>千機科技不僅在相關科技應用上有廣泛及深入的經驗，在專業諮詢上更能提供客戶寶貴的經驗。多年的系統開發經驗讓我們深知，建立系統架構絕非只考慮技術問題就能成功，還需要考慮與客戶單位策略結合、組織結構流程，以及人的因素。</p>
+                <p>為協助客戶成功建置及確保資訊安全，千機科技導入 ISO27001:2013 及個資法規範之資訊及個資安全管理制度方法，可有效引導客戶由資訊安全的觀點，於網站系統順利建置後，為客戶的後續維護機制建立風險管控。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="split">
+            <div class="l">
+                <span class="eyebrow">SERVICES</span>
+                <h2>專業服務</h2>
+            </div>
+            <div class="r">
+                <ul class="ticks" style="border-top:0;padding-top:0;font-size:17px">
+                    @foreach (var s in services) { <li>@s</li> }
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section soft">
+    <div class="container">
+        <div class="split">
+            <div class="l">
+                <span class="eyebrow">COMPANY PROFILE</span>
+                <h2>公司資料</h2>
+            </div>
+            <dl class="r facts">
+                <div><dt>公司名稱</dt><dd>@SiteInfo.Name</dd></div>
+                <div><dt>英文名稱</dt><dd>@SiteInfo.EnglishName</dd></div>
+                <div><dt>主要業務</dt><dd>專案開發、Cosaty 資安監控平台、網站開發設計</dd></div>
+                <div><dt>成立時間</dt><dd>民國 97 年（2008 年）於台北成立，現有 25 名專業服務人員</dd></div>
+                <div><dt>資安認證</dt><dd>ISMS 於民國 113 年 10 月 1 日通過 ISO 27001:2022 與 CNS 27001:2023 驗證（範圍：資訊系統開發、建置與維護及專案業務）</dd></div>
+                <div><dt>電話 / 傳真</dt><dd>@SiteInfo.Tel / @SiteInfo.Fax</dd></div>
+                <div><dt>電子郵件</dt><dd><a href="mailto:@SiteInfo.Email">@SiteInfo.Email</a></dd></div>
+                <div style="grid-column:1/-1;border-bottom:1px solid var(--line-2)"><dt>公司地址</dt><dd>@SiteInfo.PostalCode @SiteInfo.Address<br />@SiteInfo.AddressEn</dd></div>
+            </dl>
+        </div>
+    </div>
+</section>
+
+<partial name="_CtaBand" />

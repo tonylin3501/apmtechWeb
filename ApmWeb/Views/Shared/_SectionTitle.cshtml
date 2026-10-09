@@ -1,0 +1,8 @@
+@model SectionHeading
+<div class="section-head">
+    <div class="t">
+        <span class="eyebrow">@Model.Eyebrow</span>
+        <h2>@Model.Title</h2>
+    </div>
+    @if (!string.IsNullOrEmpty(Model.Lead)) { <p>@Model.Lead</p> }
+</div>

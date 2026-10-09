@@ -1,0 +1,189 @@
+@{
+    ViewData["Title"] = null;
+    ViewData["Description"] = "千機科技專注政府、國防、醫療、學校與金融機構的 AI 應用建置與智慧管理平台，並自主研發 Cosaty 資安監控平台，通過 ISO/CNS 27001 資訊安全管理驗證。";
+    var latest = NewsTimeline.All
+        .SelectMany(y => y.Items.Select(i => (y.Year, Item: i)))
+        .Take(3)
+        .ToList();
+    var featuredTitles = new[] { "國防部民意信箱系統", "AI 賦能之軍民通用韌性服務資安防禦平台建置計畫", "國防部全球資訊網、民意信箱暨國軍檔案影像調閱系統維護" };
+    var featured = featuredTitles.Select(t => CaseStudies.All.First(c => c.Title == t)).ToList();
+}
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-copy">
+            <span class="eyebrow">AI APPLICATIONS × SMART MANAGEMENT</span>
+            <h1>AI 應用建置，<br />智慧管理平台。</h1>
+            <p>千機科技深耕政府、國防、醫療、學校與金融機構，從 AI 地端知識庫、智慧客服到民意信箱等管理平台，結合自主研發的 Cosaty 資安監控，交付可以長期穩定運作、資料不出機關的智慧系統。</p>
+            <div class="actions">
+                <a class="btn btn-primary" href="~/contact">聯繫我們</a>
+                <a class="btn btn-outline" href="~/success">查看成功案例</a>
+            </div>
+        </div>
+        <div class="register">
+            <div class="register-head"><span>OUR SERVICES</span><span>04 ITEMS</span></div>
+            <a href="~/success">
+                <span class="num">01</span>
+                <span><b>AI 應用建置</b><span class="d">地端 AI 知識庫、智慧客服與民意信箱 AI 輔助，資料不出機關</span></span>
+            </a>
+            <a href="~/project">
+                <span class="num">02</span>
+                <span><b>專案開發</b><span class="d">政府、國防、醫療、學校與金融單位的系統開發與維運</span></span>
+            </a>
+            <a href="~/cosaty">
+                <span class="num">03</span>
+                <span><b>Cosaty 資安監控平台</b><span class="d">網站防置換、行為與檔案異動監控、即時告警，結合 AI</span></span>
+            </a>
+            <a href="~/project#webdesign">
+                <span class="num">04</span>
+                <span><b>網站開發設計</b><span class="d">依政府網站規範建置，RWD、無障礙 AA、多網站共用後台</span></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="solutions">
+    <div class="container">
+        <partial name="_SectionTitle" model='new SectionHeading("SOLUTIONS", "從 AI 應用、系統開發到資安監控", "針對政府、國防、醫療、學校與金融單位，提供 AI 應用建置、專案開發、網站開發設計，以及自主研發的 Cosaty 資安監控平台，協助客戶把系統建好，也把系統守好。")' />
+        <div class="grid-2">
+            <article class="card hover">
+                <partial name="_Icon" model='"ai"' />
+                <h3>AI 應用建置</h3>
+                <p>以地端 AI 模型為政府、國防與企業客戶建置知識庫、智慧客服與民意信箱輔助功能，資料留在自家環境，並可搭配 Cosaty 即時監控。</p>
+                <ul class="ticks">
+                    <li>AI 地端知識庫與智慧客服</li>
+                    <li>民意信箱自動分類、摘要與回覆草稿</li>
+                    <li>異常使用行為偵測與案件視覺化儀表板</li>
+                </ul>
+                <a class="more" href="~/success">了解 AI 案例 →</a>
+            </article>
+            <article class="card hover">
+                <partial name="_Icon" model='"project"' />
+                <h3>專案開發</h3>
+                <p>從需求分析、系統開發到長期維運，由資深資訊人員組成的專案團隊，為國防、醫療、政府、學校與金融單位量身建置所需系統。</p>
+                <ul class="ticks">
+                    <li>政府全球資訊網與入口網站建置</li>
+                    <li>醫療資訊與民意信箱系統</li>
+                    <li>APMS 檔案加密管理系統</li>
+                </ul>
+                <a class="more" href="~/project">了解專案開發 →</a>
+            </article>
+            <article class="card hover">
+                <partial name="_Icon" model='"shield"' />
+                <h3>Cosaty 資安監控平台</h3>
+                <p>自主研發的主機及網站資安監控平台，即時掌握網站防置換、程式與檔案異動及使用者行為，異常時立即告警，並結合 AI 功能，可部署於 VM 環境。</p>
+                <ul class="ticks">
+                    <li>網站防置換與應用程式監控</li>
+                    <li>主機行為、外接裝置與程式監控</li>
+                    <li>全天候即時告警，支援 Line 通知</li>
+                </ul>
+                <a class="more" href="~/cosaty">了解 Cosaty →</a>
+            </article>
+            <article class="card hover">
+                <partial name="_Icon" model='"web"' />
+                <h3>網站開發設計</h3>
+                <p>依國發會政府網站版型與內容管理規範開發，網站取得無障礙標章 2.1 AA 並通過資安檢測，並有國防部全球資訊網 RWD 改版與營運經驗。</p>
+                <ul class="ticks">
+                    <li>RWD 響應式網站與多網站共用後台</li>
+                    <li>無障礙檢核與網站營運績效檢核</li>
+                    <li>Bootstrap・HTML5・CSS3・C#・ASP.NET</li>
+                </ul>
+                <a class="more" href="~/project#webdesign">了解網站設計 →</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section soft" aria-labelledby="process-h">
+    <div class="container">
+        <div class="section-head">
+            <div class="t">
+                <span class="eyebrow">HOW WE WORK</span>
+                <h2 id="process-h">專案導入流程：從需求釐清到長期維運</h2>
+            </div>
+            <p>每個階段都納入政府規範、無障礙與資安檢測，上線後持續維護，讓系統長期穩定運作。</p>
+        </div>
+        <ol class="steps">
+            <li><span class="s">STEP 01</span><b>需求訪談與規劃</b><span class="d">釐清業務流程、規格與驗收標準，結合單位策略與組織流程，產出系統架構與時程。</span></li>
+            <li><span class="s">STEP 02</span><b>設計與規範檢核</b><span class="d">視覺與互動設計同步納入政府網站版型與無障礙規範，避免送審退件。</span></li>
+            <li><span class="s">STEP 03</span><b>開發、整合與資安</b><span class="d">系統開發、第三方系統整合與漏洞檢測並行，上線前完成資訊安全檢測。</span></li>
+            <li><span class="s">STEP 04</span><b>上線與長期維運</b><span class="d">導入 ISO 27001 與個資法規範，建立後續維護機制的風險管控，與客戶共同成長。</span></li>
+        </ol>
+    </div>
+</section>
+
+<section class="section" id="cases">
+    <div class="container">
+        <div class="section-head">
+            <div class="t">
+                <span class="eyebrow">SELECTED WORK</span>
+                <h2>成功案例</h2>
+            </div>
+            <a class="link-arrow" href="~/success">查看全部案例 →</a>
+        </div>
+        <div class="case-grid">
+            @for (var i = 0; i < featured.Count; i++)
+            {
+                var c = featured[i];
+                <article class="case">
+                    <partial name="_CaseCover" model="(c, i)" />
+                    <div class="case-body">
+                        <h3>@c.Title</h3>
+                        <p>@c.Summary</p>
+                    </div>
+                </article>
+            }
+        </div>
+        <div class="logos">
+            <span class="tag">合作單位</span>
+            <partial name="_ClientLogos" />
+        </div>
+    </div>
+</section>
+
+<section class="band" id="cosaty">
+    <div class="container">
+        <div class="copy">
+            <span class="eyebrow light">COSATY · SECURITY MONITORING PLATFORM</span>
+            <h2>守住網站與主機，<br />讓異常第一時間被看見。</h2>
+            <p>Cosaty 整合網站防置換、應用程式監控、檔案異動監控與全天候即時告警，並結合 AI 功能，提升網站服務品質與安全。提供訂閱制授權（12 個月）。</p>
+            <div class="actions">
+                <a class="btn btn-light" href="~/cosaty">查看產品與報價</a>
+                <a class="btn btn-ghost" href="~/cosaty/endpoint">端點資安防護系統</a>
+            </div>
+        </div>
+        <div class="stack">
+            @foreach (var (p, i) in CosatyCatalog.Products.Select((p, i) => (p, i)).Reverse())
+            {
+                <div>
+                    <span class="n">0@(i + 1)</span>
+                    <span><b>@p.Name.Replace("Cosaty ", "")</b><span class="d">NT$ @p.Price 起（含稅）・訂閱制 12 個月</span></span>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-head">
+            <div class="t">
+                <span class="eyebrow">NEWS</span>
+                <h2>最新消息</h2>
+            </div>
+            <a class="link-arrow" href="~/news">全部消息 →</a>
+        </div>
+        <div class="grid-3">
+            @foreach (var n in latest)
+            {
+                <article class="card">
+                    <span class="tag">@n.Year</span>
+                    <h3>@n.Item.Title</h3>
+                    <p>@n.Item.Body</p>
+                </article>
+            }
+        </div>
+    </div>
+</section>
+
+<partial name="_CtaBand" />

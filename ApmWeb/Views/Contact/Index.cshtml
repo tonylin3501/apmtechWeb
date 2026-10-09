@@ -1,0 +1,67 @@
+@model ContactFormViewModel
+@{
+    ViewData["Title"] = "聯絡我們";
+    ViewData["Eyebrow"] = "CONTACT";
+    ViewData["Subtitle"] = "您的意見及建議，是我們進步最大的動力。請留言或撥打客服專線，我們將儘快與您聯繫。";
+    ViewData["Description"] = "聯絡千機科技：線上留言、業務窗口、電話與公司地圖。";
+}
+<partial name="_PageHeader" />
+
+<section class="section">
+    <div class="container">
+        <div class="split">
+            <div class="l" style="flex:1 1 320px">
+                <h2 style="font-size:28px">業務窗口</h2>
+                <ul class="contact-list" style="margin-top:12px">
+                    <li><partial name="_Icon" model='"user-sm"' /><span>@SiteInfo.Contact</span></li>
+                    <li><partial name="_Icon" model='"mail-sm"' /><a href="mailto:@SiteInfo.Email">@SiteInfo.Email</a></li>
+                    <li><partial name="_Icon" model='"phone-sm"' /><span>電話　<a href="tel:@SiteInfo.TelHref">@SiteInfo.Tel</a><br />傳真　@SiteInfo.Fax</span></li>
+                    <li><partial name="_Icon" model='"pin-sm"' /><span>@SiteInfo.PostalCode @SiteInfo.Address<br />@SiteInfo.AddressEn</span></li>
+                </ul>
+            </div>
+
+            <form class="r form" asp-action="Send" asp-controller="Contact" method="post" novalidate style="flex:2 1 480px">
+                <div>
+                    <h2 style="font-size:28px">線上留言</h2>
+                    <p style="margin:8px 0 0;color:var(--text)">請填妥以下表格，我們將儘速回覆並 Email 到您的信箱。</p>
+                </div>
+                <div asp-validation-summary="ModelOnly"></div>
+
+                <div class="hp-field" aria-hidden="true">
+                    <label asp-for="Website">請勿填寫此欄位</label>
+                    <input asp-for="Website" tabindex="-1" autocomplete="off" />
+                </div>
+
+                <div class="field">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" autocomplete="name" required />
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="field">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" type="email" autocomplete="email" required />
+                    <span asp-validation-for="Email"></span>
+                </div>
+                <div class="field">
+                    <label asp-for="Phone"></label>
+                    <input asp-for="Phone" type="tel" autocomplete="tel" required />
+                    <span asp-validation-for="Phone"></span>
+                </div>
+                <div class="field">
+                    <label asp-for="Message"></label>
+                    <textarea asp-for="Message" rows="6" placeholder="請輸入您的需求或問題..." required></textarea>
+                    <span asp-validation-for="Message"></span>
+                </div>
+                <div class="actions" style="padding-top:0">
+                    <button type="submit" class="btn btn-primary">送出諮詢</button>
+                    <button type="reset" class="btn btn-outline">清除</button>
+                </div>
+            </form>
+        </div>
+
+        <div style="margin-top:64px">
+            <iframe class="map-frame" title="千機科技位置地圖" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14458.800719117977!2d121.526592!3d25.044247!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf7e5c6426542cbcb!2z5Y2D5qmf56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1561087869523!5m2!1szh-TW!2stw"></iframe>
+        </div>
+    </div>
+</section>

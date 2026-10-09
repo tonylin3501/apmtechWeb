@@ -1,0 +1,6 @@
+<div class="logo-grid">
+    @foreach (var c in Clients.All)
+    {
+        <div class="l" title="@c.Name"><img src="~/img/@c.Logo" alt="@c.Name" loading="lazy" /></div>
+    }
+</div>

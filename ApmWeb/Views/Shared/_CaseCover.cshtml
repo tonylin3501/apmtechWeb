@@ -1,0 +1,5 @@
+@model (CaseStudy Case, int Index)
+<div class="case-cover c@(Model.Index % 3 + 1)">
+    <span class="y">@Model.Case.Category ・ @Model.Case.Years</span>
+    <span class="cl">@Model.Case.Client</span>
+</div>

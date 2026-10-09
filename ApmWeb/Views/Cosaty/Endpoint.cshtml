@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Cosaty 端點資安防護系統";
+    ViewData["Eyebrow"] = "COSATY ENDPOINT";
+    ViewData["Subtitle"] = "Server 專業版、基本版、告警模組與用戶端軟體，依規模彈性選購。";
+    ViewData["Description"] = "Cosaty 端點資安防護系統 Server 專業版、基本版、告警模組與用戶端軟體型錄下載。";
+}
+<partial name="_PageHeader" />
+
+<section class="section">
+    <div class="container">
+        <div class="grid-2">
+            @foreach (var d in CosatyCatalog.EndpointDownloads)
+            {
+                <div class="card hover dl-row" style="flex-direction:row">
+                    <partial name="_Icon" model='"pdf"' />
+                    <div class="grow">
+                        <h3>@d.Name</h3>
+                        <p>@d.Note</p>
+                    </div>
+                    <a class="btn btn-outline btn-sm" href="~/files/@Uri.EscapeDataString(d.PdfFile)" target="_blank" rel="noopener">下載型錄</a>
+                </div>
+            }
+        </div>
+        <p style="text-align:center;margin:48px 0 16px;color:var(--text)">需要報價或導入諮詢？歡迎與我們聯繫。</p>
+        <p style="text-align:center"><a class="btn btn-primary" href="~/contact">聯絡我們</a></p>
+    </div>
+</section>

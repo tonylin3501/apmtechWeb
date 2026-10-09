@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "最新消息";
+    ViewData["Eyebrow"] = "NEWS";
+    ViewData["Subtitle"] = "千機科技歷年重要里程碑與專案實績。";
+    ViewData["Description"] = "千機科技最新消息與歷年專案實績，包含 Cosaty 資安平台、國防部全球資訊網、三軍總醫院等專案。";
+}
+<partial name="_PageHeader" />
+
+<section class="section">
+    <div class="container">
+        @foreach (var y in NewsTimeline.All)
+        {
+            <div class="news-year">
+                <div class="y">@y.Year</div>
+                <div class="items">
+                    @foreach (var item in y.Items)
+                    {
+                        <article>
+                            <h3>@item.Title</h3>
+                            <p>@item.Body</p>
+                        </article>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<partial name="_CtaBand" />

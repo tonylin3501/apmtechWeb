@@ -1,0 +1,56 @@
+@model CosatyProduct
+@{
+    ViewData["Title"] = Model.Name;
+    ViewData["Eyebrow"] = "COSATY";
+    ViewData["Description"] = Model.Summary;
+    var others = CosatyCatalog.Products.Where(p => p.Slug != Model.Slug).ToList();
+}
+<partial name="_PageHeader" />
+
+<section class="section">
+    <div class="container">
+        <div class="layout-2">
+            <div class="m stack-gap">
+                <div class="card">
+                    <div class="price">NT$ @Model.Price <small>元（含稅）</small></div>
+                    <div class="tags">
+                        <span class="chip">@CosatyCatalog.License</span>
+                        <span class="chip">@CosatyCatalog.Quantity</span>
+                    </div>
+                    <p>@Model.Summary</p>
+                </div>
+
+                <h2 style="font-family:var(--font-sans);font-size:24px;margin-top:20px">產品特性</h2>
+                <ul class="ticks" style="border-top:0;padding-top:0;font-size:17px">
+                    @foreach (var f in Model.Features) { <li>@f</li> }
+                </ul>
+
+                <h2 style="font-family:var(--font-sans);font-size:24px;margin-top:20px">系統需求</h2>
+                <table class="spec">
+                    <tbody>
+                        <tr><th scope="row">伺服器端軟體</th><td>@CosatyCatalog.OsRequirement</td></tr>
+                        <tr><th scope="row">伺服器端最低硬體</th><td>@CosatyCatalog.HwRequirement</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="actions">
+                    <a class="btn btn-primary" href="~/files/@Uri.EscapeDataString(Model.PdfFile)" target="_blank" rel="noopener">下載型錄</a>
+                    <a class="btn btn-outline" href="~/contact">聯絡我們詢價</a>
+                </div>
+            </div>
+
+            <aside>
+                <div class="card">
+                    <h3>其他 Cosaty 產品</h3>
+                    <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
+                        @foreach (var o in others)
+                        {
+                            <li><a class="link-arrow" href="~/cosaty/@o.Slug">@o.Name →</a></li>
+                        }
+                        <li><a class="link-arrow" href="~/cosaty/endpoint">Cosaty 端點資安防護系統 →</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>

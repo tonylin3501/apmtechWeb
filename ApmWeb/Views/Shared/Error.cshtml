@@ -1,0 +1,16 @@
+@{
+    var code = ViewData["Code"] as int? ?? 500;
+    ViewData["Title"] = code == 404 ? "找不到頁面" : "發生錯誤";
+    var message = code == 404 ? "您要找的頁面不存在，可能已經移動或網址輸入有誤。" : "伺服器發生問題，請稍後再試。";
+}
+<section class="error-page">
+    <div class="container">
+        <div class="error-code">@code</div>
+        <h1 style="margin:16px 0">@ViewData["Title"]</h1>
+        <p class="lead">@message</p>
+        <div class="actions" style="justify-content:center">
+            <a class="btn btn-primary" href="~/">回到首頁</a>
+            <a class="btn btn-outline" href="~/contact">聯絡我們</a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,89 @@
+@{
+    ViewData["Title"] = "專案開發";
+    ViewData["Eyebrow"] = "PROJECTS";
+    ViewData["Subtitle"] = "從專案開發、檔案加密到網站設計，提供完整的資訊系統解決方案。";
+    ViewData["Description"] = "千機科技專案開發、APMS 檔案加密軟體與網站開發設計服務，導入 ISO27001 與個資法規範。";
+
+    var apms = new (string Title, string[] Items)[]
+    {
+        ("web 權限管理設定", new[]
+        {
+            "群組權限設定", "多金鑰機制", "使用者檔案使用記錄查詢", "檔案應用程式及類型加密",
+            "檔案伺服器 File Server 金鑰權限設定", "AD 整合",
+        }),
+        ("檔案伺服器 File Server 設定", new[]
+        {
+            "可以資料夾為單位，依使用者及其所屬群組設定自動加解密。",
+            "加密資料夾 A 與資料夾 B 的授權讀取狀態均為獨立不具關連性。",
+            "單位分享資料夾，可設定為單位群組成員可以解密，不同單位人員不得解密。",
+        }),
+        ("使用者本機端", new[]
+        {
+            "使用者開啟參照檔，加密 A 檔關聯加密 B 檔，打開 A 檔仍可正常顯示資料。",
+            "可自行定義加密資料夾位置供其儲存個資檔案，且僅可由使用者及加密金鑰加解密。",
+            "使用者檔案開啟、複製、更名、修改內容、儲存等行為均會自動加密。",
+        }),
+    };
+
+    var design = new (string Title, string Body)[]
+    {
+        ("首頁", "每個網站最重要的都是首頁，而首頁最重要的是最上方的 Header，因為這是瀏覽者打開網頁後第一眼看到的畫面。隨著 HTML5 及 CSS3 日益普及，傳統 Flash 動畫已漸漸被取代，以大篇幅精緻圖片強調企業或品牌的重點，且不需要較長的讀取時間，是版型配置的第一個重點。"),
+        ("架構", "每個網站都有不同的需求，因此在網站設計之前，都要先做好網站架構規劃。設計師要全盤掌握網站的基本架構與功能項目，才能知道主選單該放哪些項目、網頁主體要不要左右欄、網頁底部要放哪些聯絡資訊、最新消息要顯示幾則。"),
+        ("色彩", "一家公司的形象，最重要的就是企業識別系統 (CIS)，網站也是，最重要的是色彩是否協調與一致。選擇色彩首要考量公司或品牌的主要顏色，決定之後整個網站的風格具有一致性，才能清楚表達企業或品牌的精神並提高識別度。"),
+        ("主次", "同樣是標題，重要性不同，文字大小就必須不同；同樣是圖片，重要性不同，尺寸也就不同。較重要的訊息可用顏色區別。所有的文字及圖片都要有適當的間距及留白，畫面閱讀起來才會輕鬆不費力。"),
+        ("圖片", "一般人閱讀網頁的習慣是由上到下、由左到右，但遇到圖片時會呈現跳躍式閱讀。全是文字讀起來枯燥，全是圖片內容又太過空洞，成功的版型規劃，就是達到圖文並茂、相互呼應的境界。"),
+    };
+}
+<partial name="_PageHeader" />
+
+<section class="section" id="web-develop">
+    <div class="container">
+        <div class="split">
+            <div class="l">
+                <span class="eyebrow">DEVELOPMENT</span>
+                <h2>專案開發</h2>
+            </div>
+            <div class="r prose">
+                <p>千機科技以專業化的工作團隊不斷在系統開發相關領域累積技術與應用經驗，並秉持對客戶永續經營的重大承諾，不是一般公司專案或人力外派的短線做法，而是將客戶視為長期的事業夥伴，持續提供最新相關的技術經驗與發展趨勢，與客戶共同成長。</p>
+                <p>千機科技不僅在相關科技應用上有廣泛及深入的經驗，在專業諮詢上更能提供客戶寶貴的經驗。建立一個系統架構絕非只考慮技術問題就可以成功，還需要考慮與客戶單位策略結合、組織結構流程，以及人的因素。</p>
+                <p>為協助客戶成功建置及確保資訊安全，千機科技導入 ISO27001:2013 及個資法規範之資訊及個資安全管理制度方法，可有效引導客戶由導入資訊安全的觀點，於系統順利建置後，為客戶的後續維護機制建立風險管控。</p>
+                <a class="btn btn-primary" href="~/success">查看成功案例</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section soft" id="apms">
+    <div class="container">
+        <partial name="_SectionTitle" model='new SectionHeading("FILE ENCRYPTION", "APMS 檔案加密軟體", "APMS 檔案加密管理系統為自主開發，並可結合使用者憑證管理、AD 群組設定，及安裝佈署建置於 VM 環境。")' />
+        <div class="grid-3">
+            @foreach (var a in apms)
+            {
+                <div class="card">
+                    <h3>@a.Title</h3>
+                    <ul class="ticks">
+                        @foreach (var i in a.Items) { <li>@i</li> }
+                    </ul>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="section" id="webdesign">
+    <div class="container">
+        <partial name="_SectionTitle" model='new SectionHeading("WEB DESIGN", "網站開發設計", "具備政府全球資訊網開發經驗，依國發會相關規範開發，曾承接國防部全球資訊網 RWD 改版與營運，並建置三軍總醫院網站。技術涵蓋 Bootstrap、HTML5、C#、CSS3、ASP.NET，並有多網站共用後台的經驗。")' />
+        <div class="grid-3">
+            @for (var i = 0; i < design.Length; i++)
+            {
+                <div class="card">
+                    <span class="tag">0@(i + 1)</span>
+                    <h3>@design[i].Title</h3>
+                    <p>@design[i].Body</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<partial name="_CtaBand" />

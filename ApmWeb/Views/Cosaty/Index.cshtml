@@ -1,0 +1,52 @@
+@{
+    ViewData["Title"] = "Cosaty 主機及網站安全";
+    ViewData["Eyebrow"] = "COSATY";
+    ViewData["Subtitle"] = "自主開發的資安監控平台：網站安全、行為、外接裝置與程式監控，全天候即時告警。";
+    ViewData["Description"] = "Cosaty 主機及網站安全管理、行為監控、外接裝置監控與程式監控平台（訂閱制授權 12 個月）。";
+}
+<partial name="_PageHeader" />
+
+<section class="section">
+    <div class="container">
+        <div class="card dl-row" style="margin-bottom:40px;flex-direction:row">
+            <partial name="_Icon" model='"pdf"' />
+            <div class="grow">
+                <h3>訂閱制與非訂閱制差異說明</h3>
+                <p>了解兩種授權方式的差異，選擇最適合貴單位的方案。</p>
+            </div>
+            <a class="btn btn-outline" href="~/files/@Uri.EscapeDataString(CosatyCatalog.SubscriptionPdf)" target="_blank" rel="noopener">下載 PDF</a>
+        </div>
+
+        <div class="grid-2">
+            @foreach (var p in CosatyCatalog.Products)
+            {
+                <article class="card hover">
+                    <partial name="_Icon" model='"shield"' />
+                    <h3>@p.Name</h3>
+                    <p>@p.Summary</p>
+                    <div class="price" style="margin-top:auto">NT$ @p.Price <small>元（含稅）起</small></div>
+                    <div class="actions" style="padding-top:0;align-items:center">
+                        <a class="btn btn-primary btn-sm" href="~/cosaty/@p.Slug">產品介紹</a>
+                        <a class="link-arrow" href="~/files/@Uri.EscapeDataString(p.PdfFile)" target="_blank" rel="noopener">型錄下載 ↓</a>
+                    </div>
+                </article>
+            }
+        </div>
+        <p style="color:var(--muted);font-size:14px;margin:28px 0 0">以上皆為訂閱制授權（12 個月），@CosatyCatalog.Quantity。</p>
+    </div>
+</section>
+
+<section class="section soft">
+    <div class="container">
+        <div class="card dl-row" style="flex-direction:row">
+            <partial name="_Icon" model='"lock"' />
+            <div class="grow">
+                <h3>Cosaty 端點資安防護系統</h3>
+                <p>Server 專業版、基本版、告警模組與用戶端軟體，依規模彈性選購。</p>
+            </div>
+            <a class="btn btn-primary" href="~/cosaty/endpoint">查看端點資安防護</a>
+        </div>
+    </div>
+</section>
+
+<partial name="_CtaBand" />

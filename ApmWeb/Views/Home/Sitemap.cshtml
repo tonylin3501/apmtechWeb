@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "網站導覽";
+    ViewData["Eyebrow"] = "SITEMAP";
+    ViewData["Subtitle"] = "快速找到您需要的頁面。";
+    ViewData["Description"] = "千機科技網站導覽：產品服務、公司資訊、聯絡方式一覽。";
+
+    var groups = new (string Title, (string Icon, string Name, string Desc, string Url)[] Links)[]
+    {
+        ("產品服務", new[]
+        {
+            ("project", "專案開發", "專案開發、APMS 檔案加密與網站開發設計", "~/project"),
+            ("shield", "Cosaty 主機及網站安全", "網站安全管理、行為、外接裝置與程式監控平台", "~/cosaty"),
+            ("lock", "Cosaty 端點資安防護", "端點資安防護系統 Server、告警模組與用戶端", "~/cosaty/endpoint"),
+        }),
+        ("公司", new[]
+        {
+            ("doc", "公司簡介", "團隊經驗、服務客戶與專業服務", "~/about"),
+            ("check", "成功案例", "國防、醫療與政府單位建置實績", "~/success"),
+            ("doc", "最新消息", "歷年里程碑與專案實績", "~/news"),
+            ("lock", "資訊安全政策", "資訊安全政策宣告", "~/policy"),
+        }),
+        ("聯絡", new[]
+        {
+            ("mail", "聯絡我們", "線上留言、業務窗口與公司地圖", "~/contact"),
+        }),
+    };
+}
+<partial name="_PageHeader" />
+
+<section class="section">
+    <div class="container">
+        <div class="grid-3">
+            @foreach (var g in groups)
+            {
+                <div class="sm-group">
+                    <h2>@g.Title</h2>
+                    @foreach (var l in g.Links)
+                    {
+                        <a class="sm-link" href="@Url.Content(l.Url)">
+                            <partial name="_Icon" model='l.Icon + "-sm"' />
+                            <div><strong>@l.Name</strong><span>@l.Desc</span></div>
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</section>
