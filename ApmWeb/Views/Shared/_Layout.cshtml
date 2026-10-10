@@ -5,9 +5,9 @@
     string? Cur(bool on) => on ? "page" : null;
     var baseUrl = SiteInfo.BaseUrl(Context);
     var title = ViewData["Title"] as string;
-    var fullTitle = string.IsNullOrEmpty(title) ? $"{SiteInfo.ShortName}｜AI 應用建置・智慧管理平台・Cosaty 資安監控" : $"{title}｜{SiteInfo.ShortName}";
+    var fullTitle = string.IsNullOrEmpty(title) ? $"{SiteInfo.ShortName}｜AI Agent 提升決策效率・打造智慧服務" : $"{title}｜{SiteInfo.ShortName}";
     var description = ViewData["Description"] as string
-        ?? "千機科技專注於政府、國防、醫療、學校與金融機構的 AI 應用建置、智慧管理平台與系統開發，並自主研發 Cosaty 資安監控平台。";
+        ?? "千機科技協助政府機關與企業善用 AI Agent 提升決策效率、打造智慧服務，並提供系統開發與自主研發的 Cosaty 資安監控平台。";
     var canonical = baseUrl + (string.IsNullOrEmpty(path) ? "/" : path);
     var gaId = Config["GoogleAnalytics:MeasurementId"];
     var orgJson = System.Text.Json.JsonSerializer.Serialize(new Dictionary<string, object>

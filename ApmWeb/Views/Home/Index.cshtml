@@ -1,6 +1,6 @@
 @{
     ViewData["Title"] = null;
-    ViewData["Description"] = "千機科技專注政府、國防、醫療、學校與金融機構的 AI 應用建置與智慧管理平台，並自主研發 Cosaty 資安監控平台，通過 ISO/CNS 27001 資訊安全管理驗證。";
+    ViewData["Description"] = "生成式 AI 浪潮來襲，千機科技協助政府機關與企業善用 AI Agent 提升決策效率、打造智慧服務，並自主研發 Cosaty 資安監控平台，通過 ISO/CNS 27001 資訊安全管理驗證。";
     var latest = NewsTimeline.All
         .SelectMany(y => y.Items.Select(i => (y.Year, Item: i)))
         .Take(3)
@@ -12,9 +12,9 @@
 <section class="hero">
     <div class="container">
         <div class="hero-copy">
-            <span class="eyebrow">AI APPLICATIONS × SMART MANAGEMENT</span>
-            <h1>AI 應用建置，<br />智慧管理平台。</h1>
-            <p>千機科技深耕政府、國防、醫療、學校與金融機構，從 AI 地端知識庫、智慧客服到民意信箱等管理平台，結合自主研發的 Cosaty 資安監控，交付可以長期穩定運作、資料不出機關的智慧系統。</p>
+            <span class="eyebrow">GENERATIVE AI × AI AGENT</span>
+            <h1>提升決策效率，<br />打造智慧服務。</h1>
+            <p>生成式 AI 浪潮來襲，千機科技協助政府機關與企業善用 AI Agent。從地端知識庫、智慧客服到民意信箱 AI 輔助，在資料留在自家環境的前提下，讓決策更快、服務更好。</p>
             <div class="actions">
                 <a class="btn btn-primary" href="~/contact">聯繫我們</a>
                 <a class="btn btn-outline" href="~/success">查看成功案例</a>
