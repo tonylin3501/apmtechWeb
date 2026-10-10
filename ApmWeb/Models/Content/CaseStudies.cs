@@ -6,7 +6,7 @@ public record Verification(string Label, string Detail);
 
 public static class CaseStudies
 {
-    public const string Ai = "AI 應用建置";
+    public const string Ai = "AI Agent 智慧服務";
     public const string Gov = "政府網站開發建置";
 
     public static readonly string[] Categories = { Ai, Gov };
