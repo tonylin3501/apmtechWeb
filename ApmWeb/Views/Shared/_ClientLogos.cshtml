@@ -1,6 +1,19 @@
-<div class="logo-grid">
-    @foreach (var c in Clients.All)
-    {
-        <div class="l" title="@c.Name"><img src="~/img/@c.Logo" alt="@c.Name" loading="lazy" /></div>
-    }
+<div class="logo-carousel" data-carousel>
+    <button type="button" class="logo-nav" data-dir="-1" aria-label="上一組合作單位"><partial name="_Icon" model='"left"' /></button>
+    <div class="logo-track" tabindex="0" role="region" aria-label="合作單位，可左右捲動">
+        @foreach (var c in Clients.All)
+        {
+            <div class="l" title="@c.Name">
+                @if (c.Logo is null)
+                {
+                    <span class="n">@c.Name</span>
+                }
+                else
+                {
+                    <img src="~/img/@c.Logo" alt="@c.Name" loading="lazy" draggable="false" />
+                }
+            </div>
+        }
+    </div>
+    <button type="button" class="logo-nav" data-dir="1" aria-label="下一組合作單位"><partial name="_Icon" model='"right"' /></button>
 </div>

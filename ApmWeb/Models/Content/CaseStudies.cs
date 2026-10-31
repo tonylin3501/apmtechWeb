@@ -8,8 +8,9 @@ public static class CaseStudies
 {
     public const string Ai = "AI Agent 智慧服務";
     public const string Gov = "政府網站開發建置";
+    public const string Industry = "產業案例";
 
-    public static readonly string[] Categories = { Ai, Gov };
+    public static readonly string[] Categories = { Ai, Gov, Industry };
 
     /// <summary>近 3 年主官網 RWD 建置履約的驗證成果（來源：民意信箱簡報 114/10/21）。</summary>
     public static readonly IReadOnlyList<Verification> WebsiteVerifications = new Verification[]
@@ -132,6 +133,30 @@ public static class CaseStudies
             new[] { "計畫網站建置與內容管理" }),
 
         // —— 金融企業 ——
+
+        // —— 產業案例 ——
+        new(Industry, "欣欣天然氣", "欣欣天然氣官網改版與櫃台 E 化無紙化表單系統", "2025 – 2026",
+            "以線上便民服務為定位改版官網，並將五項申辦表單數位化；民眾可線上或臨櫃以平板申辦，案件從建立、承辦、審核到轉入 MIS 全程線上完成。",
+            new[]
+            {
+                "官網 RWD 改版：重整網站架構與視覺，首頁提案三種版型",
+                "便民服務：氣費查詢、自報度數、線上繳費、電子帳單、停氣與施工公告、漏氣通報、常見問題",
+                "五項無紙化表單：管線裝置申請、用戶異動、中低收氣費優惠、補發載具、更正與追退維護",
+                "手機簡訊 OTP 驗證、用戶資料自動帶入、欄位防呆、手寫電子簽名與拍照上傳",
+                "以 Web API 介接 Oracle 資料庫，機敏個資欄位加密存放",
+                "教育訓練與系統維護手冊",
+            }),
+        new(Industry, "欣高石油氣", "欣高石油氣官網改版建置", "2026 建置中",
+            "為天然氣公用事業規劃新一代官網，以用戶線上服務與表單無紙化為核心，串接既有 ERP 系統。",
+            new[]
+            {
+                "RWD 版型設計與前後台系統開發，首頁提案三種版型",
+                "用戶身分驗證、氣費查詢與度數回報、繳費與條碼產生",
+                "電子帳單整合發送與郵件範本",
+                "線上申請與表單無紙化",
+                "後台群組權限管理、動態選單、公告與網頁編輯",
+                "Windows Server 與 SQL Server 2025 環境建置，上線前完成弱點掃描",
+            }),
     };
 
     private const string CrossPlatform = "系統支援跨平台於手機、平板及一般電腦完整顯示與操作所有功能畫面";

@@ -125,9 +125,17 @@ a.card:hover,.card.hover:hover{border-color:var(--blue);box-shadow:0 8px 24px rg
 .filter button{font:inherit;font-size:15px;min-height:40px;padding:6px 18px;border:1px solid #C5CFDA;border-radius:999px;background:#fff;color:var(--ink);cursor:pointer}
 .filter button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
 .logos{border-top:1px solid var(--line);padding-top:28px;margin-top:40px}
-.logo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px;margin-top:20px}
-.logo-grid .l{border:1px solid var(--line);border-radius:8px;height:84px;display:flex;align-items:center;justify-content:center;padding:12px;background:#fff}
-.logo-grid img{max-height:100%;object-fit:contain}
+.logo-carousel{display:flex;align-items:center;gap:12px;margin-top:20px}
+.logo-track{flex:1;min-width:0;display:flex;gap:16px;overflow-x:auto;scrollbar-width:none;cursor:grab;padding:2px}
+.logo-track::-webkit-scrollbar{display:none}
+.logo-track.dragging{cursor:grabbing;user-select:none}
+.logo-track .l{flex:0 0 190px;border:1px solid var(--line);border-radius:8px;height:84px;display:flex;align-items:center;justify-content:center;padding:12px;background:#fff}
+.logo-track img{max-height:100%;object-fit:contain;pointer-events:none}
+.logo-track .n{font-weight:700;font-size:16px;color:var(--navy);text-align:center;line-height:1.4}
+.logo-nav{flex:none;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line-2);border-radius:50%;background:#fff;color:var(--navy);cursor:pointer}
+.logo-nav:hover:not(:disabled){background:var(--bg-soft)}
+.logo-nav:disabled{opacity:.35;cursor:default}
+@media (max-width:560px){.logo-nav{display:none}.logo-track .l{flex-basis:150px}}
 
 /* dark band */
 .band{background:var(--navy);color:#fff;padding:48px 0}
