@@ -131,7 +131,7 @@ a.card:hover,.card.hover:hover{border-color:var(--blue);box-shadow:0 8px 24px rg
 .logo-track.dragging{cursor:grabbing;user-select:none}
 .logo-track .l{flex:0 0 190px;border:1px solid var(--line);border-radius:8px;height:84px;display:flex;align-items:center;justify-content:center;padding:12px;background:#fff}
 .logo-track img{max-height:100%;object-fit:contain;pointer-events:none}
-.logo-track .n{font-weight:700;font-size:16px;color:var(--navy);text-align:center;line-height:1.4}
+.logo-track .l.dark{background:var(--navy-2);border-color:var(--navy-2)}
 .logo-nav{flex:none;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line-2);border-radius:50%;background:#fff;color:var(--navy);cursor:pointer}
 .logo-nav:hover:not(:disabled){background:var(--bg-soft)}
 .logo-nav:disabled{opacity:.35;cursor:default}
